@@ -1,0 +1,8 @@
+{
+  "name": "Gram-Disha",
+  "description": "Intelligent, evidence-informed business guidance and deterministic financial structuring platform for rural and semi-urban entrepreneurs in India by Team ERGON.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
