@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "ᱜᱨᱟᱢ-ᱫᱤᱥᱟ",
+    "appTagline": "ᱥᱟᱹᱨᱤ ᱠᱟᱛᱷᱟ ᱪᱮᱛᱟᱱ ᱟᱛᱳ ᱵᱮᱯᱟᱨ ᱜᱮᱭᱟᱱ ᱟᱨ ᱫᱤᱥᱟᱹ ᱮᱢ",
+    "sihBadge": "V2.0 OS",
+    "initiative": "ᱴᱤᱢ ᱮᱨᱜᱳᱱ — ᱥᱢᱟᱨᱴ ᱤᱱᱰᱤᱭᱟ ᱦᱮᱠᱟᱛᱷᱚᱱ"
+  },
+  "nav": {
+    "home": "ᱢᱩᱬᱩᱛ ᱥᱟᱠᱟᱢ",
+    "howItWorks": "ᱪᱮᱫ ᱞᱮᱠᱟ ᱠᱟᱹᱢᱤᱭᱟ",
+    "features": "ᱯᱞᱮᱴᱯᱷᱚᱨᱢ ᱨᱮᱱᱟᱜ ᱜᱩᱱ",
+    "feasibility": "HBFS ᱜᱟᱱᱚᱜ ᱨᱮᱱᱟᱜ ᱵᱤᱪᱟᱹᱨ",
+    "financials": "ᱴᱟᱠᱟ-ᱯᱩᱭᱥᱟᱹ ᱜᱚᱲᱦᱚᱱ",
+    "schemes": "ᱥᱚᱨᱠᱟᱨᱤ ᱟᱸᱪᱚᱞ",
+    "about": "ᱟᱞᱮ ᱵᱟᱵᱚᱛ",
+    "signInGoogle": "ᱜᱩᱜᱚᱞ ᱛᱮ ᱞᱚᱜᱤᱱ",
+    "getStarted": "ᱮᱛᱚᱦᱚᱵ ᱢᱮ",
+    "dashboardLink": "ᱰᱮᱥᱵᱚᱨᱰ ᱡᱷᱤᱡᱽ ᱢᱮ",
+    "switchLanguage": "ᱯᱟᱹᱨᱥᱤ ᱵᱚᱫᱚᱞ ᱢᱮ"
+  },
+  "header": {
+    "activeLocationLabel": "ᱵᱟᱪᱷᱟᱣ ᱡᱟᱭᱜᱟ",
+    "selectEnterprise": "ᱵᱮᱯᱟᱨ ᱢᱚᱰᱮᱞ ᱵᱟᱪᱷᱟᱣ",
+    "allIndia": "ᱡᱚᱛᱚ ᱵᱷᱟᱨᱚᱛ (LGD ᱫᱤᱥᱟᱹ)",
+    "jwtSession": "ᱥᱮᱥᱚᱱ ᱥᱟᱹᱵᱤᱛ",
+    "notifications": "ᱠᱷᱚᱵᱚᱨ",
+    "myProfile": "ᱵᱮᱯᱟᱨᱤ ᱯᱨᱚᱯᱷᱟᱭᱤᱞ",
+    "logout": "ᱚᱰᱚᱠᱚᱜ ᱢᱮ",
+    "dishaOsTitle": "ᱫᱤᱥᱟ AI OS ᱜᱚᱲᱚᱭᱤᱡ",
+    "searchPlaceholder": "ᱟᱛᱳ, ᱪᱟᱥ ᱟᱨᱵᱟᱝ ᱥᱠᱤᱢ ᱯᱟᱱᱛᱮ..."
+  },
+  "welcome": {
+    "heroHeadline": "ᱵᱷᱟᱨᱚᱛ ᱨᱤᱱ ᱟᱛᱳ ᱵᱮᱯᱟᱨᱤ ᱠᱚ ᱞᱟᱹᱜᱤᱫ ᱥᱟᱹᱨᱤ ᱫᱤᱥᱟᱹ",
+    "heroSubtitle": "ᱵᱮᱯᱟᱨ ᱨᱮᱱᱟᱜ ᱜᱟᱱᱚᱜ ᱯᱚᱨᱠᱷᱟᱣ ᱢᱮ, ᱵᱮᱸᱠ ᱨᱮᱱᱟᱜ ᱨᱤᱯᱚᱴ ᱵᱮᱱᱟᱣ ᱢᱮ ᱟᱨ ᱥᱚᱨᱠᱟᱨᱤ ᱜᱚᱲᱚ ᱧᱟᱢ ᱢᱮ᱾",
+    "badgeLabel": "ᱵᱷᱟᱨᱚᱛ ᱥᱚᱨᱠᱟᱨ ᱟᱜ LGD ᱟᱨ MSME ᱱᱤᱭᱚᱢ ᱞᱮᱠᱟᱛᱮ",
+    "startPlanningBtn": "ᱵᱮᱯᱟᱨ ᱯᱞᱟᱱ ᱮᱛᱚᱦᱚᱵ ᱢᱮ",
+    "exploreMethodologyBtn": "ᱠᱟᱹᱢᱤ ᱦᱚᱨᱟ ᱵᱩᱡᱷᱟᱹᱣ ᱢᱮ",
+    "statsEntrepreneursLabel": "ᱫᱤᱥᱟᱹ ᱧᱟᱢ ᱟᱠᱟᱫ ᱵᱮᱯᱟᱨᱤ",
+    "statsDistrictsLabel": "ᱥᱮᱞᱮᱫ ᱡᱤᱞᱟᱹ",
+    "statsSchemesLabel": "ᱥᱟᱹᱵᱤᱛ ᱥᱚᱨᱠᱟᱨᱤ ᱥᱠᱤᱢ",
+    "statsSubsidiesLabel": "PMEGP ᱜᱚᱲᱚ"
+  },
+  "dashboard": {
+    "overviewTitle": "ᱵᱮᱯᱟᱨ ᱧᱮᱞ ᱛᱩᱢᱟᱹᱞ",
+    "overviewSubtitle": "ᱜᱟᱱᱚᱜ ᱥᱠᱳᱨ, ᱴᱚᱴᱷᱟᱠᱤᱭᱟᱹ ᱵᱟᱡᱟᱨ ᱟᱨ ᱯᱩᱸᱡᱤ ᱜᱚᱲᱦᱚᱱ",
+    "swotAnalysis": "HBFS ᱜᱟᱱᱚᱜ ᱟᱨ SWOT ᱵᱤᱪᱟᱹᱨ",
+    "marketDemand": "ᱦᱟᱴ ᱟᱨ ᱫᱟᱢ ᱨᱮᱱᱟᱜ ᱠᱷᱚᱵᱚᱨ",
+    "financialStructuring": "ᱨᱤᱬ, ᱱᱤᱡᱮᱨ ᱯᱩᱸᱡᱤ ᱟᱨ ᱠᱤᱥᱛᱤ",
+    "governmentSchemes": "ᱡᱚᱜᱟᱣ ᱥᱚᱨᱠᱟᱨᱤ ᱥᱠᱤᱢ ᱟᱨ ᱜᱚᱲᱚ",
+    "documentChecklist": "ᱞᱟᱹᱠᱛᱤᱭᱟᱱ ᱠᱟᱜᱚᱡᱽ ᱠᱚ",
+    "applicationsProgress": "DIC ᱫᱚᱨᱠᱷᱟᱥᱛ ᱦᱟᱞᱚᱛ",
+    "grievanceSupport": "ᱵᱟᱹᱲᱤᱡ ᱥᱟᱦᱟ ᱟᱨ ᱜᱚᱲᱚ ᱛᱟᱞᱢᱟ",
+    "exportDprBtn": "ᱯᱨᱚᱡᱮᱠᱴ ᱨᱤᱯᱚᱴ ᱰᱟᱣᱩᱱᱞᱳᱰ (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "ᱯᱩᱨᱟᱹ ᱧᱩᱛᱩᱢ (ᱟᱫᱷᱟᱨ / ᱯᱮᱱ ᱞᱮᱠᱟᱛᱮ)",
+    "emailLabel": "ᱤᱢᱮᱞ ᱴᱷᱤᱠᱬᱟ",
+    "mobileLabel": "᱑᱐ ᱮᱞ ᱢᱳᱵᱟᱭᱤᱞ ᱱᱚᱢᱵᱚᱨ",
+    "stateLabel": "ᱯᱚᱱᱚᱛ",
+    "districtLabel": "ᱡᱤᱞᱟᱹ",
+    "blockLabel": "ᱵᱞᱚᱠ",
+    "panchayatLabel": "ᱟᱛᱳ ᱯᱚᱧᱪᱟᱭᱚᱛ",
+    "villageLabel": "ᱟᱛᱳ / ᱴᱚᱞᱟ",
+    "pincodeLabel": "ᱯᱤᱱ ᱠᱳᱰ",
+    "activityTypeLabel": "ᱵᱮᱯᱟᱨ ᱦᱟᱹᱴᱤᱧ",
+    "projectCostLabel": "ᱡᱚᱛᱚ ᱠᱷᱚᱨᱚᱪ (₹)",
+    "ownContributionLabel": "ᱱᱤᱡᱮᱨ ᱯᱩᱸᱡᱤ (%)",
+    "searchVillagePlaceholder": "ᱟᱛᱳ ᱥᱮ ᱯᱤᱱ ᱠᱳᱰ ᱯᱟᱱᱛᱮ...",
+    "saveProfileBtn": "ᱫᱚᱦᱚᱭ ᱢᱮ ᱟᱨ ᱞᱟᱦᱟᱜ ᱢᱮ",
+    "cancelBtn": "ᱵᱟᱹᱛᱤᱞ ᱢᱮ",
+    "submitBtn": "ᱫᱚᱨᱠᱷᱟᱥᱛ ᱮᱢ ᱢᱮ"
+  },
+  "badges": {
+    "lgdVerified": "LGD ᱥᱟᱹᱵᱤᱛ",
+    "specialCategoryRural": "ᱟᱹᱛᱩ ᱴᱚᱴᱷᱟ (᱓᱕% ᱜᱚᱲᱚ)",
+    "pmegpEligible": "PMEGP ᱜᱚᱲᱚ ᱞᱟᱹᱜᱤᱫ ᱡᱚᱜᱟᱣ",
+    "odopNotified": "ODOP ᱪᱟᱥ ᱡᱤᱱᱤᱥ",
+    "highFeasibility": "ᱩᱥᱩᱞ ᱵᱮᱯᱟᱨ ᱜᱟᱱᱚᱜ",
+    "lowRisk": "ᱠᱚᱢ ᱨᱤᱬ ᱵᱚᱛᱚᱨ",
+    "unknownStateWarning": "ᱵᱟᱝ ᱥᱟᱹᱵᱤᱛ: UNKNOWN ᱚᱞ ᱟᱠᱟᱱᱟ"
+  },
+  "footer": {
+    "copyrightText": "© ᱒᱐᱒᱖ ᱜᱨᱟᱢ-ᱫᱤᱥᱟ᱾ ᱴᱤᱢ ᱮᱨᱜᱳᱱ ᱦᱚᱛᱮᱛᱮ ᱵᱮᱱᱟᱣ ᱟᱠᱟᱱᱟ᱾",
+    "madeInIndia": "ᱵᱷᱟᱨᱚᱛ ᱨᱤᱱ ᱟᱛᱳ ᱦᱚᱲ ᱠᱚ ᱞᱟᱹᱜᱤᱫ᱾",
+    "teamErgon": "ᱴᱤᱢ ᱮᱨᱜᱳᱱ",
+    "privacyPolicy": "ᱩᱠᱩ ᱱᱤᱭᱚᱢ",
+    "termsConditions": "ᱱᱤᱭᱚᱢ ᱟᱨ ᱥᱚᱨᱛᱚ",
+    "grievancePortal": "ᱥᱚᱨᱠᱟᱨᱤ ᱟᱹᱨᱡᱤ ᱯᱳᱨᱴᱟᱞ"
+  },
+  "accessibility": {
+    "selectLanguageAria": "ᱯᱟᱹᱨᱥᱤ ᱵᱟᱪᱷᱟᱣ ᱢᱮ",
+    "closeMenuAria": "ᱢᱮᱱᱩ ᱵᱚᱸᱫᱽ ᱢᱮ",
+    "openMenuAria": "ᱢᱮᱱᱩ ᱡᱷᱤᱡᱽ ᱢᱮ",
+    "rtlNotice": "ᱞᱮᱸᱜᱟ ᱠᱷᱚᱱ ᱡᱚᱡᱚᱢ",
+    "scriptName": "Ol Chiki"
+  }
+}

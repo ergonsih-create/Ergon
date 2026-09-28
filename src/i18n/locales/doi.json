@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "ग्राम-दिशा",
+    "appTagline": "तथ्यें पर अधारत ग्रामीण उद्यम सलाह ते दिशा प्रणाली",
+    "sihBadge": "V2.0 OS",
+    "initiative": "टीम एर्गोन — स्मार्ट इंडिया हैकाथॉन"
+  },
+  "nav": {
+    "home": "मुक्ख सफा",
+    "howItWorks": "एह कम् कियां करदा ऐ",
+    "features": "मंच दियां विशेशताएं",
+    "feasibility": "संभावना जांच (HBFS)",
+    "financials": "वित्तीय ढांचा",
+    "schemes": "सरकारी योजना",
+    "about": "साढ़े बारे च",
+    "signInGoogle": "गूगल राहें लाग इन करो",
+    "getStarted": "शुरू करो",
+    "dashboardLink": "डैशबोर्ड खोल्लो",
+    "switchLanguage": "बोली बदलो"
+  },
+  "header": {
+    "activeLocationLabel": "चुनेदी थाह्र",
+    "selectEnterprise": "कारोबारी माडल चुनो",
+    "allIndia": "समस्त भारत (LGD निर्देशिका)",
+    "jwtSession": "सत्र प्रमाणीकरण",
+    "notifications": "सूचना",
+    "myProfile": "उद्यमी प्रोफाइल",
+    "logout": "लाग आउट",
+    "dishaOsTitle": "दिशा AI OS सलाहकार",
+    "searchPlaceholder": "ग्रां, पैदावार या योजना लब्भो..."
+  },
+  "welcome": {
+    "heroHeadline": "ग्रामीण भारत दे उद्यमीएं लेई प्रमाण-अधारत कारोबारी दिशा",
+    "heroSubtitle": "व्यापार दी संभावना जांचो, बैंक लेई प्रोजेक्ट रिपोर्ट त्यार करो ते सरकारी सब्सिडी हासल करो।",
+    "badgeLabel": "भारत सरकार दे LGD ते MSME नियमें अनसार",
+    "startPlanningBtn": "कारोबारी योजना शुरू करो",
+    "exploreMethodologyBtn": "कार्यप्रणाली समझो",
+    "statsEntrepreneursLabel": "सलाह लैने आले उद्यमी",
+    "statsDistrictsLabel": "शामल जिले",
+    "statsSchemesLabel": "प्रमाणित सरकारी योजना",
+    "statsSubsidiesLabel": "PMEGP सब्सिडी मदद"
+  },
+  "dashboard": {
+    "overviewTitle": "उद्यम सारांश",
+    "overviewSubtitle": "सटीक संभावना स्कोर, स्थानीय मंडी दी परख ते पूंजी ढांचा",
+    "swotAnalysis": "HBFS संभावना ते SWOT विश्लेषण",
+    "marketDemand": "स्थानीय मंडी ते भाव दी जानकारी",
+    "financialStructuring": "कर्ज, निजी पूंजी ते किश्तां दा विवरण",
+    "governmentSchemes": "योग्य सरकारी योजना ते सब्सिडी",
+    "documentChecklist": "जरूरी दस्तावेजां दी सूची",
+    "applicationsProgress": "DIC अर्जी दी प्रगति",
+    "grievanceSupport": "शिकायत निवारण ते सहायता केंद्र",
+    "exportDprBtn": "प्रोजेक्ट रिपोर्ट डाउनलोड करो (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "पूरा नां (आधार / पैन मुतावक)",
+    "emailLabel": "ईमेल पता",
+    "mobileLabel": "१० अंकें दा मोबाइल नंबर",
+    "stateLabel": "राज्य / केंद्र शासित प्रदेश",
+    "districtLabel": "जिला",
+    "blockLabel": "तहसील / ब्लाक",
+    "panchayatLabel": "ग्राम पंचायत",
+    "villageLabel": "ग्रां / बस्ती",
+    "pincodeLabel": "डाक पिन कोड",
+    "activityTypeLabel": "उद्यम दी किस्म",
+    "projectCostLabel": "कुल प्रोजेक्ट लागत (₹)",
+    "ownContributionLabel": "निजी पूंजी हिस्सा (%)",
+    "searchVillagePlaceholder": "ग्रां जां पिन कोड लब्भो...",
+    "saveProfileBtn": "संजोओ ते अग्गें बधो",
+    "cancelBtn": "रद्द करो",
+    "submitBtn": "अर्जी जमा करो"
+  },
+  "badges": {
+    "lgdVerified": "LGD निर्देशिका सत्यापित",
+    "specialCategoryRural": "विशेश श्रेणी (ग्रामीण खित्ता — ३५% सब्सिडी)",
+    "pmegpEligible": "PMEGP सब्सिडी योग्य",
+    "odopNotified": "ODOP अधिसूचित उत्पाद",
+    "highFeasibility": "उच्च व्यापारिक संभावना",
+    "lowRisk": "घट्ट कर्ज जोखिम",
+    "unknownStateWarning": "अप्रामाणिक जानकारी: UNKNOWN अंकित"
+  },
+  "footer": {
+    "copyrightText": "© २०२६ ग्राम-दिशा। स्मार्ट इंडिया हैकाथॉन लेई टीम एर्गोन आसेआ त्यार।",
+    "madeInIndia": "ग्रामीण भारत लेई समर्पित।",
+    "teamErgon": "टीम एर्गोन",
+    "privacyPolicy": "गोपनीयता नीति",
+    "termsConditions": "नियम ते शर्त",
+    "grievancePortal": "राष्ट्रीय शिकायत पोर्टल"
+  },
+  "accessibility": {
+    "selectLanguageAria": "बोली चुनो",
+    "closeMenuAria": "मेनू बंद करो",
+    "openMenuAria": "मेनू खोल्लो",
+    "rtlNotice": "खब्बै थमां सज्जे लेआउट",
+    "scriptName": "Devanagari (Dogri)"
+  }
+}

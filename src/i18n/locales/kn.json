@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "ಗ್ರಾಮ್-ದಿಶಾ",
+    "appTagline": "ಸಾಕ್ಷ್ಯಾಧಾರಿತ ಗ್ರಾಮೀಣ ಉದ್ಯಮ ಗುಪ್ತಚರ ಮತ್ತು ಮಾರ್ಗದರ್ಶನ ವೇದಿಕೆ",
+    "sihBadge": "V2.0 OS",
+    "initiative": "ಟೀಮ್ ಎರ್ಗೋನ್ — ಸ್ಮಾರ್ಟ್ ಇಂಡಿಯಾ ಹ್ಯಾಕಥಾನ್"
+  },
+  "nav": {
+    "home": "ಮುಖಪುಟ",
+    "howItWorks": "ಇದು ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ",
+    "features": "ವೇದಿಕೆಯ ಸಾಮರ್ಥ್ಯಗಳು",
+    "feasibility": "ಸಾಧ್ಯತೆಯ ವಿಶ್ಲೇಷಣೆ (HBFS)",
+    "financials": "ಹಣಕಾಸು ರಚನೆ",
+    "schemes": "ಸರ್ಕಾರಿ ಯೋಜನೆಗಳು",
+    "about": "ನಮ್ಮ ಬಗ್ಗೆ",
+    "signInGoogle": "ಗೂಗಲ್ ಮೂಲಕ ಲಾಗಿನ್ ಮಾಡಿ",
+    "getStarted": "ಪ್ರಾರಂಭಿಸಿ",
+    "dashboardLink": "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ತೆರೆಯಿರಿ",
+    "switchLanguage": "ಭಾಷೆ ಬದಲಾಯಿಸಿ"
+  },
+  "header": {
+    "activeLocationLabel": "ಪ್ರಸ್ತುತ ಸ್ಥಳ",
+    "selectEnterprise": "ಉದ್ಯಮ ಮಾದರಿಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    "allIndia": "ಸಮಗ್ರ ಭಾರತ (LGD ಡೈರೆಕ್ಟರಿ)",
+    "jwtSession": "ಸೆಷನ್ ದೃಢೀಕರಣ",
+    "notifications": "ಸೂಚನೆಗಳು",
+    "myProfile": "ಉದ್ಯಮಿ ಪ್ರೊಫೈಲ್",
+    "logout": "ಲಾಗ್ ಔಟ್",
+    "dishaOsTitle": "ದಿಶಾ AI OS ಸಹಾಯಕ",
+    "searchPlaceholder": "ಗ್ರಾಮಗಳು, ಕೃಷಿ ಉತ್ಪನ್ನಗಳು ಅಥವಾ ಯೋಜನೆಗಳನ್ನು ಹುಡುಕಿ..."
+  },
+  "welcome": {
+    "heroHeadline": "ಭಾರತದ ಗ್ರಾಮೀಣ ಉದ್ಯಮಿಗಳಿಗೆ ಸಾಕ್ಷ್ಯಾಧಾರಿತ ವ್ಯವಹಾರ ಮಾರ್ಗದರ್ಶನ",
+    "heroSubtitle": "ವ್ಯವಹಾರದ ಕಾರ್ಯಸಾಧ್ಯತೆಯನ್ನು ನಿರ್ಣಯಿಸಿ, ಬ್ಯಾಂಕ್-ಸಿದ್ಧ ಯೋಜನಾ ವರದಿಗಳನ್ನು ತಯಾರಿಸಿ ಮತ್ತು ಪರಿಶೀಲಿಸಿದ ಸರ್ಕಾರಿ ಸಬ್ಸಿಡಿಗಳನ್ನು ಪಡೆಯಿರಿ.",
+    "badgeLabel": "ಭಾರತ ಸರ್ಕಾರದ LGD ಮತ್ತು MSME ಮಾನದಂಡಗಳಿಗೆ ಅನುಗುಣವಾಗಿದೆ",
+    "startPlanningBtn": "ವ್ಯವಹಾರ ಯೋಜನೆ ಪ್ರಾರಂಭಿಸಿ",
+    "exploreMethodologyBtn": "ಕಾರ್ಯವಿಧಾನವನ್ನು ತಿಳಿಯಿರಿ",
+    "statsEntrepreneursLabel": "ಮಾರ್ಗದರ್ಶನ ಪಡೆದ ಗ್ರಾಮೀಣ ಉದ್ಯಮಿಗಳು",
+    "statsDistrictsLabel": "ಒಳಗೊಂಡಿರುವ LGD ಜಿಲ್ಲೆಗಳು",
+    "statsSchemesLabel": "ಪರಿಶೀಲಿಸಿದ ಸರ್ಕಾರಿ ಯೋಜನೆಗಳು",
+    "statsSubsidiesLabel": "PMEGP ಬಂಡವಾಳ ಸಬ್ಸಿಡಿಗಳ ನೆರವು"
+  },
+  "dashboard": {
+    "overviewTitle": "ಉದ್ಯಮ ಗುಪ್ತಚರ ಸಾರಾಂಶ",
+    "overviewSubtitle": "ನಿಖರ ಸಾಧ್ಯತೆಯ ಅಂಕಗಳು, ಸ್ಥಳೀಯ ಮಾರುಕಟ್ಟೆ ಒಳನೋಟಗಳು ಮತ್ತು ಬಂಡವಾಳ ರಚನೆ",
+    "swotAnalysis": "HBFS ಸಾಧ್ಯತೆ ಮತ್ತು SWOT ವಿಶ್ಲೇಷಣೆ",
+    "marketDemand": "ಸ್ಥಳೀಯ ಮಂಡಿ ಮತ್ತು ಮಾರುಕಟ್ಟೆ ಒಳನೋಟಗಳು",
+    "financialStructuring": "ಸಾಲ-ಇಕ್ವಿಟಿ ಮತ್ತು ಮರುಪಾವತಿ ವೇಳಾಪಟ್ಟಿ",
+    "governmentSchemes": "ಅರ್ಹ ಸರ್ಕಾರಿ ಯೋಜನೆಗಳು ಮತ್ತು ಸಬ್ಸಿಡಿಗಳು",
+    "documentChecklist": "ಅಗತ್ಯ ಶಾಸನಬದ್ಧ ದಾಖಲೆಗಳ ಪಟ್ಟಿ",
+    "applicationsProgress": "DIC ಅರ್ಜಿ ಪ್ರಗತಿ ಟ್ರ್ಯಾಕರ್",
+    "grievanceSupport": "ದೂರು ನಿವಾರಣೆ ಮತ್ತು ಸಹಾಯವಾಣಿ",
+    "exportDprBtn": "ಬ್ಯಾಂಕೇಬಲ್ DPR ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "ಪೂರ್ಣ ಹೆಸರು (ಆಧಾರ್ / ಪಾನ್ ಪ್ರಕಾರ)",
+    "emailLabel": "ಇಮೇಲ್ ವಿಳಾಸ",
+    "mobileLabel": "10-ಅಂಕಿಯ ಮೊಬೈಲ್ ಸಂಖ್ಯೆ",
+    "stateLabel": "ರಾಜ್ಯ / ಕೇಂದ್ರಾಡಳಿತ ಪ್ರದೇಶ",
+    "districtLabel": "ಜಿಲ್ಲೆ",
+    "blockLabel": "ತಾಲೂಕು / ಬ್ಲಾಕ್",
+    "panchayatLabel": "ಗ್ರಾಮ ಪಂಚಾಯತ್",
+    "villageLabel": "ಗ್ರಾಮ / ವಾಸಸ್ಥಳ",
+    "pincodeLabel": "ಅಂಚೆ ಪಿನ್ ಕೋಡ್",
+    "activityTypeLabel": "ಉದ್ಯಮ ಚಟುವಟಿಕೆಯ ಪ್ರಕಾರ",
+    "projectCostLabel": "ಒಟ್ಟು ಯೋಜನಾ ವೆಚ್ಚ (₹)",
+    "ownContributionLabel": "ಪ್ರವರ್ತಕರ ಇಕ್ವಿಟಿ ಪಾಲು (%)",
+    "searchVillagePlaceholder": "ಗ್ರಾಮ ಅಥವಾ ಅಂಚೆ ಪಿನ್ ಕೋಡ್ ಹುಡುಕಿ...",
+    "saveProfileBtn": "ಉಳಿಸಿ & ಮುಂದುವರಿಯಿರಿ",
+    "cancelBtn": "ರದ್ದುಮಾಡಿ",
+    "submitBtn": "ಅರ್ಜಿ ಸಲ್ಲಿಸಿ"
+  },
+  "badges": {
+    "lgdVerified": "LGD ಡೈರೆಕ್ಟರಿ ಪರಿಶೀಲಿಸಲಾಗಿದೆ",
+    "specialCategoryRural": "ವಿಶೇಷ ವರ್ಗ (ಗ್ರಾಮೀಣ ಪ್ರದೇಶ — 35% ಸಬ್ಸಿಡಿ)",
+    "pmegpEligible": "PMEGP ಸಬ್ಸಿಡಿಗೆ ಅರ್ಹ",
+    "odopNotified": "ODOP ಅಧಿಸೂಚಿತ ಉತ್ಪನ್ನ",
+    "highFeasibility": "ಹೆಚ್ಚಿನ ವಾಣಿಜ್ಯ ಸಾಧ್ಯತೆ",
+    "lowRisk": "ಕಡಿಮೆ ಕ್ರೆಡಿಟ್ ಮತ್ತು ಡೀಫಾಲ್ಟ್ ಅಪಾಯ",
+    "unknownStateWarning": "ದೃಢೀಕರಿಸದ ಮಾಹಿತಿ: UNKNOWN ಎಂದು ಗುರುತಿಸಲಾಗಿದೆ"
+  },
+  "footer": {
+    "copyrightText": "© 2026 ಗ್ರಾಮ್-ದಿಶಾ. ಸ್ಮಾರ್ಟ್ ಇಂಡಿಯಾ ಹ್ಯಾಕಥಾನ್‌ಗಾಗಿ ಟೀಮ್ ಎರ್ಗೋನ್ ಅಭಿವೃದ್ಧಿಪಡಿಸಿದೆ.",
+    "madeInIndia": "ಗ್ರಾಮೀಣ ಮತ್ತು ಅರೆ-ನಗರ ಭಾರತಕ್ಕಾಗಿ ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ.",
+    "teamErgon": "ಟೀಮ್ ಎರ್ಗೋನ್",
+    "privacyPolicy": "ಗೌಪ್ಯತೆ ನೀತಿ",
+    "termsConditions": "ನಿಯಮಗಳು ಮತ್ತು ಷರತ್ತುಗಳು",
+    "grievancePortal": "ರಾಷ್ಟ್ರೀಯ ದೂರು ನಿವಾರಣಾ ಪೋರ್ಟಲ್"
+  },
+  "accessibility": {
+    "selectLanguageAria": "ಅಪ್ಲಿಕೇಶನ್ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    "closeMenuAria": "ಮೆನು ಮುಚ್ಚಿ",
+    "openMenuAria": "ಮೆನು ತೆರೆಯಿರಿ",
+    "rtlNotice": "ಎಡದಿಂದ ಬಲಕ್ಕೆ ವಿನ್ಯಾಸ ಸಕ್ರಿಯವಾಗಿದೆ",
+    "scriptName": "Kannada"
+  }
+}

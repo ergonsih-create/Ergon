@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  # MySQL 8.0 Engine
+  db:
+    image: mysql:8.0
+    container_name: gram_disha_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root_secure_pass_2026
+      MYSQL_DATABASE: gram_disha_db
+      MYSQL_USER: gram_disha_user
+      MYSQL_PASSWORD: gram_disha_secure_pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ../database/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql
+      - ../database/seeds/01_provenance_sources.sql:/docker-entrypoint-initdb.d/02_sources.sql
+      - ../database/seeds/02_schemes_baseline.sql:/docker-entrypoint-initdb.d/03_schemes.sql
+    networks:
+      - gram_disha_net
+
+  # FastAPI Backend Engine
+  backend:
+    build:
+      context: ../backend
+      dockerfile: ../deploy/Dockerfile.backend
+    container_name: gram_disha_backend
+    restart: unless-stopped
+    environment:
+      ENVIRONMENT: production
+      DEBUG: "false"
+      MYSQL_HOST: db
+      MYSQL_PORT: 3306
+      MYSQL_USER: gram_disha_user
+      MYSQL_PASSWORD: gram_disha_secure_pass
+      MYSQL_DB: gram_disha_db
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY:-gram_disha_prod_jwt_secret_2026}
+    depends_on:
+      - db
+    networks:
+      - gram_disha_net
+
+  # Nginx Reverse Proxy & Frontend Webserver
+  frontend:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.frontend
+    container_name: gram_disha_frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - backend
+    networks:
+      - gram_disha_net
+
+volumes:
+  mysql_data:
+
+networks:
+  gram_disha_net:
+    driver: bridge

@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "ગ્રામ-દિશા",
+    "appTagline": "પુરાવા-આધારિત ગ્રામીણ ઉદ્યોગ બુદ્ધિમત્તા અને માર્ગદર્શન પ્લેટફોર્મ",
+    "sihBadge": "V2.0 OS",
+    "initiative": "ટીમ એર્ગોન — સ્માર્ટ ઇન્ડિયા હેકાથોન"
+  },
+  "nav": {
+    "home": "મુખ્ય પૃષ્ઠ",
+    "howItWorks": "આ કેવી રીતે કાર્ય કરે છે",
+    "features": "પ્લેટફોર્મની સુવિધાઓ",
+    "feasibility": "વાણિજ્યિક સંભાવના (HBFS)",
+    "financials": "નાણાકીય માળખું",
+    "schemes": "સરકારી યોજનાઓ",
+    "about": "અમારા વિશે",
+    "signInGoogle": "ગુગલ વડે સાઇન ઇન કરો",
+    "getStarted": "શરૂ કરો",
+    "dashboardLink": "ડેશબોર્ડ ખોલો",
+    "switchLanguage": "ભાષા પસંદ કરો"
+  },
+  "header": {
+    "activeLocationLabel": "પસંદ કરેલ સ્થળ",
+    "selectEnterprise": "ઉદ્યોગ મોડેલ પસંદ કરો",
+    "allIndia": "સમગ્ર ભારત (એલજીડી નિર્દેશિકા)",
+    "jwtSession": "સુરક્ષિત સત્ર",
+    "notifications": "સૂચનાઓ",
+    "myProfile": "ઉદ્યોગસાહસિક પ્રોફાઇલ",
+    "logout": "સાઇન આઉટ",
+    "dishaOsTitle": "દિશા એઆઈ સહાયક",
+    "searchPlaceholder": "ગામ, પાક અથવા યોજના શોધો..."
+  },
+  "welcome": {
+    "heroHeadline": "ભારતના ગ્રામીણ ઉદ્યોગસાહસિકો માટે પુરાવા-આધારિત વ્યાપાર દિશા",
+    "heroSubtitle": "વ્યાપારની વાણિજ્યિક સંભાવનાનું સચોટ મૂલ્યાંકન કરો, બેંક સ્વીકાર્ય ડીપીઆર બનાવો અને કોઈપણ અટકળો વિના સરકારી સબસિડી મેળવો.",
+    "badgeLabel": "ભારત સરકાર એલજીડી અને એમએસએમઈ ધોરણોને અનુરૂપ",
+    "startPlanningBtn": "વ્યવસાય આયોજન શરૂ કરો",
+    "exploreMethodologyBtn": "કાર્યપદ્ધતિ સમજો",
+    "statsEntrepreneursLabel": "માર્ગદર્શન મેળવનાર ગ્રામીણ સાહસિકો",
+    "statsDistrictsLabel": "આવરી લેવાયેલા એલજીડી જિલ્લાઓ",
+    "statsSchemesLabel": "ચકાસાયેલ સરકારી યોજનાઓ",
+    "statsSubsidiesLabel": "પીએમઈજીપી કેપિટલ સબસિડી સહાય"
+  },
+  "dashboard": {
+    "overviewTitle": "ઉદ્યોગ વિશ્લેષણ સંક્ષેપ",
+    "overviewSubtitle": "સચોટ સંભાવના સ્કોર, સ્થાનિક બજાર ડેટા અને મૂડી માળખું",
+    "swotAnalysis": "વાણિજ્યિક સંભાવના અને સ્વૉટ (SWOT) વિશ્લેષણ",
+    "marketDemand": "સ્થાનિક માર્કેટ યાર્ડ અને માંગ વિશ્લેષણ",
+    "financialStructuring": "લોન-મૂડી ગુણોત્તર અને હપ્તાનું પત્રક",
+    "governmentSchemes": "પાત્ર સરકારી યોજનાઓ અને અનુદાન",
+    "documentChecklist": "જરૂરી દસ્તાવેજોની યાદી",
+    "applicationsProgress": "જિલ્લા ઉદ્યોગ કેન્દ્ર (ડીઆઈસી) અરજી પ્રગતિ",
+    "grievanceSupport": "ફરિયાદ નિવારણ અને સહાય કેન્દ્ર",
+    "exportDprBtn": "બેંક ડીપીઆર ડાઉનલોડ કરો (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "પૂરું નામ (આધાર / પાન કાર્ડ મુજબ)",
+    "emailLabel": "ઈમેલ સરનામું",
+    "mobileLabel": "૧૦-અંકનો મોબાઈલ નંબર",
+    "stateLabel": "રાજ્ય / કેન્દ્રશાસિત પ્રદેશ",
+    "districtLabel": "જિલ્લો",
+    "blockLabel": "તાલુકો / સબ-ડિસ્ટ્રિક્ટ",
+    "panchayatLabel": "ગ્રામ પંચાયત / સ્થાનિક સંસ્થા",
+    "villageLabel": "મહેસૂલી ગામ / વસાહત",
+    "pincodeLabel": "પોસ્ટલ પિન કોડ",
+    "activityTypeLabel": "વ્યાપાર પ્રવૃત્તિનો પ્રકાર",
+    "projectCostLabel": "કુલ પ્રોજેક્ટ ખર્ચ (₹)",
+    "ownContributionLabel": "સ્વ-મૂડી હિસ્સો (%)",
+    "searchVillagePlaceholder": "ગામ અથવા પિન કોડ શોધો...",
+    "saveProfileBtn": "સાચવો અને આગળ વધો",
+    "cancelBtn": "રદ કરો",
+    "submitBtn": "અરજી સબમિટ કરો"
+  },
+  "badges": {
+    "lgdVerified": "એલજીડી ડિરેક્ટરી દ્વારા ચકાસાયેલ",
+    "specialCategoryRural": "વિશેષ શ્રેણી (ગ્રામીણ વિસ્તાર — ૩૫% સબસિડી)",
+    "pmegpEligible": "પીએમઈજીપી સબસિડી માટે પાત્ર",
+    "odopNotified": "એક જિલ્લો એક ઉત્પાદન (ODOP) જાહેર",
+    "highFeasibility": "ઉચ્ચ વ્યાપારિક સંભાવના",
+    "lowRisk": "ન્યૂનતમ ધિરાણ જોખમ",
+    "unknownStateWarning": "બિન-ચકાસાયેલ ડેટા: UNKNOWN તરીકે ચિહ્નિત"
+  },
+  "footer": {
+    "copyrightText": "© ૨૦૨૬ ગ્રામ-દિશા. સ્માર્ટ ઇન્ડિયા હેકાથોન માટે ટીમ એર્ગોન દ્વારા નિર્મિત.",
+    "madeInIndia": "ગ્રામીણ અને અર્ધ-શહેરી ભારતના સાહસિકો માટે સમર્પિત.",
+    "teamErgon": "ટીમ એર્ગોન",
+    "privacyPolicy": "ગોપનીયતા નીતિ",
+    "termsConditions": "નિયમો અને શરતો",
+    "grievancePortal": "રાષ્ટ્રીય ફરિયાદ પોર્ટલ"
+  },
+  "accessibility": {
+    "selectLanguageAria": "એપ્લિકેશન ભાષા પસંદ કરો",
+    "closeMenuAria": "મેનુ બંધ કરો",
+    "openMenuAria": "મેનુ ખોલો",
+    "rtlNotice": "ડાબેથી જમણે લખાણ પદ્ધતિ સક્રિય છે",
+    "scriptName": "ગુજરાતી"
+  }
+}

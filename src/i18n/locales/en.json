@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "Gram-Disha",
+    "appTagline": "Evidence-First Rural Enterprise Intelligence & Advisory OS",
+    "sihBadge": "V2.0 OS",
+    "initiative": "Gram-Disha Rural Enterprise Platform"
+  },
+  "nav": {
+    "home": "Home",
+    "howItWorks": "How It Works",
+    "features": "Platform Capabilities",
+    "feasibility": "HBFS Feasibility",
+    "financials": "Financial Structuring",
+    "schemes": "Government Schemes",
+    "about": "About Initiative",
+    "signInGoogle": "Sign in",
+    "getStarted": "Get Started",
+    "dashboardLink": "Open Dashboard",
+    "switchLanguage": "Select Language"
+  },
+  "header": {
+    "activeLocationLabel": "Active Location",
+    "selectEnterprise": "Select Enterprise Model",
+    "allIndia": "All India (LGD Directory)",
+    "jwtSession": "JWT Session",
+    "notifications": "Notifications",
+    "myProfile": "Entrepreneur Profile",
+    "logout": "Sign Out",
+    "dishaOsTitle": "DISHA AI OS Copilot",
+    "searchPlaceholder": "Search villages, commodities, or schemes..."
+  },
+  "welcome": {
+    "heroHeadline": "Evidence-Driven Enterprise Direction for Bharat's Rural Entrepreneurs",
+    "heroSubtitle": "Evaluate business feasibility, generate credit-ready bankable project reports, and unlock verified central and state subsidies with zero speculation.",
+    "badgeLabel": "Government of India LGD & MSME Compliant",
+    "startPlanningBtn": "Start Business Planning",
+    "exploreMethodologyBtn": "Explore Methodology",
+    "statsEntrepreneursLabel": "Rural Entrepreneurs Guided",
+    "statsDistrictsLabel": "LGD Districts Covered",
+    "statsSchemesLabel": "Versioned Government Schemes",
+    "statsSubsidiesLabel": "PMEGP Capital Subsidies Unlocked"
+  },
+  "dashboard": {
+    "overviewTitle": "Enterprise Intelligence Overview",
+    "overviewSubtitle": "Deterministic feasibility scoring, local market insights, and capital structure",
+    "swotAnalysis": "HBFS Feasibility & SWOT Matrix",
+    "marketDemand": "Hyper-Local Mandi & Market Insights",
+    "financialStructuring": "Debt-Equity & Amortization Schedule",
+    "governmentSchemes": "Eligible Government Schemes & Subsidies",
+    "documentChecklist": "Statutory Documentation Checklist",
+    "applicationsProgress": "DIC Application Progress Tracker",
+    "grievanceSupport": "Grievance Redressal & Help Desk",
+    "exportDprBtn": "Download Bankable DPR (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "Full Legal Name (as per Aadhaar / PAN)",
+    "emailLabel": "Email Address",
+    "mobileLabel": "10-Digit Mobile Number",
+    "stateLabel": "State / Union Territory",
+    "districtLabel": "District",
+    "blockLabel": "Sub-District / Block / Taluk",
+    "panchayatLabel": "Gram Panchayat / Local Body",
+    "villageLabel": "Village / Revenue Gaon / Habitation",
+    "pincodeLabel": "Postal PIN Code",
+    "activityTypeLabel": "Enterprise Activity Type",
+    "projectCostLabel": "Total Project Outlay (₹)",
+    "ownContributionLabel": "Promoter's Equity Margin (%)",
+    "searchVillagePlaceholder": "Search revenue gaon or postal PIN code...",
+    "saveProfileBtn": "Save & Continue",
+    "cancelBtn": "Cancel",
+    "submitBtn": "Submit Application"
+  },
+  "badges": {
+    "lgdVerified": "LGD Directory Verified",
+    "specialCategoryRural": "Special Category (Rural Area — 35% Margin)",
+    "pmegpEligible": "PMEGP Subsidy Eligible",
+    "odopNotified": "ODOP Notified Commodity",
+    "highFeasibility": "High Commercial Feasibility",
+    "lowRisk": "Low Credit & Default Risk",
+    "unknownStateWarning": "Unverified Data: Marked as UNKNOWN (Zero Speculation)"
+  },
+  "footer": {
+    "copyrightText": "© 2026 Gram-Disha. Rural Enterprise Decision Support OS.",
+    "madeInIndia": "Designed and engineered for rural and semi-urban India.",
+    "teamErgon": "Enterprise Platform",
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms & Conditions",
+    "grievancePortal": "National Grievance Portal"
+  },
+  "accessibility": {
+    "selectLanguageAria": "Select application language",
+    "closeMenuAria": "Close navigation menu",
+    "openMenuAria": "Open navigation menu",
+    "rtlNotice": "Right-to-Left (RTL) script layout active",
+    "scriptName": "Latin"
+  }
+}

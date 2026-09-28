@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "ग्राम-दिशा",
+    "appTagline": "तथ्य-आधारित ग्रामीण उद्यम निर्णय आ सलाहकार प्रणाली",
+    "sihBadge": "V2.0 OS",
+    "initiative": "टीम एर्गोन — स्मार्ट इंडिया हैकाथॉन"
+  },
+  "nav": {
+    "home": "मुखपृष्ठ",
+    "howItWorks": "ई कोना काज करैत अछि",
+    "features": "मंचक विशेषता",
+    "feasibility": "व्यवहार्यता आकलन (HBFS)",
+    "financials": "वित्तीय संरचना",
+    "schemes": "सरकारी योजना",
+    "about": "हमरा सभक विषय मे",
+    "signInGoogle": "गूगल सं प्रवेश करू",
+    "getStarted": "आरंभ करू",
+    "dashboardLink": "डैशबोर्ड खोलू",
+    "switchLanguage": "भाषा बदलू"
+  },
+  "header": {
+    "activeLocationLabel": "चयनित स्थान",
+    "selectEnterprise": "उद्यमक प्रारूप चुनू",
+    "allIndia": "समस्त भारत (LGD निर्देशिका)",
+    "jwtSession": "सत्र सत्यापन",
+    "notifications": "सूचना",
+    "myProfile": "उद्यमी प्रोफाइल",
+    "logout": "लॉग आउट",
+    "dishaOsTitle": "दिशा AI OS सलाहकार",
+    "searchPlaceholder": "गाम, फसल आ योजना खोजू..."
+  },
+  "welcome": {
+    "heroHeadline": "ग्रामीण भारतक उद्यमी लेल तथ्य-आधारित व्यावसायिक दिशा",
+    "heroSubtitle": "व्यवसायक व्यवहार्यता जाँचु, बैंक लेल परियोजना रिपोर्ट बनाऊ आ बिना कोनो अनुमानक सरकारी अनुदान प्राप्त करू।",
+    "badgeLabel": "भारत सरकारक LGD आ MSME मानकानुरूप",
+    "startPlanningBtn": "व्यापार योजना शुरू करू",
+    "exploreMethodologyBtn": "कार्यप्रणाली समझू",
+    "statsEntrepreneursLabel": "मार्गदर्शन प्राप्त उद्यमी",
+    "statsDistrictsLabel": "सम्मिलित जिला",
+    "statsSchemesLabel": "प्रमाणित सरकारी योजना",
+    "statsSubsidiesLabel": "PMEGP अनुदान सहायता"
+  },
+  "dashboard": {
+    "overviewTitle": "उद्यम अवलोकन",
+    "overviewSubtitle": "सटीक व्यवहार्यता स्कोर, स्थानीय बजारक समीक्षा आ पूंजी संरचना",
+    "swotAnalysis": "HBFS व्यवहार्यता आ SWOT विश्लेषण",
+    "marketDemand": "स्थानीय मंडी आ मूल्यक जानकारी",
+    "financialStructuring": "ऋण, पूंजी आ किश्तीक विवरण",
+    "governmentSchemes": "योग्य सरकारी योजना आ अनुदान",
+    "documentChecklist": "आवश्यक कानूनी दस्तावेजक सूची",
+    "applicationsProgress": "DIC आवेदनक प्रगति",
+    "grievanceSupport": "शिकायत निवारण आ सहायता केंद्र",
+    "exportDprBtn": "परियोजना रिपोर्ट डाउनलोड करू (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "पूरा नाम (आधार / पैन केर अनुसार)",
+    "emailLabel": "ईमेल पता",
+    "mobileLabel": "१० अंकक मोबाइल नंबर",
+    "stateLabel": "राज्य / केंद्र शासित प्रदेश",
+    "districtLabel": "जिला",
+    "blockLabel": "प्रखंड / अनुमंडल",
+    "panchayatLabel": "ग्राम पंचायत",
+    "villageLabel": "गाम / टोला",
+    "pincodeLabel": "डाक पिन कोड",
+    "activityTypeLabel": "उद्यमक प्रकार",
+    "projectCostLabel": "कुल परियोजना लागत (₹)",
+    "ownContributionLabel": "अपन पूंजी हिस्सा (%)",
+    "searchVillagePlaceholder": "गाम वा पिन कोड खोजू...",
+    "saveProfileBtn": "सहेजू आ आगू बढ़ू",
+    "cancelBtn": "रद्द करू",
+    "submitBtn": "आवेदन जमा करू"
+  },
+  "badges": {
+    "lgdVerified": "LGD निर्देशिका सत्यापित",
+    "specialCategoryRural": "विशेष श्रेणी (ग्रामीण क्षेत्र — ३५% अनुदान)",
+    "pmegpEligible": "PMEGP अनुदानक योग्य",
+    "odopNotified": "ODOP अधिसूचित उत्पाद",
+    "highFeasibility": "उच्च व्यावसायिक संभावना",
+    "lowRisk": "कम ऋण जोखिम",
+    "unknownStateWarning": "असत्यापित डेटा: UNKNOWN अंकित"
+  },
+  "footer": {
+    "copyrightText": "© २०२६ ग्राम-दिशा। स्मार्ट इंडिया हैकाथॉन लेल टीम एर्गोन द्वारा निर्मित।",
+    "madeInIndia": "ग्रामीण भारतक लेल समर्पित।",
+    "teamErgon": "टीम एर्गोन",
+    "privacyPolicy": "गोपनीयता नीति",
+    "termsConditions": "नियम आ शर्त",
+    "grievancePortal": "राष्ट्रीय शिकायत पोर्टल"
+  },
+  "accessibility": {
+    "selectLanguageAria": "भाषा चुनू",
+    "closeMenuAria": "मेनू बंद करू",
+    "openMenuAria": "मेनू खोलू",
+    "rtlNotice": "बामा सं दाहिना लेआउट सक्रिय",
+    "scriptName": "Devanagari (Maithili)"
+  }
+}

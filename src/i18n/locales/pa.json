@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "ਗ੍ਰਾਮ-ਦਿਸ਼ਾ",
+    "appTagline": "ਤੱਥ-ਅਧਾਰਿਤ ਪੇਂਡੂ ਉੱਦਮ ਖੁਫੀਆ ਅਤੇ ਸਲਾਹਕਾਰ ਪ੍ਰਣਾਲੀ",
+    "sihBadge": "V2.0 OS",
+    "initiative": "ਟੀਮ ਅਰਗੋਨ — ਸਮਾਰਟ ਇੰਡੀਆ ਹੈਕਾਥੌਨ"
+  },
+  "nav": {
+    "home": "ਮੁੱਖ ਪੰਨਾ",
+    "howItWorks": "ਇਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ",
+    "features": "ਪਲੇਟਫਾਰਮ ਦੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ",
+    "feasibility": "ਸੰਭਾਵਨਾ ਵਿਸ਼ਲੇਸ਼ਣ (HBFS)",
+    "financials": "ਵਿੱਤੀ ਢਾਂਚਾ",
+    "schemes": "ਸਰਕਾਰੀ ਸਕੀਮਾਂ",
+    "about": "ਸਾਡੇ ਬਾਰੇ",
+    "signInGoogle": "ਗੂਗਲ ਰਾਹੀਂ ਲੌਗਇਨ ਕਰੋ",
+    "getStarted": "ਸ਼ੁਰੂ ਕਰੋ",
+    "dashboardLink": "ਡੈਸ਼ਬੋਰਡ ਖੋਲ੍ਹੋ",
+    "switchLanguage": "ਭਾਸ਼ਾ ਬਦਲੋ"
+  },
+  "header": {
+    "activeLocationLabel": "ਚੁਣੀ ਗਈ ਜਗ੍ਹਾ",
+    "selectEnterprise": "ਕਾਰੋਬਾਰੀ ਮਾਡਲ ਚੁਣੋ",
+    "allIndia": "ਸਮੁੱਚਾ ਭਾਰਤ (LGD ਡਾਇਰੈਕਟਰੀ)",
+    "jwtSession": "ਸੈਸ਼ਨ ਪ੍ਰਮਾਣੀਕਰਨ",
+    "notifications": "ਸੂਚਨਾਵਾਂ",
+    "myProfile": "ਉੱਦਮੀ ਪ੍ਰੋਫਾਈਲ",
+    "logout": "ਲਾਗ ਆਊਟ",
+    "dishaOsTitle": "ਦਿਸ਼ਾ AI OS ਸਹਾਇਕ",
+    "searchPlaceholder": "ਪਿੰਡ, ਫ਼ਸਲਾਂ ਜਾਂ ਸਕੀਮਾਂ ਖੋਜੋ..."
+  },
+  "welcome": {
+    "heroHeadline": "ਭਾਰਤ ਦੇ ਪੇਂਡੂ ਉੱਦਮੀਆਂ ਲਈ ਸਬੂਤ-ਅਧਾਰਿਤ ਕਾਰੋਬਾਰੀ ਦਿਸ਼ਾ",
+    "heroSubtitle": "ਕਾਰੋਬਾਰ ਦੀ ਵਿਵਹਾਰਕਤਾ ਦਾ ਮੁਲਾਂਕਣ ਕਰੋ, ਬੈਂਕ-ਯੋਗ ਪ੍ਰੋਜੈਕਟ ਰਿਪੋਰਟਾਂ ਤਿਆਰ ਕਰੋ ਅਤੇ ਸਰਕਾਰੀ ਸਬਸਿਡੀਆਂ ਪ੍ਰਾਪਤ ਕਰੋ।",
+    "badgeLabel": "ਭਾਰਤ ਸਰਕਾਰ ਦੇ LGD ਅਤੇ MSME ਨਿਯਮਾਂ ਅਨੁਸਾਰ",
+    "startPlanningBtn": "ਕਾਰੋਬਾਰੀ ਯੋਜਨਾ ਸ਼ੁਰੂ ਕਰੋ",
+    "exploreMethodologyBtn": "ਕਾਰਜਪ੍ਰਣਾਲੀ ਸਮਝੋ",
+    "statsEntrepreneursLabel": "ਸੇਧ ਪ੍ਰਾਪਤ ਉੱਦਮੀ",
+    "statsDistrictsLabel": "ਸ਼ਾਮਲ ਜ਼ਿਲ੍ਹੇ",
+    "statsSchemesLabel": "ਪ੍ਰਮਾਣਿਤ ਸਰਕਾਰੀ ਸਕੀਮਾਂ",
+    "statsSubsidiesLabel": "PMEGP ਸਬਸਿਡੀ ਸਹਾਇਤਾ"
+  },
+  "dashboard": {
+    "overviewTitle": "ਕਾਰੋਬਾਰੀ ਸੰਖੇਪ",
+    "overviewSubtitle": "ਸੰਭਾਵਨਾ ਸਕੋਰ, ਸਥਾਨਕ ਮੰਡੀ ਰੁਝਾਨ ਅਤੇ ਪੂੰਜੀ ਢਾਂਚਾ",
+    "swotAnalysis": "HBFS ਸੰਭਾਵਨਾ ਅਤੇ SWOT ਵਿਸ਼ਲੇਸ਼ਣ",
+    "marketDemand": "ਸਥਾਨਕ ਮੰਡੀ ਅਤੇ ਭਾਅ ਦੀ ਜਾਣਕਾਰੀ",
+    "financialStructuring": "ਕਰਜ਼ਾ-ਇਕੁਇਟੀ ਅਤੇ ਕਿਸ਼ਤਾਂ ਦਾ ਵੇਰਵਾ",
+    "governmentSchemes": "ਯੋਗ ਸਰਕਾਰੀ ਸਕੀਮਾਂ ਅਤੇ ਸਬਸਿਡੀਆਂ",
+    "documentChecklist": "ਲੋੜੀਂਦੇ ਦਸਤਾਵੇਜ਼ਾਂ ਦੀ ਸੂਚੀ",
+    "applicationsProgress": "DIC ਅਰਜ਼ੀ ਦੀ ਪ੍ਰਗਤੀ",
+    "grievanceSupport": "ਸ਼ਿਕਾਇਤ ਨਿਵਾਰਨ ਅਤੇ ਹੈਲਪ ਡੈਸਕ",
+    "exportDprBtn": "ਪ੍ਰੋਜੈਕਟ ਰਿਪੋਰਟ ਡਾਊਨਲੋਡ ਕਰੋ (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "ਪੂਰਾ ਨਾਮ (ਆਧਾਰ / ਪੈਨ ਅਨੁਸਾਰ)",
+    "emailLabel": "ਈਮੇਲ ਪਤਾ",
+    "mobileLabel": "10-ਅੰਕਾਂ ਦਾ ਮੋਬਾਈਲ ਨੰਬਰ",
+    "stateLabel": "ਰਾਜ / ਕੇਂਦਰ ਸ਼ਾਸਿਤ ਪ੍ਰਦੇਸ਼",
+    "districtLabel": "ਜ਼ਿਲ੍ਹਾ",
+    "blockLabel": "ਬਲਾਕ / ਤਹਿਸੀਲ",
+    "panchayatLabel": "ਗ੍ਰਾਮ ਪੰਚਾਇਤ",
+    "villageLabel": "ਪਿੰਡ / ਆਵਾਸ",
+    "pincodeLabel": "ਡਾਕ ਪਿੰਨ ਕੋਡ",
+    "activityTypeLabel": "ਉੱਦਮ ਦੀ ਕਿਸਮ",
+    "projectCostLabel": "ਕੁੱਲ ਪ੍ਰੋਜੈਕਟ ਲਾਗਤ (₹)",
+    "ownContributionLabel": "ਨਿਜੀ ਪੂੰਜੀ ਹਿੱਸਾ (%)",
+    "searchVillagePlaceholder": "ਪਿੰਡ ਜਾਂ ਪਿੰਨ ਕੋਡ ਖੋਜੋ...",
+    "saveProfileBtn": "ਸੰਭਾਲੋ ਅਤੇ ਜਾਰੀ ਰੱਖੋ",
+    "cancelBtn": "ਰੱਦ ਕਰੋ",
+    "submitBtn": "ਅਰਜ਼ੀ ਜਮ੍ਹਾਂ ਕਰੋ"
+  },
+  "badges": {
+    "lgdVerified": "LGD ਡਾਇਰੈਕਟਰੀ ਪ੍ਰਮਾਣਿਤ",
+    "specialCategoryRural": "ਵਿਸ਼ੇਸ਼ ਸ਼੍ਰੇਣੀ (ਪੇਂਡੂ ਖੇਤਰ — 35% ਸਬਸਿਡੀ)",
+    "pmegpEligible": "PMEGP ਸਬਸਿਡੀ ਲਈ ਯੋਗ",
+    "odopNotified": "ODOP ਨੋਟੀਫਾਈਡ ਉਤਪਾਦ",
+    "highFeasibility": "ਉੱਚ ਵਪਾਰਕ ਸੰਭਾਵਨਾ",
+    "lowRisk": "ਘੱਟ ਕਰਜ਼ਾ ਜੋਖਮ",
+    "unknownStateWarning": "ਅਪ੍ਰਮਾਣਿਤ ਜਾਣਕਾਰੀ: UNKNOWN ਚਿੰਨ੍ਹਿਤ"
+  },
+  "footer": {
+    "copyrightText": "© 2026 ਗ੍ਰਾਮ-ਦਿਸ਼ਾ। ਸਮਾਰਟ ਇੰਡੀਆ ਹੈਕਾਥੌਨ ਲਈ ਟੀਮ ਅਰਗੋਨ ਦੁਆਰਾ ਤਿਆਰ ਕੀਤਾ ਗਿਆ।",
+    "madeInIndia": "ਪੇਂਡੂ ਭਾਰਤ ਲਈ ਵਿਸ਼ੇਸ਼ ਤੌਰ 'ਤੇ ਡਿਜ਼ਾਈਨ ਕੀਤਾ ਗਿਆ।",
+    "teamErgon": "ਟੀਮ ਅਰਗੋਨ",
+    "privacyPolicy": "ਨਿੱਜਤਾ ਨੀਤੀ",
+    "termsConditions": "ਨਿਯਮ ਅਤੇ ਸ਼ਰਤਾਂ",
+    "grievancePortal": "ਰਾਸ਼ਟਰੀ ਸ਼ਿਕਾਇਤ ਪੋਰਟਲ"
+  },
+  "accessibility": {
+    "selectLanguageAria": "ਭਾਸ਼ਾ ਚੁਣੋ",
+    "closeMenuAria": "ਮੀਨੂ ਬੰਦ ਕਰੋ",
+    "openMenuAria": "ਮੀਨੂ ਖੋਲ੍ਹੋ",
+    "rtlNotice": "ਖੱਬੇ ਤੋਂ ਸੱਜੇ ਲੇਆਉਟ ਸਰਗਰਮ",
+    "scriptName": "Gurmukhi"
+  }
+}

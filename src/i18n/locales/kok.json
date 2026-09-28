@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "ग्राम-दिशा",
+    "appTagline": "पुराव्यांचेर आदारिल्लें ग्रामीण उद्देग मार्गदर्शन आनी सल्लागार तंत्रज्ञान",
+    "sihBadge": "V2.0 OS",
+    "initiative": "टीम एर्गोन — स्मार्ट इंडिया हॅकाथॉन"
+  },
+  "nav": {
+    "home": "मुखेल पान",
+    "howItWorks": "हें कशें काम करता",
+    "features": "प्लॅटफॉर्मचीं वैशिश्ट्यां",
+    "feasibility": "शक्यताय तपासणी (HBFS)",
+    "financials": "आर्थिक येवजण",
+    "schemes": "सरकारी येवजण्यो",
+    "about": "आमच्या विशीं",
+    "signInGoogle": "गूगल वरवीं भितर सरा",
+    "getStarted": "सुरू करात",
+    "dashboardLink": "डॅशबोर्ड उगडा",
+    "switchLanguage": "भास बदलात"
+  },
+  "header": {
+    "activeLocationLabel": "निवडिल्लो जागो",
+    "selectEnterprise": "वेवसाय मॉडेल निवडा",
+    "allIndia": "सगळो भारत (LGD निर्देशिका)",
+    "jwtSession": "सत्र प्रमाणीकरण",
+    "notifications": "सुचोवण्यो",
+    "myProfile": "उद्योजक प्रोफायल",
+    "logout": "भायर पडा",
+    "dishaOsTitle": "दिशा AI OS सांगाती",
+    "searchPlaceholder": "गांव, पीक वा येवजण्यो सोधात..."
+  },
+  "welcome": {
+    "heroHeadline": "भारतांतल्या ग्रामीण उद्योजकां खातीर पुराव्यांचेर आदारिल्ली वेवसायिक दिशा",
+    "heroSubtitle": "वेवसायाची वेव्हारीक शक्यताय तपासात, बँक-योग्य प्रकल्प अहवाल तयार करात आनी सरकारी सबसिडी मेळयात.",
+    "badgeLabel": "भारत सरकारच्या LGD आनी MSME नेम नेमणुकां प्रमाण",
+    "startPlanningBtn": "वेवसाय येवजण सुरू करात",
+    "exploreMethodologyBtn": "पद्धत समजून घेयात",
+    "statsEntrepreneursLabel": "मार्गदर्शन मेळिल्ले उद्योजक",
+    "statsDistrictsLabel": "आस्पाव आशिल्ले जिल्हे",
+    "statsSchemesLabel": "तपासिल्ल्यो सरकारी येवजण्यो",
+    "statsSubsidiesLabel": "PMEGP सबसिडी आदार"
+  },
+  "dashboard": {
+    "overviewTitle": "उद्देग म्हायती सारांश",
+    "overviewSubtitle": "अचूक शक्यताय गुण, थळावी बाजार म्हायती आनी भांडवल रचणूक",
+    "swotAnalysis": "HBFS शक्यताय आनी SWOT विस्लेषण",
+    "marketDemand": "थळावी बाजारपेठ आनी दर म्हायती",
+    "financialStructuring": "ऋण-इक्विटी आनी हप्त्यांचे वेळापत्रक",
+    "governmentSchemes": "पात्र सरकारी येवजण्यो आनी सबसिडी",
+    "documentChecklist": "गरजेच्या कागदपत्रांची वळेरी",
+    "applicationsProgress": "DIC अर्ज प्रगती",
+    "grievanceSupport": "तक्रार निवारण आनी आदार केंद्र",
+    "exportDprBtn": "प्रकल्प अहवाल डावनलोड करात (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "पूर्ण नांव (आधार / पॅन कार्डा प्रमाण)",
+    "emailLabel": "ईमेल पत्तो",
+    "mobileLabel": "१० आंकड्यांचो मोबाइल नंबर",
+    "stateLabel": "राज्य / केंद्रशासित प्रदेश",
+    "districtLabel": "जिल्हो",
+    "blockLabel": "तालुको / विभाग",
+    "panchayatLabel": "ग्रामपंचायत",
+    "villageLabel": "गांव / वाडो",
+    "pincodeLabel": "टपाल पिन कोड",
+    "activityTypeLabel": "उद्देगाचो प्रकार",
+    "projectCostLabel": "एकूण प्रकल्प खर्च (₹)",
+    "ownContributionLabel": "स्वतःचें भांडवल वांटो (%)",
+    "searchVillagePlaceholder": "गांव वा पिन कोड सोधात...",
+    "saveProfileBtn": "सांबाळा आनी मुखार वचात",
+    "cancelBtn": "रद्द करात",
+    "submitBtn": "अर्ज सादर करात"
+  },
+  "badges": {
+    "lgdVerified": "LGD निर्देशिका पडताळिल्लें",
+    "specialCategoryRural": "खाशेलो वर्ग (ग्रामीण वाठार — ३५% सबसिडी)",
+    "pmegpEligible": "PMEGP सबसिडी खातीर पात्र",
+    "odopNotified": "ODOP अधिसूचीत उत्पादन",
+    "highFeasibility": "उंच वेव्हारीक शक्यताय",
+    "lowRisk": "कमी रीण धोको",
+    "unknownStateWarning": "पडताळणी नाशिल्ली म्हायती: UNKNOWN खूण"
+  },
+  "footer": {
+    "copyrightText": "© २०२६ ग्राम-दिशा। स्मार्ट इंडिया हॅकाथॉन खातीर टीम एर्गोन निर्मित.",
+    "madeInIndia": "ग्रामीण भारता खातीर समर्पित.",
+    "teamErgon": "टीम एर्गोन",
+    "privacyPolicy": "गोपनीयता धोरण",
+    "termsConditions": "नेम आनी अटी",
+    "grievancePortal": "राष्ट्रीय तक्रार निवारण पोर्टल"
+  },
+  "accessibility": {
+    "selectLanguageAria": "भास निवडा",
+    "closeMenuAria": "मेनू बंद करात",
+    "openMenuAria": "मेनू उगडात",
+    "rtlNotice": "दाव्याकडल्यान उजव्याक लेआउट",
+    "scriptName": "Devanagari (Konkani)"
+  }
+}

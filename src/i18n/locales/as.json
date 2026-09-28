@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "গ্ৰাম-দিশা",
+    "appTagline": "প্ৰমাণ-ভিত্তিক গ্ৰামীণ উদ্যোগ আৰু পৰামৰ্শদাতা ব্যৱস্থা",
+    "sihBadge": "V2.0 OS",
+    "initiative": "টিম এৰগন — স্মাৰ্ট ইণ্ডিয়া হেকাথন"
+  },
+  "nav": {
+    "home": "গৃহপৃষ্ঠা",
+    "howItWorks": "ই কেনেকৈ কাম কৰে",
+    "features": "প্লেটফৰ্মৰ বৈশিষ্ট্যসমূহ",
+    "feasibility": "সম্ভাৱ্যতা বিশ্লেষণ (HBFS)",
+    "financials": "বিত্তীয় পৰিকল্পনা",
+    "schemes": "চৰকাৰী আঁচনি",
+    "about": "আমাৰ বিষয়ে",
+    "signInGoogle": "Google ৰ সৈতে প্ৰৱেশ কৰক",
+    "getStarted": "আৰম্ভ কৰক",
+    "dashboardLink": "ডেশ্ববৰ্ড খোলক",
+    "switchLanguage": "ভাষা সলনি কৰক"
+  },
+  "header": {
+    "activeLocationLabel": "নিৰ্বাচিত স্থান",
+    "selectEnterprise": "ব্যৱসায়িক আৰ্হি বাছক",
+    "allIndia": "সমগ্ৰ ভাৰত (LGD ডাইৰেক্টৰি)",
+    "jwtSession": "সত্ৰ প্ৰমাণীকৰণ",
+    "notifications": "অধিসূচনা",
+    "myProfile": "উদ্যমীৰ প্ৰফাইল",
+    "logout": "প্ৰস্থান কৰক",
+    "dishaOsTitle": "দিশা AI OS সহায়ক",
+    "searchPlaceholder": "গাঁও, সামগ্ৰী বা আঁচনি অনুসন্ধান কৰক..."
+  },
+  "welcome": {
+    "heroHeadline": "ভাৰতৰ গ্ৰাম্য উদ্যোগীসকলৰ বাবে প্ৰমাণ-আধাৰিত ব্যৱসায়িক দিশ",
+    "heroSubtitle": "ব্যৱসায়ৰ সম্ভাৱ্যতা পৰীক্ষা কৰক, বেংকযোগ্য প্ৰকল্প প্ৰতিবেদন প্ৰস্তুত কৰক আৰু চৰকাৰী ৰাজসাহায্য লাভ কৰক।",
+    "badgeLabel": "ভাৰত চৰকাৰৰ LGD আৰু MSME নিৰ্দেশনা অনুসৰি",
+    "startPlanningBtn": "ব্যৱসায় পৰিকল্পনা আৰম্ভ কৰক",
+    "exploreMethodologyBtn": "পদ্ধতিটো বুজি লওক",
+    "statsEntrepreneursLabel": "পৰামৰ্শপ্ৰাপ্ত গ্ৰাম্য উদ্যোগী",
+    "statsDistrictsLabel": "অন্তৰ্ভুক্ত জিলাসমূহ",
+    "statsSchemesLabel": "প্ৰমাণিত চৰকাৰী আঁচনি",
+    "statsSubsidiesLabel": "PMEGP ৰাজসাহায্য সমৰ্থন"
+  },
+  "dashboard": {
+    "overviewTitle": "উদ্যোগৰ সামগ্ৰিক দৃশ্যপট",
+    "overviewSubtitle": "সম্ভাৱ্যতা স্ক'ৰ, স্থানীয় বজাৰৰ তথ্য আৰু মূলধন গঠন",
+    "swotAnalysis": "HBFS সম্ভাৱ্যতা আৰু SWOT বিশ্লেষণ",
+    "marketDemand": "স্থানীয় বজাৰ আৰু মূল্য পৰ্যালোচনা",
+    "financialStructuring": "ঋণ-ইকুইটি আৰু কিস্তিৰ সূচী",
+    "governmentSchemes": "উপযুক্ত চৰকাৰী আঁচনি আৰু ৰাজসাহায্য",
+    "documentChecklist": "প্ৰয়োজনীয় নথি-পত্ৰৰ তালিকা",
+    "applicationsProgress": "DIC আবেদনৰ অগ্ৰগতি",
+    "grievanceSupport": "অভিযোগ নিষ্পত্তি আৰু সাহায্য কেন্দ্ৰ",
+    "exportDprBtn": "প্ৰকল্প প্ৰতিবেদন ডাউনল'ড কৰক (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "সম্পূৰ্ণ নাম (আধাৰ / পেন কাৰ্ড অনুসৰি)",
+    "emailLabel": "ইমেইল ঠিকনা",
+    "mobileLabel": "১০ টা সংখ্যাৰ মোবাইল নম্বৰ",
+    "stateLabel": "ৰাজ্য / কেন্দ্ৰীয় শাসিত অঞ্চল",
+    "districtLabel": "জিলা",
+    "blockLabel": "মহকুমা / খণ্ড",
+    "panchayatLabel": "গাঁও পঞ্চায়ত",
+    "villageLabel": "গাঁও / বাসস্থান",
+    "pincodeLabel": "ডাক পিন ক'ড",
+    "activityTypeLabel": "উদ্যোগৰ প্ৰকাৰ",
+    "projectCostLabel": "মুঠ প্ৰকল্প ব্যয় (₹)",
+    "ownContributionLabel": "নিজস্ব মূলধন অংশ (%)",
+    "searchVillagePlaceholder": "গাঁও বা পিন ক'ড সন্ধান কৰক...",
+    "saveProfileBtn": "সংৰক্ষণ কৰক আৰু আগবাঢ়ক",
+    "cancelBtn": "বাতিল কৰক",
+    "submitBtn": "আবেদন দাখিল কৰক"
+  },
+  "badges": {
+    "lgdVerified": "LGD ডাইৰেক্টৰি পৰীক্ষিত",
+    "specialCategoryRural": "বিশেষ শ্ৰেণী (গ্ৰাম্য অঞ্চল — ৩৫% ৰাজসাহায্য)",
+    "pmegpEligible": "PMEGP ৰাজসাহায্যৰ যোগ্য",
+    "odopNotified": "ODOP অধিসূচিত উৎপাদিত সামগ্ৰী",
+    "highFeasibility": "উচ্চ বাণিজ্যিক সম্ভাৱনা",
+    "lowRisk": "কম ঋণজনিত বিপদাশংকা",
+    "unknownStateWarning": "অপৰীক্ষিত তথ্য: UNKNOWN হিচাপে চিহ্নিত"
+  },
+  "footer": {
+    "copyrightText": "© ২০২৬ গ্ৰাম-দিশা। স্মাৰ্ট ইণ্ডিয়া হেকাথনৰ বাবে টিম এৰগনে নিৰ্মাণ কৰা।",
+    "madeInIndia": "গ্ৰাম্য ভাৰতৰ বাবে বিশেষভাৱে নিৰ্মিত।",
+    "teamErgon": "টিম এৰগন",
+    "privacyPolicy": "গোপনীয়তা নীতি",
+    "termsConditions": "নিয়মাৱলী আৰু চৰ্তসমূহ",
+    "grievancePortal": "ৰাষ্ট্ৰীয় অভিযোগ নিষ্পত্তি পৰ্টেল"
+  },
+  "accessibility": {
+    "selectLanguageAria": "ভাষা বাছনি কৰক",
+    "closeMenuAria": "মেনু বন্ধ কৰক",
+    "openMenuAria": "মেনু খোলক",
+    "rtlNotice": "বাওঁফালৰ পৰা সোঁফাললৈ লেআউট সক্ৰিয়",
+    "scriptName": "Assamese"
+  }
+}

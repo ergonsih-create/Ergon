@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "ग्राम-दिशा",
+    "appTagline": "तथ्य-आधारित ग्रामीण उद्यम निर्णय एवं सलाहकार प्रणाली",
+    "sihBadge": "V2.0 OS",
+    "initiative": "टीम एरगॉन — स्मार्ट इंडिया हैकाथॉन"
+  },
+  "nav": {
+    "home": "मुख्य पृष्ठ",
+    "howItWorks": "यह कैसे काम करता है",
+    "features": "मंच की विशेषताएं",
+    "feasibility": "एचबीएफएस व्यवहार्यता",
+    "financials": "वित्तीय संरचना",
+    "schemes": "सरकारी योजनाएं",
+    "about": "पहल के बारे में",
+    "signInGoogle": "साइन इन",
+    "getStarted": "शुरू करें",
+    "dashboardLink": "डैशबोर्ड खोलें",
+    "switchLanguage": "भाषा चुनें"
+  },
+  "header": {
+    "activeLocationLabel": "सक्रिय स्थान",
+    "selectEnterprise": "उद्यम मॉडल चुनें",
+    "allIndia": "अखिल भारतीय (एलजीडी निर्देशिका)",
+    "jwtSession": "सक्रिय सत्र",
+    "notifications": "सूचनाएं",
+    "myProfile": "उद्यमी प्रोफ़ाइल",
+    "logout": "लॉग आउट",
+    "dishaOsTitle": "दिशा एआई ओएस सलाहकार",
+    "searchPlaceholder": "गांव, फसल या योजना खोजें..."
+  },
+  "welcome": {
+    "heroHeadline": "भारत के ग्रामीण उद्यमियों के लिए तथ्य-आधारित व्यावसायिक दिशा",
+    "heroSubtitle": "व्यवसाय की व्यवहार्यता का सटीक आकलन करें, बैंकों द्वारा स्वीकार्य डीपीआर बनाएं और बिना किसी अनुमान के केंद्र व राज्य सरकारों की सत्यापित सब्सिडी प्राप्त करें।",
+    "badgeLabel": "भारत सरकार एलजीडी एवं एमएसएमई मानकों के अनुरूप",
+    "startPlanningBtn": "व्यवसाय योजना शुरू करें",
+    "exploreMethodologyBtn": "कार्यप्रणाली समझें",
+    "statsEntrepreneursLabel": "मार्गदर्शन प्राप्त ग्रामीण उद्यमी",
+    "statsDistrictsLabel": "शामिल एलजीडी जिले",
+    "statsSchemesLabel": "सत्यापित सरकारी योजनाएं",
+    "statsSubsidiesLabel": "पीएमईजीपी पूंजी सब्सिडी सहायता"
+  },
+  "dashboard": {
+    "overviewTitle": "उद्यम विश्लेषण सारांश",
+    "overviewSubtitle": "सटीक व्यवहार्यता स्कोर, स्थानीय मंडी डेटा और पूंजी संरचना",
+    "swotAnalysis": "एचबीएफएस व्यवहार्यता एवं स्वॉट मैट्रिक्स",
+    "marketDemand": "स्थानीय मंडी मांग एवं आपूर्ति विश्लेषण",
+    "financialStructuring": "ऋण-पूंजी अनुपात एवं किस्त सारणी",
+    "governmentSchemes": "पात्र सरकारी योजनाएं एवं अनुदान",
+    "documentChecklist": "अनिवार्य दस्तावेज़ सूची",
+    "applicationsProgress": "जिला उद्योग केंद्र (डीआईसी) आवेदन प्रगति",
+    "grievanceSupport": "शिकायत निवारण एवं सहायता केंद्र",
+    "exportDprBtn": "बैंक डीपीआर डाउनलोड करें (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "पूरा नाम (आधार / पैन के अनुसार)",
+    "emailLabel": "ईमेल पता",
+    "mobileLabel": "10-अंकीय मोबाइल नंबर",
+    "stateLabel": "राज्य / केंद्र शासित प्रदेश",
+    "districtLabel": "जिला",
+    "blockLabel": "प्रखंड / तहसील / उप-जिला",
+    "panchayatLabel": "ग्राम पंचायत / स्थानीय निकाय",
+    "villageLabel": "राजस्व गांव / बस्ती / मोहल्ला",
+    "pincodeLabel": "डाक पिन कोड",
+    "activityTypeLabel": "उद्यम गतिविधि का प्रकार",
+    "projectCostLabel": "कुल परियोजना लागत (₹)",
+    "ownContributionLabel": "स्वयं का अंशदान (%)",
+    "searchVillagePlaceholder": "राजस्व गांव या पिन कोड खोजें...",
+    "saveProfileBtn": "सहेजें और आगे बढ़ें",
+    "cancelBtn": "रद्द करें",
+    "submitBtn": "आवेदन जमा करें"
+  },
+  "badges": {
+    "lgdVerified": "एलजीडी निर्देशिका सत्यापित",
+    "specialCategoryRural": "विशेष श्रेणी (ग्रामीण क्षेत्र — 35% अनुदान)",
+    "pmegpEligible": "पीएमईजीपी सब्सिडी हेतु पात्र",
+    "odopNotified": "ओडीओपी अधिसूचित उत्पाद",
+    "highFeasibility": "उच्च व्यावसायिक व्यवहार्यता",
+    "lowRisk": "न्यूनतम ऋण जोखिम",
+    "unknownStateWarning": "अपुष्ट डेटा: UNKNOWN के रूप में चिह्नित (शून्य अनुमान)"
+  },
+  "footer": {
+    "copyrightText": "© 2026 ग्राम-दिशा। स्मार्ट इंडिया हैकाथॉन हेतु टीम एरगॉन द्वारा निर्मित।",
+    "madeInIndia": "ग्रामीण एवं अर्ध-शहरी भारत के उद्यमियों के लिए समर्पित।",
+    "teamErgon": "टीम एरगॉन",
+    "privacyPolicy": "गोपनीयता नीति",
+    "termsConditions": "नियम एवं शर्तें",
+    "grievancePortal": "राष्ट्रीय शिकायत निवारण पोर्टल"
+  },
+  "accessibility": {
+    "selectLanguageAria": "एप्लिकेशन की भाषा चुनें",
+    "closeMenuAria": "मेन्यू बंद करें",
+    "openMenuAria": "मेन्यू खोलें",
+    "rtlNotice": "बाएं-से-दाएं लिपि सक्रिय",
+    "scriptName": "देवनागरी"
+  }
+}

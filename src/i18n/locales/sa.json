@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "ग्राम-दिशा",
+    "appTagline": "प्रमाण-आधारितं ग्रामीणोद्यम-मार्गदर्शन-तन्त्रम्",
+    "sihBadge": "V2.0 OS",
+    "initiative": "वर्गः एर्गोन् — स्मार्ट इन्डिया ह्याकाथॉन्"
+  },
+  "nav": {
+    "home": "मुखपृष्ठम्",
+    "howItWorks": "कथं प्रवर्तते",
+    "features": "मञ्चस्य वैशिष्ट्यानि",
+    "feasibility": "सम्भाव्यता-परीक्षणम् (HBFS)",
+    "financials": "वित्तीय-संरचना",
+    "schemes": "सर्वकारीय-योजनाः",
+    "about": "अस्मद्विषये",
+    "signInGoogle": "गूगल-माध्यमेन प्रवेशः",
+    "getStarted": "प्रारभ्यताम्",
+    "dashboardLink": "फलकं उद्घाट्यताम्",
+    "switchLanguage": "भाषा परिवर्त्यताम्"
+  },
+  "header": {
+    "activeLocationLabel": "चयनितं स्थानम्",
+    "selectEnterprise": "उद्यम-प्रारूपं चिनुत",
+    "allIndia": "समग्र-भारतम् (LGD निर्देशिका)",
+    "jwtSession": "सत्र-प्रमाणीकरणम्",
+    "notifications": "सूचनाः",
+    "myProfile": "उद्यमी-विवरणम्",
+    "logout": "निर्गमनम्",
+    "dishaOsTitle": "दिशा AI OS सहायकः",
+    "searchPlaceholder": "ग्रामान्, शस्यानि वा योजनाः अन्विषन्तु..."
+  },
+  "welcome": {
+    "heroHeadline": "भारतस्य ग्रामीणोद्यमिभ्यः प्रमाण-आधारितं व्यावसायिकं मार्गदर्शनम्",
+    "heroSubtitle": "व्यवसायस्य सम्भाव्यतां परीक्षन्ताम्, वित्तकोश-योग्यं प्रकल्प-विवरणं सृजन्तु तथा सर्वकारीयं साहाय्यं प्राप्नुवन्तु।",
+    "badgeLabel": "भारतसर्वकारस्य LGD तथा MSME नियमानुकूलम्",
+    "startPlanningBtn": "व्यापार-योजनां प्रारभताम्",
+    "exploreMethodologyBtn": "कार्यप्रणालीं अवगच्छन्तु",
+    "statsEntrepreneursLabel": "मार्गदर्शिताः ग्रामीणोद्यमिनः",
+    "statsDistrictsLabel": "सम्मिलिताः जनपदाः",
+    "statsSchemesLabel": "प्रमाणीकृताः सर्वकारीय-योजनाः",
+    "statsSubsidiesLabel": "PMEGP साहाय्य-वितरणम्"
+  },
+  "dashboard": {
+    "overviewTitle": "उद्यम-समीक्षा",
+    "overviewSubtitle": "सटीकं सम्भाव्यता-मानम्, स्थानीय-विपणन-विवरणं तथा मूलधन-संरचना",
+    "swotAnalysis": "HBFS सम्भाव्यता तथा SWOT विश्लेषणम्",
+    "marketDemand": "स्थानिक-विपणि-मूल्यानां समीक्षा",
+    "financialStructuring": "ऋणम्, स्व-मूलधनं तथा किश्त-विवरणम्",
+    "governmentSchemes": "योग्याः सर्वकारीय-योजनाः तथा अनुदानानि",
+    "documentChecklist": "आवश्यक-प्रपत्राणां सूची",
+    "applicationsProgress": "DIC आवेदन-प्रगतिः",
+    "grievanceSupport": "कष्ट-निवारणं तथा साहाय्य-केन्द्रम्",
+    "exportDprBtn": "प्रकल्प-विवरणं अवतरतु (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "पूर्णं नाम (आधार / पान् पत्रानुसारम्)",
+    "emailLabel": "विद्युत्-पत्र-सङ्केतः",
+    "mobileLabel": "१० अङ्कात्मकः दूरभाष-सङ्ख्या",
+    "stateLabel": "राज्यम् / केन्द्रशासित-प्रदेशः",
+    "districtLabel": "जनपदम्",
+    "blockLabel": "प्रखण्डम् / मण्डलम्",
+    "panchayatLabel": "ग्रामपञ्चायतम्",
+    "villageLabel": "ग्रामः / आवासः",
+    "pincodeLabel": "पत्रालय-पिन-सङ्केतः",
+    "activityTypeLabel": "उद्यम-प्रकारः",
+    "projectCostLabel": "समग्र-प्रकल्प-व्ययः (₹)",
+    "ownContributionLabel": "स्वांश-मूलधनम् (%)",
+    "searchVillagePlaceholder": "ग्रामं वा पिन-सङ्केतं अन्विष्यतु...",
+    "saveProfileBtn": "संरक्ष्य अग्रेसरतु",
+    "cancelBtn": "निरस्यताम्",
+    "submitBtn": "आवेदनं समर्प्यताम्"
+  },
+  "badges": {
+    "lgdVerified": "LGD निर्देशिका प्रमाणीकृता",
+    "specialCategoryRural": "विशिष्ट-वर्गः (ग्रामीण-क्षेत्रम् — ३५% अनुदानम्)",
+    "pmegpEligible": "PMEGP अनुदान-योग्यम्",
+    "odopNotified": "ODOP अधिसूचित-उत्पादः",
+    "highFeasibility": "उत्कृष्ट-वाणिज्यिक-सम्भाव्यता",
+    "lowRisk": "न्यूनं ऋण-सङ्कटम्",
+    "unknownStateWarning": "अप्रमाणित-तथ्यम्: UNKNOWN अङ्कितम्"
+  },
+  "footer": {
+    "copyrightText": "© २०२६ ग्राम-दिशा। स्मार्ट इन्डिया ह्याकाथॉन् कृते वर्ग-एर्गोनेन निर्मितम्।",
+    "madeInIndia": "ग्रामीण-भारताय समर्पितम्।",
+    "teamErgon": "वर्गः एर्गोन्",
+    "privacyPolicy": "गोपनीयता-नीतिः",
+    "termsConditions": "नियमाः तथा उपाधयः",
+    "grievancePortal": "राष्ट्रीय-कष्टनिवारण-द्वारम्"
+  },
+  "accessibility": {
+    "selectLanguageAria": "भाषां चिनुत",
+    "closeMenuAria": "सूचीं पिदधातु",
+    "openMenuAria": "सूचीं उद्घाटयतु",
+    "rtlNotice": "वामतः दक्षिणं विन्यासः सक्रियः",
+    "scriptName": "Devanagari (Sanskrit)"
+  }
+}

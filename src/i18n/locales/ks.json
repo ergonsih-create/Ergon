@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "گرام-دِشا",
+    "appTagline": "حقایقن پؠٹھ مبنی دیہی کاروباری رہنمٲیی تہٕ مشورٕ نظام",
+    "sihBadge": "V2.0 OS",
+    "initiative": "ٹیم ایرگون — سمارٹ انڈیا ہیکاتھون"
+  },
+  "nav": {
+    "home": "اہم صفحہ",
+    "howItWorks": "یہٕ کِتھ پٲٹھۍ چھُ کٲم کران",
+    "features": "پلیٹ فارمک خاصیتہٕ",
+    "feasibility": "امکاناتن ہُنٛد جائزہ (HBFS)",
+    "financials": "مالیاتی ڈھانچہٕ",
+    "schemes": "سرکٲری سکیمہٕ",
+    "about": "اسہِ متعلق",
+    "signInGoogle": "گوگل کہِ ذریعے لاگ ان",
+    "getStarted": "شروٗع کٔرِو",
+    "dashboardLink": "ڈیش بورڈ کٔھلو",
+    "switchLanguage": "زبان بٔدلِو"
+  },
+  "header": {
+    "activeLocationLabel": "منتخب جاے",
+    "selectEnterprise": "کاروبار نمونہٕ ژٲرِو",
+    "allIndia": "سارُوی ہندوستان (LGD)",
+    "jwtSession": "محفوظ سیشن",
+    "notifications": "اطلاعات",
+    "myProfile": "کاروبار پروفائل",
+    "logout": "نیبر نیرِو",
+    "dishaOsTitle": "دِشا اے آئی مشیر",
+    "searchPlaceholder": "گام، فصٕل یا سکیم ژھانٛڈِو..."
+  },
+  "welcome": {
+    "heroHeadline": "دیہی ہندوستان کہِ کاروبارین خٲطرٕ حقایقن پؠٹھ مبنی رستہٕ",
+    "heroSubtitle": "کاروبار کین امکاناتن ہُنٛد صٔحیح اندازٕ لگٲوِو، بینک رپورٹ تیار کٔرِو تہٕ سرکٲری سبسڈی حٲصل کٔرِو۔",
+    "badgeLabel": "حکومت ہند کہِ ایل جی ڈی تہٕ ایم ایس ایم ای معیارن مطٲبق",
+    "startPlanningBtn": "کاروباری منصوبہٕ شروٗع کٔرِو",
+    "exploreMethodologyBtn": "طریقہٕ کٲر سمجِھو",
+    "statsEntrepreneursLabel": "رہنمٲیی حٲصل کٔرمٕتۍ دیہی کاروباری",
+    "statsDistrictsLabel": "شٲمل ایل جی ڈی ضلعہٕ",
+    "statsSchemesLabel": "تصدیق شُدٕ سرکٲری سکیمہٕ",
+    "statsSubsidiesLabel": "پی ایم ای جی پی سبسڈی امداد"
+  },
+  "dashboard": {
+    "overviewTitle": "کاروباری تجزیہٕ خلاصہٕ",
+    "overviewSubtitle": "امکاناتن ہُنٛد اسکور، مقامی منڈی معلومات تہٕ سرمایہٕ ساخت",
+    "swotAnalysis": "کاروباری امکانات تہٕ سوات (SWOT) تجزیہٕ",
+    "marketDemand": "مقامی منڈی مانٛگ تہٕ معائنہٕ",
+    "financialStructuring": "قرض تہٕ قسطن ہُنٛد جدول",
+    "governmentSchemes": "اہل سرکٲری سکیمہٕ تہٕ سبسڈی",
+    "documentChecklist": "ضروری کاغذاتن ہٕنٛز فہرست",
+    "applicationsProgress": "ضلعی صنعتی مرکز (DIC) درخواست پیش رفت",
+    "grievanceSupport": "شکایات ازالہٕ تہٕ مدد سنٹر",
+    "exportDprBtn": "بینک ڈی پی آر ڈاؤن لوڈ کٔرِو (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "پوٗرٕ ناو (آدھار / پین کارڈ مطٲبق)",
+    "emailLabel": "ای میل پتہٕ",
+    "mobileLabel": "۱۰ ہندسَن ہُنٛد موبائل نمبر",
+    "stateLabel": "ریاست / مرکز کہِ زیر انتظام علاقہٕ",
+    "districtLabel": "ضلعہٕ",
+    "blockLabel": "تحصیل / بلاک",
+    "panchayatLabel": "گرام پنچایت / مقامی ادارٕ",
+    "villageLabel": "ریونیو گام / بستی",
+    "pincodeLabel": "پوسٹل پن کوڈ",
+    "activityTypeLabel": "کاروباری سرگرمی ہُنٛد قسم",
+    "projectCostLabel": "پراجیکٹک کُل خرچہٕ (₹)",
+    "ownContributionLabel": "ذاتی سرمایہٕ ہُنٛد حِصہٕ (%)",
+    "searchVillagePlaceholder": "گام یا پن کوڈ ژھانٛڈِو...",
+    "saveProfileBtn": "محفوظ کٔرِو تہٕ برونٛہہ پٔکِو",
+    "cancelBtn": "منسوخ کٔرِو",
+    "submitBtn": "درخواست جمع کٔرِو"
+  },
+  "badges": {
+    "lgdVerified": "ایل جی ڈی تصدیق شُدٕ",
+    "specialCategoryRural": "خصوصی زمرٕ (دیہی علاقہٕ — ۳۵٪ سبسڈی)",
+    "pmegpEligible": "پی ایم ای جی پی سبسڈی خٲطرٕ اہل",
+    "odopNotified": "ایک ضلع ایک پیداوار (ODOP) تحت منتخب",
+    "highFeasibility": "کامیابی ہٕنٛدۍ اعلیٰ امکانات",
+    "lowRisk": "قرضک کم کھٹکہٕ",
+    "unknownStateWarning": "غیر تصدیق شُدٕ: UNKNOWN نِشان زد"
+  },
+  "footer": {
+    "copyrightText": "© ۲۰۲۶ گرام-دِشا۔ سمارٹ انڈیا ہیکاتھون خٲطرٕ ٹیم ایرگون کہِ طرفہٕ۔",
+    "madeInIndia": "دیہی تہٕ نیم شہری ہندوستان خٲطرٕ تیار کردہ۔",
+    "teamErgon": "ٹیم ایرگون",
+    "privacyPolicy": "رازداری ہٕنٛز پالیسی",
+    "termsConditions": "شرائط و ضوابط",
+    "grievancePortal": "قومی شکایات پورٹل"
+  },
+  "accessibility": {
+    "selectLanguageAria": "ایپلی کیشنچ زبان ژٲرِو",
+    "closeMenuAria": "مینو بٔند کٔرِو",
+    "openMenuAria": "مینو کٔھلو",
+    "rtlNotice": "دچھنہِ پیٹھہٕ کھووُر (RTL) رسم الخط چالو",
+    "scriptName": "كٲشُر / نستعلیق"
+  }
+}

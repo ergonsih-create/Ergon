@@ -1,0 +1,112 @@
+{
+  "database": {
+    "collections": {
+      "users": {
+        "description": "User profiles and demographics",
+        "fields": {
+          "id": "string",
+          "email": "string",
+          "fullName": "string",
+          "avatarUrl": "string?",
+          "authProvider": "string?",
+          "emailVerified": "boolean?",
+          "phoneNumber": "string?",
+          "role": "string",
+          "location": "map",
+          "demographics": "map",
+          "createdAt": "timestamp",
+          "updatedAt": "timestamp"
+        }
+      },
+      "businesses": {
+        "description": "Registered enterprise business contexts",
+        "fields": {
+          "id": "string",
+          "userId": "string",
+          "title": "string",
+          "category": "string",
+          "activity": "string",
+          "stage": "string",
+          "scale": "string",
+          "description": "string",
+          "proposedLocation": "map",
+          "capitalRequirements": "map",
+          "requirements": "map",
+          "createdAt": "timestamp",
+          "updatedAt": "timestamp"
+        }
+      },
+      "inventory": {
+        "description": "Enterprise stock/inventory items",
+        "fields": {
+          "id": "string",
+          "userId": "string",
+          "businessId": "string",
+          "itemName": "string",
+          "category": "string",
+          "currentStock": "number",
+          "unit": "string",
+          "reorderLevel": "number",
+          "unitCost": "number",
+          "supplier": "string",
+          "lastRestockedDate": "timestamp"
+        }
+      },
+      "sales": {
+        "description": "Sales records of items",
+        "fields": {
+          "id": "string",
+          "userId": "string",
+          "businessId": "string",
+          "productName": "string",
+          "unitsSold": "number",
+          "unitPrice": "number",
+          "totalRevenue": "number",
+          "buyerName": "string?",
+          "date": "timestamp"
+        }
+      },
+      "applications": {
+        "description": "Government scheme applications",
+        "fields": {
+          "id": "string",
+          "userId": "string",
+          "businessId": "string",
+          "schemeId": "string",
+          "schemeName": "string",
+          "ministryName": "string",
+          "subsidyAmount": "number",
+          "status": "string",
+          "progress": "number",
+          "submittedAt": "timestamp?",
+          "createdAt": "timestamp"
+        }
+      },
+      "supportTickets": {
+        "description": "Grievance and support tickets",
+        "fields": {
+          "id": "string",
+          "userId": "string",
+          "referenceCode": "string",
+          "subject": "string",
+          "description": "string",
+          "status": "string",
+          "createdAt": "timestamp"
+        }
+      },
+      "notifications": {
+        "description": "System notifications for the user",
+        "fields": {
+          "id": "string",
+          "userId": "string",
+          "title": "string",
+          "message": "string",
+          "type": "string",
+          "read": "boolean",
+          "actionUrl": "string?",
+          "timestamp": "timestamp"
+        }
+      }
+    }
+  }
+}

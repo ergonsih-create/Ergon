@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "گرام-دشا",
+    "appTagline": "ثبوتن تي ٻڌل ٻهراڙي جي ڪاروباري رهنمائي ۽ صلاحڪار نظام",
+    "sihBadge": "V2.0 OS",
+    "initiative": "ٽيم ايرگون — سمارٽ انڊيا هيڪاٿون"
+  },
+  "nav": {
+    "home": "مک صفحو",
+    "howItWorks": "هي ڪيئن ڪم ڪري ٿو",
+    "features": "پليٽ فارم جون خوبيون",
+    "feasibility": "امڪانن جو جائزو (HBFS)",
+    "financials": "مالي منصوبابندي",
+    "schemes": "سرڪاري اسڪيمون",
+    "about": "اسان بابت",
+    "signInGoogle": "گوگل ذريعي داخل ٿيو",
+    "getStarted": "شروع ڪريو",
+    "dashboardLink": "ڊيش بورڊ کوليو",
+    "switchLanguage": "ٻولي تبديل ڪريو"
+  },
+  "header": {
+    "activeLocationLabel": "چونڊيل جاءِ",
+    "selectEnterprise": "ڪاروباري ماڊل چونڊيو",
+    "allIndia": "سمورو ڀارت (LGD ڊائريڪٽري)",
+    "jwtSession": "سيشن جي تصديق",
+    "notifications": "اطلاعون",
+    "myProfile": "ڪاروباري پروفائل",
+    "logout": "ٻاهر نڪرو",
+    "dishaOsTitle": "دشا AI OS صلاحڪار",
+    "searchPlaceholder": "ڳوٺ، پيداوار يا اسڪيم ڳوليو..."
+  },
+  "welcome": {
+    "heroHeadline": "ڀارت جي ٻهراڙي جي واپارين لاءِ ثبوتن تي ٻڌل ڪاروباري رخ",
+    "heroSubtitle": "ڪاروبار جي ڪاميابي جا امڪان جانچيو، بئنڪ لائق پروجيڪٽ رپورٽون ٺاهيو ۽ سرڪاري سبسڊي حاصل ڪريو.",
+    "badgeLabel": "حڪومت هند جي LGD ۽ MSME معيار مطابق",
+    "startPlanningBtn": "ڪاروباري رٿابندي شروع ڪريو",
+    "exploreMethodologyBtn": "طريقيڪار سمجهو",
+    "statsEntrepreneursLabel": "رهنمائي حاصل ڪندڙ ڪاروباري",
+    "statsDistrictsLabel": "شامل ٿيل ضلعا",
+    "statsSchemesLabel": "تصديق ٿيل سرڪاري اسڪيمون",
+    "statsSubsidiesLabel": "PMEGP سبسڊي جي مدد"
+  },
+  "dashboard": {
+    "overviewTitle": "ڪاروباري جائزو",
+    "overviewSubtitle": "امڪانن جو اسڪور، مقامي منڊي جو تجزيو ۽ سرمائي جي جوڙجڪ",
+    "swotAnalysis": "HBFS امڪان ۽ SWOT تجزيو",
+    "marketDemand": "مقامي منڊي ۽ اگهن بابت ڄاڻ",
+    "financialStructuring": "قرض، ذاتي سيڙپڪاري ۽ قسطن جو تفصيل",
+    "governmentSchemes": "اهل سرڪاري اسڪيمون ۽ رعايتون",
+    "documentChecklist": "ضروري قانوني ڪاغذن جي لسٽ",
+    "applicationsProgress": "DIC درخواست جي ترقي",
+    "grievanceSupport": "ڏکن سورن جو ازالو ۽ مدد مرڪز",
+    "exportDprBtn": "پروجيڪٽ رپورٽ ڊائون لوڊ ڪريو (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "پورو نالو (آڌار / پين ڪارڊ مطابق)",
+    "emailLabel": "اي ميل پتو",
+    "mobileLabel": "10 انگن جو موبائل نمبر",
+    "stateLabel": "ریاست / مرڪزي علائقو",
+    "districtLabel": "ضلعو",
+    "blockLabel": "تعلقو / بلاڪ",
+    "panchayatLabel": "گرام پنچائت",
+    "villageLabel": "ڳوٺ / واهو",
+    "pincodeLabel": "پوسٽل پن ڪوڊ",
+    "activityTypeLabel": "ڪاروبار جو قسم",
+    "projectCostLabel": "ڪل پروجيڪٽ لاڳت (₹)",
+    "ownContributionLabel": "پنهنجو سرمایو (%)",
+    "searchVillagePlaceholder": "ڳوٺ يا پن ڪوڊ ڳوليو...",
+    "saveProfileBtn": "محفوظ ڪريو ۽ اڳتي وڌو",
+    "cancelBtn": "رد ڪريو",
+    "submitBtn": "درخواست داخل ڪريو"
+  },
+  "badges": {
+    "lgdVerified": "LGD ڊائريڪٽري تصديق ٿيل",
+    "specialCategoryRural": "خاص درجو (ٻهراڙي وارو علائقو — 35% سبسڊي)",
+    "pmegpEligible": "PMEGP سبسڊي جي لائق",
+    "odopNotified": "ODOP نوٽيفائيڊ پيداوار",
+    "highFeasibility": "اعليٰ تجارتي امڪان",
+    "lowRisk": "گهٽ قرض خطرو",
+    "unknownStateWarning": "غير تصديق ٿيل ڄاڻ: UNKNOWN نشان لڳل"
+  },
+  "footer": {
+    "copyrightText": "© 2026 گرام-دشا. ٽيم ايرگون پاران سمارٽ انڊيا هيڪاٿون لاءِ ٺاهيل.",
+    "madeInIndia": "ڀارت جي ٻهراڙي جي عوام لاءِ خاص پيشڪش.",
+    "teamErgon": "ٽيم ايرگون",
+    "privacyPolicy": "رازداري واري پاليسي",
+    "termsConditions": "شرط ۽ ضابطا",
+    "grievancePortal": "قومي شڪايت پورٽل"
+  },
+  "accessibility": {
+    "selectLanguageAria": "ٻولي چونڊيو",
+    "closeMenuAria": "مينيو بند ڪريو",
+    "openMenuAria": "مينيو کوليو",
+    "rtlNotice": "ساڄي کان کاٻي لي آئوٽ چالو آهي",
+    "scriptName": "Sindhi (Arabic)"
+  }
+}

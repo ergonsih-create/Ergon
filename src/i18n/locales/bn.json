@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "গ্রাম-দিশা",
+    "appTagline": "প্রমাণ-ভিত্তিক গ্রামীণ উদ্যোগ সিদ্ধান্ত ও উপদেষ্টা প্ল্যাটফর্ম",
+    "sihBadge": "V2.0 OS",
+    "initiative": "টিম এরগন — স্মার্ট ইন্ডিয়া হ্যাকাথন"
+  },
+  "nav": {
+    "home": "মূল পাতা",
+    "howItWorks": "কীভাবে কাজ করে",
+    "features": "প্ল্যাটফর্মের সুবিধাসমূহ",
+    "feasibility": "এইচবিএফএস সম্ভাব্যতা",
+    "financials": "আর্থিক কাঠামো",
+    "schemes": "সরকারি প্রকল্প",
+    "about": "আমাদের সম্পর্কে",
+    "signInGoogle": "গুগল দিয়ে সাইন ইন করুন",
+    "getStarted": "শুরু করুন",
+    "dashboardLink": "ড্যাশবোর্ড খুলুন",
+    "switchLanguage": "ভাষা নির্বাচন করুন"
+  },
+  "header": {
+    "activeLocationLabel": "বর্তমান এলাকা",
+    "selectEnterprise": "উদ্যোগ মডেল নির্বাচন করুন",
+    "allIndia": "সমগ্র ভারত (এলজিডি তালিকা)",
+    "jwtSession": "সুরক্ষিত সেশন",
+    "notifications": "বিজ্ঞপ্তি",
+    "myProfile": "উদ্যোক্তা প্রোফাইল",
+    "logout": "লগআউট",
+    "dishaOsTitle": "দিশা এআই উপদেষ্টা",
+    "searchPlaceholder": "গ্রাম, ফসল বা প্রকল্প অনুসন্ধান করুন..."
+  },
+  "welcome": {
+    "heroHeadline": "ভারতের গ্রামীণ উদ্যোক্তাদের জন্য প্রমাণ-ভিত্তিক ব্যবসায়িক দিকনির্দেশনা",
+    "heroSubtitle": "বাণিজ্যিক সম্ভাব্যতা মূল্যায়ন করুন, ব্যাংকে গ্রহণযোগ্য ডিপিআর তৈরি করুন এবং অনুমান ছাড়াই সরকারি যাচাইকৃত ভর্তুকি লাভ করুন।",
+    "badgeLabel": "ভারত সরকারের এলজিডি ও এমএসএমই মানদণ্ড অনুযায়ী প্রস্তুত",
+    "startPlanningBtn": "ব্যবসা পরিকল্পনা শুরু করুন",
+    "exploreMethodologyBtn": "পদ্ধতি জানুন",
+    "statsEntrepreneursLabel": "দিকনির্দেশনাপ্রাপ্ত গ্রামীণ উদ্যোক্তা",
+    "statsDistrictsLabel": "অন্তর্ভুক্ত এলজিডি জেলা",
+    "statsSchemesLabel": "যাচাইকৃত সরকারি প্রকল্প",
+    "statsSubsidiesLabel": "পিএমইজিপি মূলধন ভর্তুকি সহায়তা"
+  },
+  "dashboard": {
+    "overviewTitle": "উদ্যোগ বিশ্লেষণের সামগ্রিক রূপ",
+    "overviewSubtitle": "সঠিক সম্ভাব্যতা স্কোর, স্থানীয় বাজারের তথ্য ও মূলধন বিন্যাস",
+    "swotAnalysis": "এইচবিএফএস সম্ভাব্যতা ও সোয়াট ম্যাট্রিক্স",
+    "marketDemand": "স্থানীয় বাজার ও মান্ডি বিশ্লেষণ",
+    "financialStructuring": "ঋণ-মূলধন অনুপাত ও কিস্তির তালিকা",
+    "governmentSchemes": "যোগ্য সরকারি প্রকল্প ও অনুদান",
+    "documentChecklist": "প্রয়োজনীয় নথিপত্রের তালিকা",
+    "applicationsProgress": "জেলা শিল্প কেন্দ্র (ডিআইসি) আবেদন অগ্রগতি",
+    "grievanceSupport": "অভিযোগ প্রতিকার ও সহায়তা কেন্দ্র",
+    "exportDprBtn": "ব্যাংক ডিপিআর ডাউনলোড করুন (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "সম্পূর্ণ নাম (আধার / প্যান কার্ড অনুযায়ী)",
+    "emailLabel": "ইমেল ঠিকানা",
+    "mobileLabel": "১০-সংখ্যার মোবাইল নম্বর",
+    "stateLabel": "রাজ্য / কেন্দ্রশাসিত অঞ্চল",
+    "districtLabel": "জেলা",
+    "blockLabel": "মহকুমা / ব্লক / তালুক",
+    "panchayatLabel": "গ্রাম পঞ্চায়েত / স্থানীয় সংস্থা",
+    "villageLabel": "রাজস্ব গ্রাম / জনপদ / লোকালয়",
+    "pincodeLabel": "পোস্টাল পিন কোড",
+    "activityTypeLabel": "উদ্যোগের কার্যধারা",
+    "projectCostLabel": "মোট প্রকল্প ব্যয় (₹)",
+    "ownContributionLabel": "নিজস্ব পুঁজির অংশ (%)",
+    "searchVillagePlaceholder": "রাজস্ব গ্রাম বা পিন কোড খুঁজুন...",
+    "saveProfileBtn": "সংরক্ষণ করুন ও এগিয়ে যান",
+    "cancelBtn": "বাতিল করুন",
+    "submitBtn": "আবেদন জমা দিন"
+  },
+  "badges": {
+    "lgdVerified": "এলজিডি তালিকা যাচাইকৃত",
+    "specialCategoryRural": "বিশেষ বিভাগ (গ্রামীণ এলাকা — ৩৫% ভর্তুকি)",
+    "pmegpEligible": "পিএমইজিপি প্রকল্পের যোগ্য",
+    "odopNotified": "ওডিওপি পণ্য হিসেবে তালিকাভুক্ত",
+    "highFeasibility": "উচ্চ বাণিজ্যিক সম্ভাব্যতা",
+    "lowRisk": "ন্যূনতম ঋণ ঝুঁকি",
+    "unknownStateWarning": "অযাচাইকৃত তথ্য: UNKNOWN হিসেবে চিহ্নিত (অনুমানমুক্ত)"
+  },
+  "footer": {
+    "copyrightText": "© ২০২৬ গ্রাম-দিশা। স্মার্ট ইন্ডিয়া হ্যাকাথনের জন্য টিম এরগন কর্তৃক প্রস্তুত।",
+    "madeInIndia": "গ্রামীণ ও মফস্বল ভারতের জন্য বিশেষভাবে নির্মিত।",
+    "teamErgon": "টিম এরগন",
+    "privacyPolicy": "গোপনীয়তা নীতি",
+    "termsConditions": "শর্তাবলী",
+    "grievancePortal": "জাতীয় অভিযোগ প্রতিকার পোর্টাল"
+  },
+  "accessibility": {
+    "selectLanguageAria": "অ্যাপ্লিকেশনের ভাষা পরিবর্তন করুন",
+    "closeMenuAria": "মেনু বন্ধ করুন",
+    "openMenuAria": "মেনু খুলুন",
+    "rtlNotice": "বাম-থেকে-ডান লিপি সক্রিয়",
+    "scriptName": "বাংলা"
+  }
+}

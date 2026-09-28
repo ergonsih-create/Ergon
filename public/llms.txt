@@ -1,0 +1,24 @@
+# Gram-Disha — Rural & Semi-Urban Enterprise Intelligence System
+> Built by Team ERGON for Smart India Hackathon 2026 under Ministry of Rural Development & NITI Aayog challenges.
+
+## Overview
+Gram-Disha is an evidence-informed decision support architecture designed to guide rural and semi-urban Indian entrepreneurs from initial idea discovery to credit-ready project reports (DPR) and government scheme execution.
+
+## Core Capabilities & System Modules
+1. Holistic Business Feasibility Score (HBFS): An 8-vector deterministic evaluation engine analyzing local LGD geography, AGMARKNET mandi pricing, raw material proximity, and power infrastructure.
+2. Deterministic Financial Engineering: Automated calculation of Total Capital Outlay, Promoter Margin Equity, Bank Loan Requirements, Monthly EMI Amortization, and Debt Service Coverage Ratio (DSCR).
+3. Versioned Scheme & Subsidy Engine: Rule-matched evaluation for PMEGP v2.4, PMFME, Mudra Yojana, DAY-NRLM, Stand-Up India, and Agriculture Infrastructure Fund (AIF).
+4. DISHA Voice & Multilingual Copilot: Offline-first voice assistant supporting Hindi, Marathi, Gujarati, Tamil, Telugu, Bengali, Urdu, and English with server-side speech recognition.
+5. Statutory DPR Generation: One-click export of Lead Bank & DIC compliant Detailed Project Reports.
+
+## Official Data Registers Integrated
+- LGD (Local Government Directory) Census 2011 & SECC 2011 Data
+- AGMARKNET Agricultural Commodity Mandi Real-Time Prices
+- Ministry of MSME / Udyam MSME Portal Framework
+- NABARD & Lead Bank District Credit Plans
+
+## Legal & Compliance Statement
+Gram-Disha operates strictly as a public-good decision support system. It collects only necessary local parameter data under DPDPA 2023 guidelines and makes no guaranteed commercial claims.
+
+Developer Contact: Team ERGON (sih2026@gramdisha.in)
+Website: https://gramdisha.in

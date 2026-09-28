@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "ഗ്രാം-ദിശ",
+    "appTagline": "വസ്തുതാധിഷ്ഠിത ഗ്രാമീണ സംരംഭക ഇന്റലിജൻസ് & ഉപദേശക സംവിധാനം",
+    "sihBadge": "V2.0 OS",
+    "initiative": "ടീം എർഗോൺ — സ്മാർട്ട് ഇന്ത്യ ഹാക്കത്തോൺ"
+  },
+  "nav": {
+    "home": "ഹോം",
+    "howItWorks": "ഇത് എങ്ങനെ പ്രവർത്തിക്കുന്നു",
+    "features": "പ്ലാറ്റ്‌ഫോം സവിശേഷതകൾ",
+    "feasibility": "സാധ്യതാ പഠനം (HBFS)",
+    "financials": "സാമ്പത്തിക ആസൂത്രണം",
+    "schemes": "സർക്കാർ പദ്ധതികൾ",
+    "about": "ഞങ്ങളെക്കുറിച്ച്",
+    "signInGoogle": "ഗൂഗിൾ ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുക",
+    "getStarted": "ആരംഭിക്കുക",
+    "dashboardLink": "ഡാഷ്‌ബോർഡ് തുറക്കുക",
+    "switchLanguage": "ഭാഷ മാറ്റുക"
+  },
+  "header": {
+    "activeLocationLabel": "തിരഞ്ഞെടുത്ത പ്രദേശം",
+    "selectEnterprise": "സംരംഭക മാതൃക തിരഞ്ഞെടുക്കുക",
+    "allIndia": "അഖിലേന്ത്യാ തലം (LGD ഡയറക്ടറി)",
+    "jwtSession": "സെഷൻ പ്രാമാണീകരണം",
+    "notifications": "അറിയിപ്പുകൾ",
+    "myProfile": "സംരംഭക പ്രൊഫൈൽ",
+    "logout": "ലോഗ് ഔട്ട്",
+    "dishaOsTitle": "ദിശ AI OS ഉപദേശകൻ",
+    "searchPlaceholder": "ഗ്രാമങ്ങൾ, ഉൽപ്പന്നങ്ങൾ അല്ലെങ്കിൽ പദ്ധതികൾ തിരയുക..."
+  },
+  "welcome": {
+    "heroHeadline": "ഗ്രാമീണ സംരംഭകർക്ക് കൃത്യമായ വസ്തുതാധിഷ്ഠിത മാർഗ്ഗനിർദ്ദേശം",
+    "heroSubtitle": "സംരംഭ സാധ്യതാ പഠനം നടത്തുക, ബാങ്ക് പ്രോജക്റ്റ് റിപ്പോർട്ടുകൾ തയ്യാറാക്കുക, സർക്കാർ സബ്‌സിഡികൾ സുതാര്യമായി നേടുക.",
+    "badgeLabel": "കേന്ദ്ര സർക്കാരിന്റെ LGD & MSME മാനദണ്ഡങ്ങൾക്ക് വിധേയം",
+    "startPlanningBtn": "ബിസിനസ് പ്ലാനിംഗ് ആരംഭിക്കുക",
+    "exploreMethodologyBtn": "രീതിശാസ്ത്രം മനസ്സിലാക്കുക",
+    "statsEntrepreneursLabel": "വഴികാട്ടിയ സംരംഭകർ",
+    "statsDistrictsLabel": "ഉൾപ്പെടുത്തിയ ജില്ലകൾ",
+    "statsSchemesLabel": "സർക്കാർ പദ്ധതികൾ",
+    "statsSubsidiesLabel": "PMEGP സബ്‌സിഡി പിന്തുണ"
+  },
+  "dashboard": {
+    "overviewTitle": "സംരംഭക അവലോകനം",
+    "overviewSubtitle": "സാധ്യത സ്കോർ, പ്രാദേശിക വിപണി വിവരങ്ങൾ, മൂലധന ഘടന",
+    "swotAnalysis": "HBFS സാധ്യതയും SWOT വിശകലനവും",
+    "marketDemand": "പ്രാദേശിക മാർക്കറ്റ് വിലനിലവാരം",
+    "financialStructuring": "വായ്പ, സ്വന്തം ഓഹരി, തിരിച്ചടവ് പട്ടിക",
+    "governmentSchemes": "അർഹമായ സർക്കാർ പദ്ധതികളും സബ്‌സിഡികളും",
+    "documentChecklist": "ആവശ്യമായ രേഖകളുടെ പട്ടിക",
+    "applicationsProgress": "DIC അപേക്ഷാ പുരോഗതി",
+    "grievanceSupport": "പരാതി പരിഹാരവും ഹെൽപ്പ് ഡെസ്കും",
+    "exportDprBtn": "പ്രോജക്റ്റ് റിപ്പോർട്ട് ഡൗൺലോഡ് ചെയ്യുക (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "പൂർണ്ണ നാമം (ആധാർ / പാൻ അനുസരിച്ച്)",
+    "emailLabel": "ഇമെയിൽ വിലാസം",
+    "mobileLabel": "10 അക്ക മൊബൈൽ നമ്പർ",
+    "stateLabel": "സംസ്ഥാനം / കേന്ദ്രഭരണ പ്രദേശം",
+    "districtLabel": "ജില്ല",
+    "blockLabel": "ബ്ലോക്ക് / താലൂക്ക്",
+    "panchayatLabel": "ഗ്രാമപഞ്ചായത്ത്",
+    "villageLabel": "ഗ്രാമം / പ്രദേശം",
+    "pincodeLabel": "പിൻകോഡ്",
+    "activityTypeLabel": "സംരംഭക വിഭാഗം",
+    "projectCostLabel": "ആകെ പദ്ധതി ചെലവ് (₹)",
+    "ownContributionLabel": "സ്വന്തം ഓഹരി വിഹിതം (%)",
+    "searchVillagePlaceholder": "ഗ്രാമം അല്ലെങ്കിൽ പിൻകോഡ് തിരയുക...",
+    "saveProfileBtn": "സേവ് ചെയ്ത് തുടരുക",
+    "cancelBtn": "റദ്ദാക്കുക",
+    "submitBtn": "അപേക്ഷ സമർപ്പിക്കുക"
+  },
+  "badges": {
+    "lgdVerified": "LGD ഡയറക്ടറി പരിശോധിച്ചുറപ്പിച്ചു",
+    "specialCategoryRural": "പ്രത്യേക വിഭാഗം (ഗ്രാമീണ മേഖല — 35% സബ്‌സിഡി)",
+    "pmegpEligible": "PMEGP സബ്‌സിഡിക്ക് അർഹതയുണ്ട്",
+    "odopNotified": "ODOP വിജ്ഞാപനം ചെയ്ത ഉൽപ്പന്നം",
+    "highFeasibility": "ഉയർന്ന വാണിജ്യ സാധ്യത",
+    "lowRisk": "കുറഞ്ഞ വായ്പാ റിസ്ക്",
+    "unknownStateWarning": "സ്ഥിരീകരിക്കാത്ത വിവരങ്ങൾ: UNKNOWN എന്ന് അടയാളപ്പെടുത്തിയിരിക്കുന്നു"
+  },
+  "footer": {
+    "copyrightText": "© 2026 ഗ്രാം-ദിശ. സ്മാർട്ട് ഇന്ത്യ ഹാക്കത്തോണിനായി ടീം എർഗോൺ നിർമ്മിച്ചത്.",
+    "madeInIndia": "ഇന്ത്യൻ ഗ്രാമങ്ങൾക്കായി രൂപകൽപ്പന ചെയ്തത്.",
+    "teamErgon": "ടീം എർഗോൺ",
+    "privacyPolicy": "സ്വകാര്യതാ നയം",
+    "termsConditions": "നിബന്ധനകളും വ്യവസ്ഥകളും",
+    "grievancePortal": "ദേശീയ പരാതി പരിഹാര പോർട്ടൽ"
+  },
+  "accessibility": {
+    "selectLanguageAria": "ഭാഷ തിരഞ്ഞെടുക്കുക",
+    "closeMenuAria": "മെനു അടയ്ക്കുക",
+    "openMenuAria": "മെനു തുറക്കുക",
+    "rtlNotice": "ഇടത്തുനിന്ന് വലത്തോട്ട് ലേഔട്ട് സജീവം",
+    "scriptName": "Malayalam"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "গ্রাম-দিশা",
+    "appTagline": "খুদমদা য়ুম্ফম ওইবা খুঙ্গংগী ললোন-ইতিক পাউতাক অমসুং লমজিং থৌরম",
+    "sihBadge": "V2.0 OS",
+    "initiative": "টীম এৰগোন — স্মাৰ্ট ইন্দিয়া হেকাথোন"
+  },
+  "nav": {
+    "home": "ময়াই ওইবা লমাই",
+    "howItWorks": "কমদৌনা থবক তৌবগে",
+    "features": "প্লেটফোর্মগী শক্তমশিং",
+    "feasibility": "য়াব্রা য়েংশিনবা (HBFS)",
+    "financials": "শেন-থুমগী প্লান",
+    "schemes": "লৈঙাক্কী স্কীমশিং",
+    "about": "ঐখোয়গী মরমদা",
+    "signInGoogle": "গুগলনা চংবীয়ু",
+    "getStarted": "হৌদোকপীয়ু",
+    "dashboardLink": "ডেশ্বোর্দ হাংদোকউ",
+    "switchLanguage": "লোন হোংদোকউ"
+  },
+  "header": {
+    "activeLocationLabel": "খল্লবা মফম",
+    "selectEnterprise": "ললোন-ইতিক মোদেল খল্লু",
+    "allIndia": "ভারত অপুনবা (LGD দাইরেক্তরি)",
+    "jwtSession": "সেসন চেক তৌবা",
+    "notifications": "পাউতাকশিং",
+    "myProfile": "ললোনবা মীওইগী প্রোফাইল",
+    "logout": "থোকপা",
+    "dishaOsTitle": "দিশা AI OS মতেংপাংবা",
+    "searchPlaceholder": "খুঙ্গং, মহৈ-মরোং নত্রগা স্কীম থিবীয়ু..."
+  },
+  "welcome": {
+    "heroHeadline": "ভারতকী খুঙ্গংগী ললোন-ইতিক তৌবশিংদা অচুম্বা লমজিং",
+    "heroSubtitle": "ললোন-ইতিক তৌবা য়াব্রা য়েংশিল্লু, বেঙ্ক প্রজেক্ত রিপোর্ত শেম্মু অমসুং লৈঙাক্কী মতেং ফংবীয়ু।",
+    "badgeLabel": "ভারত লৈঙাক্কী LGD অমসুং MSME নিয়মগী মতুংইন্না",
+    "startPlanningBtn": "ললোন-ইতিক প্লান হৌবা",
+    "exploreMethodologyBtn": "থৌওং খঙদোকপা",
+    "statsEntrepreneursLabel": "পাউতাক ফংলবা ললোনবা",
+    "statsDistrictsLabel": "য়াওরবা দিস্ত্রিক্তশিং",
+    "statsSchemesLabel": "চেক তৌরবা লৈঙাক্কী স্কীম",
+    "statsSubsidiesLabel": "PMEGP মতেং"
+  },
+  "dashboard": {
+    "overviewTitle": "ললোন-ইতিক কুপ্না য়েংবা",
+    "overviewSubtitle": "য়াব্রা স্কোর, মফম অদুগী কৈথেল অমসুং শেঞ্জা-লৌশিং",
+    "swotAnalysis": "HBFS য়েংশিনবা অমসুং SWOT নৈনবা",
+    "marketDemand": "মফম অদুগী কৈথেলগী পোত্থোক মমল",
+    "financialStructuring": "লোন, মশাগী শেল অমসুং কিস্তি",
+    "governmentSchemes": "য়াবা লৈঙাক্কী স্কীমশিং",
+    "documentChecklist": "মথৌ তাবা চে-চাংশিং",
+    "applicationsProgress": "DIC এপ্লিকেসন ফীভম",
+    "grievanceSupport": "অৱাবা কোকহনবা অমসুং মতেং মেক্সিক",
+    "exportDprBtn": "প্রজেক্ত রিপোর্ত দাউনলোদ (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "অচুম্বা মমিং (আধার / পেন মতুংইন্না)",
+    "emailLabel": "ইমেল এদ্রেস",
+    "mobileLabel": "নম্বর ১০ গী মোবাইল নম্বর",
+    "stateLabel": "ষ্টেত / কেন্দ্রগী লমদম",
+    "districtLabel": "দিস্ত্রিক্ত",
+    "blockLabel": "সব-দিভিজন / ব্লোক",
+    "panchayatLabel": "গ্রাম পঞ্চায়ত",
+    "villageLabel": "খুঙ্গং / মফম",
+    "pincodeLabel": "পিন কোদ",
+    "activityTypeLabel": "ললোন-ইতিক মখাল",
+    "projectCostLabel": "অপুনবা প্রজেক্ত শেল (₹)",
+    "ownContributionLabel": "মশাগী শেল শেম্বা (%)",
+    "searchVillagePlaceholder": "খুঙ্গং নত্রগা পিন কোদ থিবীয়ু...",
+    "saveProfileBtn": "শেভ তৌদুনা মাংলোইনা চংশিল্লু",
+    "cancelBtn": "তৌরোইদবা",
+    "submitBtn": "দরখাস্ত থাবীয়ু"
+  },
+  "badges": {
+    "lgdVerified": "LGD দাইরেক্তরি চেক তৌখ্রে",
+    "specialCategoryRural": "খুঙ্গং লমদম (৩৫% লৈঙাক্কী মতেং)",
+    "pmegpEligible": "PMEGP মতেং ফংবা য়াগনি",
+    "odopNotified": "ODOP মহৈ-মরোং",
+    "highFeasibility": "ললোন-ইতিক তৌবা য়াবা মখল",
+    "lowRisk": "লোন মাঙবগী অকিব খরা হন্থবা",
+    "unknownStateWarning": "পাউতাক চেক তৌদবা: UNKNOWN মশক খঙদোকপা"
+  },
+  "footer": {
+    "copyrightText": "© ২০২৬ গ্রাম-দিশা। স্মাৰ্ট ইন্দিয়া হেকাথোনগীদমক টীম এৰগোননা শেম্বা।",
+    "madeInIndia": "ভারতকী খুঙ্গংগী মীওইরোইগীদমক শেমখিবনি।",
+    "teamErgon": "টীম এৰগোন",
+    "privacyPolicy": "লোনশিনবা নিয়ম",
+    "termsConditions": "নিয়মশিং",
+    "grievancePortal": "লৈঙাক্কী অৱাবা পোরতেল"
+  },
+  "accessibility": {
+    "selectLanguageAria": "লোন খল্লু",
+    "closeMenuAria": "মেনু থিংজিনবা",
+    "openMenuAria": "মেনু হাংদোকপা",
+    "rtlNotice": "ওইথক্তগী য়েত্থক্তা লেআউত",
+    "scriptName": "Bengali-Assamese (Manipuri)"
+  }
+}

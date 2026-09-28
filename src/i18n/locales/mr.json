@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "ग्राम-दिशा",
+    "appTagline": "वस्तुस्थिती-आधारित ग्रामीण उद्योग निर्णय व सल्लागार प्रणाली",
+    "sihBadge": "V2.0 OS",
+    "initiative": "टीम एरगॉन — स्मार्ट इंडिया हॅकाथॉन"
+  },
+  "nav": {
+    "home": "मुख्य पृष्ठ",
+    "howItWorks": "हे कसे कार्य करते",
+    "features": "प्लॅटफॉर्मची वैशिष्ट्ये",
+    "feasibility": "उद्योग व्यवहार्यता (HBFS)",
+    "financials": "आर्थिक नियोजन",
+    "schemes": "शासकीय योजना",
+    "about": "आमच्याबद्दल",
+    "signInGoogle": "गुगलद्वारे प्रवेश करा",
+    "getStarted": "सुरुवात करा",
+    "dashboardLink": "डॅशबोर्ड उघडा",
+    "switchLanguage": "भाषा निवडा"
+  },
+  "header": {
+    "activeLocationLabel": "निवडलेले ठिकाण",
+    "selectEnterprise": "उद्योग मॉडेल निवडा",
+    "allIndia": "अखिल भारतीय (एलजीडी निर्देशिका)",
+    "jwtSession": "सक्रिय सत्र",
+    "notifications": "सूचना",
+    "myProfile": "उद्योजक प्रोफाइल",
+    "logout": "बाहेर पडा",
+    "dishaOsTitle": "दिशा एआय सल्लागार",
+    "searchPlaceholder": "गाव, पीक किंवा योजना शोधा..."
+  },
+  "welcome": {
+    "heroHeadline": "भारतातील ग्रामीण उद्योजकांसाठी वस्तुस्थिती-आधारित व्यावसायिक दिशा",
+    "heroSubtitle": "व्यवसायाच्या व्यवहार्यतेचे अचूक मूल्यांकन करा, बँकांसाठी स्वीकार्य डीपीआर तयार करा आणि अनुमानांशिवाय शासकीय अनुदाने मिळवा.",
+    "badgeLabel": "भारत सरकार एलजीडी व एमएसएमई मानकांनुसार प्रमाणित",
+    "startPlanningBtn": "व्यवसाय नियोजन सुरू करा",
+    "exploreMethodologyBtn": "कार्यपद्धती समजून घ्या",
+    "statsEntrepreneursLabel": "मार्गदर्शन लाभलेले ग्रामीण उद्योजक",
+    "statsDistrictsLabel": "समाविष्ट एलजीडी जिल्हे",
+    "statsSchemesLabel": "प्रमाणित शासकीय योजना",
+    "statsSubsidiesLabel": "पीएमईजीपी भांडवली अनुदान सहाय्य"
+  },
+  "dashboard": {
+    "overviewTitle": "उद्योग विश्लेषण सारांश",
+    "overviewSubtitle": "अचूक व्यवहार्यता गुण, स्थानिक बाजार माहिती आणि भांडवल रचना",
+    "swotAnalysis": "उद्योग व्यवहार्यता आणि स्वॉट (SWOT) विश्लेषण",
+    "marketDemand": "स्थानिक कृषी उत्पन्न बाजार समिती (APMC) मागणी विश्लेषण",
+    "financialStructuring": "कर्ज-भांडवल प्रमाण आणि परतफेडीचे वेळापत्रक",
+    "governmentSchemes": "पात्र शासकीय योजना आणि अनुदाने",
+    "documentChecklist": "आवश्यक कागदपत्रांची पडताळणी यादी",
+    "applicationsProgress": "जिल्हा उद्योग केंद्र (डीआयसी) अर्ज प्रगती",
+    "grievanceSupport": "तक्रार निवारण आणि मदत कक्ष",
+    "exportDprBtn": "बँक डीपीआर डाउनलोड करा (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "पूर्ण नाव (आधार / पॅन कार्डनुसार)",
+    "emailLabel": "ईमेल पत्ता",
+    "mobileLabel": "१०-अंकी मोबाईल क्रमांक",
+    "stateLabel": "राज्य / केंद्रशासित प्रदेश",
+    "districtLabel": "जिल्हा",
+    "blockLabel": "तालुका / उप-जिल्हा",
+    "panchayatLabel": "ग्रामपंचायत / स्थानिक स्वराज्य संस्था",
+    "villageLabel": "महसुली गाव / वस्ती",
+    "pincodeLabel": "टपाल पिन कोड",
+    "activityTypeLabel": "उद्योग उपक्रमाचा प्रकार",
+    "projectCostLabel": "एकूण प्रकल्प खर्च (₹)",
+    "ownContributionLabel": "स्वतःचे भांडवल (%)",
+    "searchVillagePlaceholder": "गाव किंवा पिन कोड शोधा...",
+    "saveProfileBtn": "जतन करा आणि पुढे जा",
+    "cancelBtn": "रद्द करा",
+    "submitBtn": "अर्ज सादर करा"
+  },
+  "badges": {
+    "lgdVerified": "एलजीडी निर्देशिका प्रमाणित",
+    "specialCategoryRural": "विशेष प्रवर्ग (ग्रामीण भाग — ३५% अनुदान)",
+    "pmegpEligible": "पीएमईजीपी अनुदानासाठी पात्र",
+    "odopNotified": "एक जिल्हा एक उत्पादन (ODOP) अधिसूचित",
+    "highFeasibility": "उच्च व्यावसायिक व्यवहार्यता",
+    "lowRisk": "कमीत कमी कर्ज जोखीम",
+    "unknownStateWarning": "अपुष्ट माहिती: UNKNOWN म्हणून नोंद (शून्य अंदाज)"
+  },
+  "footer": {
+    "copyrightText": "© २०२६ ग्राम-दिशा. स्मार्ट इंडिया हॅकाथॉनसाठी टीम एरगॉनद्वारे निर्मित.",
+    "madeInIndia": "ग्रामीण आणि निम-शहरी भारतातील उद्योजकांसाठी समर्पित.",
+    "teamErgon": "टीम एरगॉन",
+    "privacyPolicy": "गोपनीयता धोरण",
+    "termsConditions": "नियम व अटी",
+    "grievancePortal": "राष्ट्रीय तक्रार निवारण पोर्टल"
+  },
+  "accessibility": {
+    "selectLanguageAria": "अॅप्लिकेशनची भाषा निवडा",
+    "closeMenuAria": "मेनू बंद करा",
+    "openMenuAria": "मेनू उघडा",
+    "rtlNotice": "डावीकडून उजवीकडे लेखन पद्धती सक्रिय आहे",
+    "scriptName": "देवनागरी"
+  }
+}

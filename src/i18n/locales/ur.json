@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "گرام-دِشا",
+    "appTagline": "حقائق پر مبنی دیہی کاروباری بصیرت اور مشاورتی نظام",
+    "sihBadge": "V2.0 OS",
+    "initiative": "ٹیم ایرگون — سمارٹ انڈیا ہیکاتھون"
+  },
+  "nav": {
+    "home": "صفحہ اول",
+    "howItWorks": "یہ کیسے کام کرتا ہے",
+    "features": "پلیٹ فارم کی خصوصیات",
+    "feasibility": "امکانات کا جائزہ (HBFS)",
+    "financials": "مالیاتی ڈھانچہ",
+    "schemes": "سرکاری سکیمیں",
+    "about": "ہمارے بارے میں",
+    "signInGoogle": "گوگل کے ذریعے لاگ ان کریں",
+    "getStarted": "آغاز کریں",
+    "dashboardLink": "ڈیش بورڈ کھولیں",
+    "switchLanguage": "زبان تبدیل کریں"
+  },
+  "header": {
+    "activeLocationLabel": "منتخب مقام",
+    "selectEnterprise": "کاروباری ماڈل منتخب کریں",
+    "allIndia": "تمام ہندوستان (ایل جی ڈی ڈائرکٹری)",
+    "jwtSession": "سیشن کی تصدیق",
+    "notifications": "اطلاعات",
+    "myProfile": "کاروباری پروفائل",
+    "logout": "لاگ آؤٹ",
+    "dishaOsTitle": "دِشا اے آئی مشیر",
+    "searchPlaceholder": "گاؤں، پیداوار یا سکیم تلاش کریں..."
+  },
+  "welcome": {
+    "heroHeadline": "دیہی ہندوستان کے تاجروں کے لیے حقائق پر مبنی کاروباری سمت",
+    "heroSubtitle": "کاروبار کے امکانات کا قطعی اندازہ لگائیں، بینک کے قابل پراجیکٹ رپورٹس تیار کریں اور بغیر قیاس آرائی کے حکومتی سبسڈی حاصل کریں۔",
+    "badgeLabel": "حکومت ہند کے ایل جی ڈی اور ایم ایس ایم ای معیارات سے ہم آہنگ",
+    "startPlanningBtn": "کاروباری منصوبہ بندی شروع کریں",
+    "exploreMethodologyBtn": "طریقہ کار سمجھیں",
+    "statsEntrepreneursLabel": "رہنمائی پانے والے دیہی تاجر",
+    "statsDistrictsLabel": "احاطہ کیے گئے اضلاع",
+    "statsSchemesLabel": "تصدیق شدہ حکومتی سکیمیں",
+    "statsSubsidiesLabel": "پی ایم ای جی پی سبسڈی کی معاونت"
+  },
+  "dashboard": {
+    "overviewTitle": "کاروباری بصیرت کا خلاصہ",
+    "overviewSubtitle": "امکانات کا قطعی اسکور، مقامی منڈی کے رجحانات اور مالیاتی ڈھانچہ",
+    "swotAnalysis": "کاروباری امکانات اور اندرونی و بیرونی عوامل کا تجزیہ",
+    "marketDemand": "مقامی منڈی اور قیمتوں کا تجزیہ",
+    "financialStructuring": "قرض، ذاتی سرمایہ اور اقساط کا جدول",
+    "governmentSchemes": "اہل سرکاری سکیمیں اور گرانٹس",
+    "documentChecklist": "ضروری قانونی دستاویزات کی فہرست",
+    "applicationsProgress": "ضلعی صنعتی مرکز (DIC) میں درخواست کی پیش رفت",
+    "grievanceSupport": "شکایات کا ازالہ اور ہیلپ ڈیسک",
+    "exportDprBtn": "بینک پراجیکٹ رپورٹ ڈاؤن لوڈ کریں (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "مکمل نام (آدھار / پین کارڈ کے مطابق)",
+    "emailLabel": "ای میل ایڈریس",
+    "mobileLabel": "10 ہندسوں کا موبائل نمبر",
+    "stateLabel": "ریاست / مرکز کے زیر انتظام علاقہ",
+    "districtLabel": "ضلع",
+    "blockLabel": "تحصیل / بلاک / سب ڈسٹرکٹ",
+    "panchayatLabel": "گرام پنچایت / مقامی ادارہ",
+    "villageLabel": "ریونیو گاؤں / بستی / علاقہ",
+    "pincodeLabel": "پوسٹل پن کوڈ",
+    "activityTypeLabel": "کاروباری سرگرمی کی قسم",
+    "projectCostLabel": "پراجیکٹ کی کل لاگت (₹)",
+    "ownContributionLabel": "ذاتی سرمائے کا حصہ (%)",
+    "searchVillagePlaceholder": "گاؤں یا پن کوڈ تلاش کریں...",
+    "saveProfileBtn": "محفوظ کریں اور آگے بڑھیں",
+    "cancelBtn": "منسوخ کریں",
+    "submitBtn": "درخواست جمع کرائیں"
+  },
+  "badges": {
+    "lgdVerified": "ایل جی ڈی ڈائرکٹری سے تصدیق شدہ",
+    "specialCategoryRural": "خصوصی زمرہ (دیہی علاقہ — 35% سبسڈی)",
+    "pmegpEligible": "پی ایم ای جی پی سبسڈی کے اہل",
+    "odopNotified": "ایک ضلع ایک پیداوار (ODOP) کے تحت نامزد",
+    "highFeasibility": "کامیابی کے اعلیٰ امکانات",
+    "lowRisk": "قرض کا کم سے کم خطرہ",
+    "unknownStateWarning": "غیر تصدیق شدہ ڈیٹا: نامعلوم (UNKNOWN) کے طور پر نشان زد"
+  },
+  "footer": {
+    "copyrightText": "© 2026 گرام-دِشا۔ سمارٹ انڈیا ہیکاتھون کے لیے ٹیم ایرگون کی پیشکش۔",
+    "madeInIndia": "دیہی اور نیم شہری ہندوستان کے لیے خصوصی طور پر تیار کردہ۔",
+    "teamErgon": "ٹیم ایرگون",
+    "privacyPolicy": "رازداری کی پالیسی",
+    "termsConditions": "شرائط و ضوابط",
+    "grievancePortal": "قومی شکایات پورٹل"
+  },
+  "accessibility": {
+    "selectLanguageAria": "ایپلی کیشن کی زبان منتخب کریں",
+    "closeMenuAria": "مینو بند کریں",
+    "openMenuAria": "مینو کھولیں",
+    "rtlNotice": "دائیں سے بائیں (RTL) رسم الخط فعال ہے",
+    "scriptName": "فارسی عربی / اردو"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Gram-Disha — Intelligent Rural Enterprise Guidance",
+  "short_name": "Gram-Disha",
+  "description": "Evidence-informed business guidance and deterministic financial structuring platform for rural entrepreneurs in India by Team ERGON.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#174C3A",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

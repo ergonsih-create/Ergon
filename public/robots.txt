@@ -1,0 +1,18 @@
+# Gram-Disha Search Engine Directives
+# Team ERGON - Smart India Hackathon 2026
+
+User-agent: *
+Allow: /
+Allow: /privacy
+Allow: /terms
+Allow: /cookies
+Allow: /refund
+
+# Block API Gateway & System Diagnostics from Public Crawlers
+Disallow: /api/
+Disallow: /api/v1/
+Disallow: /admin/
+Disallow: /*?*token=
+
+# Canonical Sitemap Location
+Sitemap: https://gramdisha.in/sitemap.xml

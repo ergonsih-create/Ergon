@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "ग्राम-दिशा",
+    "appTagline": "तथ्य-आधारित ग्रामीण उद्यम बौद्धिकता र सल्लाहकार प्रणाली",
+    "sihBadge": "V2.0 OS",
+    "initiative": "टिम एर्गोन — स्मार्ट इन्डिया ह्याकाथन"
+  },
+  "nav": {
+    "home": "गृहपृष्ठ",
+    "howItWorks": "यो कसरी काम गर्छ",
+    "features": "मञ्चका सुविधाहरू",
+    "feasibility": "सम्भाव्यता मूल्याङ्कन (HBFS)",
+    "financials": "वित्तीय संरचना",
+    "schemes": "सरकारी योजनाहरू",
+    "about": "हाम्रो बारेमा",
+    "signInGoogle": "गुगलबाट प्रवेश गर्नुहोस्",
+    "getStarted": "सुरु गर्नुहोस्",
+    "dashboardLink": "ड्यासबोर्ड खोल्नुहोस्",
+    "switchLanguage": "भाषा बदल्नुहोस्"
+  },
+  "header": {
+    "activeLocationLabel": "चयन गरिएको स्थान",
+    "selectEnterprise": "उद्यम मोडेल छान्नुहोस्",
+    "allIndia": "सम्पूर्ण भारत (LGD निर्देशिका)",
+    "jwtSession": "सत्र प्रमाणीकरण",
+    "notifications": "सूचनाहरू",
+    "myProfile": "उद्यमी प्रोफाइल",
+    "logout": "बाहिर निस्कनुहोस्",
+    "dishaOsTitle": "दिशा AI OS सहायक",
+    "searchPlaceholder": "गाउँ, उत्पादन वा योजनाहरू खोज्नुहोस्..."
+  },
+  "welcome": {
+    "heroHeadline": "भारतका ग्रामीण उद्यमीहरूका लागि तथ्य-आधारित व्यावसायिक दिशा",
+    "heroSubtitle": "व्यवसायको सम्भाव्यता जाँच्नुहोस्, बैंक-योग्य परियोजना प्रतिवेदन बनाउनुहोस् र सरकारी अनुदान प्राप्त गर्नुहोस्।",
+    "badgeLabel": "भारत सरकारको LGD र MSME मापदण्ड अनुरूप",
+    "startPlanningBtn": "व्यापार योजना सुरु गर्नुहोस्",
+    "exploreMethodologyBtn": "कार्यविधि बुझ्नुहोस्",
+    "statsEntrepreneursLabel": "मार्गदर्शन प्राप्त उद्यमीहरू",
+    "statsDistrictsLabel": "समेटिएका जिल्लाहरू",
+    "statsSchemesLabel": "प्रमाणित सरकारी योजनाहरू",
+    "statsSubsidiesLabel": "PMEGP अनुदान सहायता"
+  },
+  "dashboard": {
+    "overviewTitle": "उद्यम समीक्षा",
+    "overviewSubtitle": "सटीक सम्भाव्यता स्कोर, स्थानीय बजार विश्लेषण र पुँजी संरचना",
+    "swotAnalysis": "HBFS सम्भाव्यता र SWOT विश्लेषण",
+    "marketDemand": "स्थानीय बजार र मूल्य जानकारी",
+    "financialStructuring": "ऋण, पुँजी र किस्ता तालिका",
+    "governmentSchemes": "योग्य सरकारी योजना र अनुदानहरू",
+    "documentChecklist": "आवश्यक कागजात सूची",
+    "applicationsProgress": "DIC आवेदन स्थिति",
+    "grievanceSupport": "गुनासो निवारण र सहायता केन्द्र",
+    "exportDprBtn": "परियोजना प्रतिवेदन डाउनलोड गर्नुहोस् (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "पूरा नाम (आधार / प्यान अनुसार)",
+    "emailLabel": "इमेल ठेगाना",
+    "mobileLabel": "१० अङ्कको मोबाइल नम्बर",
+    "stateLabel": "राज्य / केन्द्र शासित प्रदेश",
+    "districtLabel": "जिल्ला",
+    "blockLabel": "प्रखण्ड / ब्लक",
+    "panchayatLabel": "ग्राम पञ्चायत",
+    "villageLabel": "गाउँ / बस्ती",
+    "pincodeLabel": "हुलाक पिन कोड",
+    "activityTypeLabel": "उद्यमको प्रकार",
+    "projectCostLabel": "कुल परियोजना लागत (₹)",
+    "ownContributionLabel": "आफ्नो पुँजी अंश (%)",
+    "searchVillagePlaceholder": "गाउँ वा पिन कोड खोज्नुहोस्...",
+    "saveProfileBtn": "सुरक्षित गर्नुहोस् र अघि बढ्नुहोस्",
+    "cancelBtn": "रद्द गर्नुहोस्",
+    "submitBtn": "आवेदन पेश गर्नुहोस्"
+  },
+  "badges": {
+    "lgdVerified": "LGD निर्देशिका प्रमाणित",
+    "specialCategoryRural": "विशेष वर्ग (ग्रामीण क्षेत्र — ३५% अनुदान)",
+    "pmegpEligible": "PMEGP अनुदान योग्य",
+    "odopNotified": "ODOP अधिसूचित उत्पादन",
+    "highFeasibility": "उच्च व्यावसायिक सम्भाव्यता",
+    "lowRisk": "न्यून ऋण जोखिम",
+    "unknownStateWarning": "अपुष्ट जानकारी: UNKNOWN चिन्हित"
+  },
+  "footer": {
+    "copyrightText": "© २०२६ ग्राम-दिशा। स्मार्ट इन्डिया ह्याकाथनका लागि टिम एर्गोनद्वारा निर्मित।",
+    "madeInIndia": "ग्रामीण भारतका लागि समर्पित।",
+    "teamErgon": "टिम एर्गोन",
+    "privacyPolicy": "गोपनीयता नीति",
+    "termsConditions": "नियम र सर्तहरू",
+    "grievancePortal": "राष्ट्रिय गुनासो पोर्टल"
+  },
+  "accessibility": {
+    "selectLanguageAria": "भाषा छान्नुहोस्",
+    "closeMenuAria": "मेनु बन्द गर्नुहोस्",
+    "openMenuAria": "मेनु खोल्नुहोस्",
+    "rtlNotice": "बायाँबाट दायाँ लेआउट सक्रिय",
+    "scriptName": "Devanagari (Nepali)"
+  }
+}

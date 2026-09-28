@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "ଗ୍ରାମ-ଦିଶା",
+    "appTagline": "ପ୍ରମାଣ-ଭିତ୍ତିକ ଗ୍ରାମୀଣ ଉଦ୍ୟୋଗ ଗୁଇନ୍ଦା ଓ ପରାମର୍ଶ ପ୍ଲାଟଫର୍ମ",
+    "sihBadge": "V2.0 OS",
+    "initiative": "ଟିମ୍ ଏରଗନ — ସ୍ମାର୍ଟ ଇଣ୍ଡିଆ ହ୍ୟାକାଥନ"
+  },
+  "nav": {
+    "home": "ମୂଳପୃଷ୍ଠା",
+    "howItWorks": "ଏହା କିପରି କାମ କରେ",
+    "features": "ପ୍ଲାଟଫର୍ମର ବିଶେଷତା",
+    "feasibility": "ସମ୍ଭାବ୍ୟତା ଆକଳନ (HBFS)",
+    "financials": "ଆର୍ଥିକ ଯୋଜନା",
+    "schemes": "ସରକାରୀ ଯୋଜନା",
+    "about": "ଆମ ବିଷୟରେ",
+    "signInGoogle": "ଗୁଗୁଲ୍ ଦ୍ୱାରା ଲଗଇନ୍ କରନ୍ତୁ",
+    "getStarted": "ଆରମ୍ଭ କରନ୍ତୁ",
+    "dashboardLink": "ଡ୍ୟାସବୋର୍ଡ ଖୋଲନ୍ତୁ",
+    "switchLanguage": "ଭାଷା ବଦଳାନ୍ତୁ"
+  },
+  "header": {
+    "activeLocationLabel": "ବର୍ତ୍ତମାନର ସ୍ଥାନ",
+    "selectEnterprise": "ଉଦ୍ୟୋଗ ମଡେଲ ଚୟନ କରନ୍ତୁ",
+    "allIndia": "ସମଗ୍ର ଭାରତ (LGD ଡାଇରେକ୍ଟୋରୀ)",
+    "jwtSession": "ସେସନ୍ ପ୍ରମାଣୀକରଣ",
+    "notifications": "ସୂଚନା",
+    "myProfile": "ଉଦ୍ୟୋଗୀ ପ୍ରୋଫାଇଲ୍",
+    "logout": "ଲଗ୍ ଆଉଟ୍",
+    "dishaOsTitle": "ଦିଶା AI OS ସହାୟକ",
+    "searchPlaceholder": "ଗ୍ରାମ, ଉତ୍ପାଦ କିମ୍ବା ଯୋଜନା ଖୋଜନ୍ତୁ..."
+  },
+  "welcome": {
+    "heroHeadline": "ଭାରତର ଗ୍ରାମୀଣ ଉଦ୍ୟୋଗୀଙ୍କ ପାଇଁ ପ୍ରମାଣ-ଆଧାରିତ ବ୍ୟବସାୟିକ ଦିଗଦର୍ଶନ",
+    "heroSubtitle": "ବ୍ୟବସାୟର ସମ୍ଭାବ୍ୟତା ଯାଞ୍ଚ କରନ୍ତୁ, ବ୍ୟାଙ୍କ-ଉପଯୋଗୀ ପ୍ରୋଜେକ୍ଟ ରିପୋର୍ଟ ପ୍ରସ୍ତୁତ କରନ୍ତୁ ଏବଂ ସରକାରୀ ସବସିଡି ପ୍ରାପ୍ତ କରନ୍ତୁ।",
+    "badgeLabel": "ଭାରତ ସରକାରଙ୍କ LGD ଓ MSME ମାନଦଣ୍ଡ ଅନୁଯାୟୀ",
+    "startPlanningBtn": "ବ୍ୟବସାୟ ଯୋଜନା ଆରମ୍ଭ କରନ୍ତୁ",
+    "exploreMethodologyBtn": "କାର୍ଯ୍ୟପ୍ରଣାଳୀ ବୁଝନ୍ତୁ",
+    "statsEntrepreneursLabel": "ମାର୍ଗଦର୍ଶନ ପାଇଥିବା ଉଦ୍ୟୋଗୀ",
+    "statsDistrictsLabel": "ଅନ୍ତର୍ଭୁକ୍ତ ଜିଲ୍ଲା",
+    "statsSchemesLabel": "ଯାଞ୍ଚ ହୋଇଥିବା ସରକାରୀ ଯୋଜନା",
+    "statsSubsidiesLabel": "PMEGP ସବସିଡି ସହାୟତା"
+  },
+  "dashboard": {
+    "overviewTitle": "ଉଦ୍ୟୋଗ ସମୀକ୍ଷା",
+    "overviewSubtitle": "ସମ୍ଭାବ୍ୟତା ସ୍କୋର, ସ୍ଥାନୀୟ ବଜାର ବିଶ୍ଳେଷଣ ଓ ପୁଞ୍ଜି ଗଠନ",
+    "swotAnalysis": "HBFS ସମ୍ଭାବ୍ୟତା ଓ SWOT ବିଶ୍ଳେଷଣ",
+    "marketDemand": "ସ୍ଥାନୀୟ ମଣ୍ଡି ଓ ବଜାର ଦର",
+    "financialStructuring": "ଋଣ-ଇକ୍ୱିଟି ଏବଂ କିସ୍ତି ତାଲିକା",
+    "governmentSchemes": "ଯୋଗ୍ୟ ସରକାରୀ ଯୋଜନା ଓ ସବସିଡି",
+    "documentChecklist": "ଆବଶ୍ୟକୀୟ ଦସ୍ତାବିଜ ତାଲିକା",
+    "applicationsProgress": "DIC ଆବେଦନ ସ୍ଥିତି",
+    "grievanceSupport": "ଅଭିଯୋଗ ନିବାରଣ ଓ ସହାୟତା କେନ୍ଦ୍ର",
+    "exportDprBtn": "ପ୍ରୋଜେକ୍ଟ ରିପୋର୍ଟ ଡାଉନଲୋଡ କରନ୍ତୁ (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "ପୂର୍ଣ୍ଣ ନାମ (ଆଧାର / ପ୍ୟାନ୍ ଅନୁସାରେ)",
+    "emailLabel": "ଇମେଲ୍ ଠିକଣା",
+    "mobileLabel": "୧୦ ଅଙ୍କ ବିଶିଷ୍ଟ ମୋବାଇଲ୍ ନମ୍ବର",
+    "stateLabel": "ରାଜ୍ୟ / କେନ୍ଦ୍ରଶାସିତ ଅଞ୍ଚଳ",
+    "districtLabel": "ଜିଲ୍ଲା",
+    "blockLabel": "ବ୍ଲକ୍ / ତହସିଲ",
+    "panchayatLabel": "ଗ୍ରାମ ପଞ୍ଚାୟତ",
+    "villageLabel": "ଗ୍ରାମ / ବାସସ୍ଥାନ",
+    "pincodeLabel": "ପିନ୍ କୋଡ୍",
+    "activityTypeLabel": "ଉଦ୍ୟୋଗର ପ୍ରକାର",
+    "projectCostLabel": "ମୋଟ ପ୍ରକଳ୍ପ ମୂଲ୍ୟ (₹)",
+    "ownContributionLabel": "ନିଜସ୍ୱ ପୁଞ୍ଜି ଅଂଶ (%)",
+    "searchVillagePlaceholder": "ଗ୍ରାମ କିମ୍ବା ପିନ୍ କୋଡ୍ ଖୋଜନ୍ତୁ...",
+    "saveProfileBtn": "ସଂରକ୍ଷଣ କରନ୍ତୁ ଓ ଆଗକୁ ବଢ଼ନ୍ତୁ",
+    "cancelBtn": "ବାତିଲ କରନ୍ତୁ",
+    "submitBtn": "ଆବେଦନ ଦାଖଲ କରନ୍ତୁ"
+  },
+  "badges": {
+    "lgdVerified": "LGD ଡାଇରେକ୍ଟୋରୀ ଯାଞ୍ଚ ହୋଇଛି",
+    "specialCategoryRural": "ବିଶେଷ ବର୍ଗ (ଗ୍ରାମାଞ୍ଚଳ — ୩୫% ସବସିଡି)",
+    "pmegpEligible": "PMEGP ସବସିଡି ପାଇଁ ଯୋଗ୍ୟ",
+    "odopNotified": "ODOP ଅଧିସୂଚିତ ଉତ୍ପାଦ",
+    "highFeasibility": "ଉଚ୍ଚ ବାଣିଜ୍ୟିକ ସମ୍ଭାବ୍ୟତା",
+    "lowRisk": "କମ୍ ଋଣ ବିପଦ",
+    "unknownStateWarning": "ଅପ୍ରମାଣିତ ତଥ୍ୟ: UNKNOWN ଭାବେ ଚିହ୍ନିତ"
+  },
+  "footer": {
+    "copyrightText": "© ୨୦୨୬ ଗ୍ରାମ-ଦିଶା। ଟିମ୍ ଏରଗନ ଦ୍ୱାରା ସ୍ମାର୍ଟ ଇଣ୍ଡିଆ ହ୍ୟାକାଥନ ପାଇଁ ନିର୍ମିତ।",
+    "madeInIndia": "ଗ୍ରାମୀଣ ଭାରତ ପାଇଁ ସ୍ୱତନ୍ତ୍ର ଭାବରେ ପ୍ରସ୍ତୁତ।",
+    "teamErgon": "ଟିମ୍ ଏରଗନ",
+    "privacyPolicy": "ଗୋପନୀୟତା ନୀତି",
+    "termsConditions": "ନିୟମାବଳୀ ଓ ସର୍ତ୍ତାବଳୀ",
+    "grievancePortal": "ଜାତୀୟ ଅଭିଯୋଗ ପୋର୍ଟାଲ"
+  },
+  "accessibility": {
+    "selectLanguageAria": "ଭାଷା ଚୟନ କରନ୍ତୁ",
+    "closeMenuAria": "ମେନୁ ବନ୍ଦ କରନ୍ତୁ",
+    "openMenuAria": "ମେନୁ ଖୋଲନ୍ତୁ",
+    "rtlNotice": "ବାମରୁ ଡାହାଣ ଲେଆଉଟ୍ ସକ୍ରିୟ",
+    "scriptName": "Odia"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "appName": "ग्राम-दिशा",
+    "appTagline": "थार फोरमान सिबिथायाव गामियारी फालांगि गियान आरो फोसावथाय राहा",
+    "sihBadge": "V2.0 OS",
+    "initiative": "टिम एर्गोन — स्मार्ट इन्डिया हेकाथन"
+  },
+  "nav": {
+    "home": "गाहाय बिलाइ",
+    "howItWorks": "इयो माबोरै मावो",
+    "features": "मंचनि गोहोफोर",
+    "feasibility": "जाथावनाय नायबिजिरनाय (HBFS)",
+    "financials": "रां-खान्थि दाथाय",
+    "schemes": "सोरखारि आंसोल",
+    "about": "जोंनि सोमोन्दै",
+    "signInGoogle": "गुगलजों हाब",
+    "getStarted": "जागाय",
+    "dashboardLink": "डेशबोर्ड खेव",
+    "switchLanguage": "राव सोलाय"
+  },
+  "header": {
+    "activeLocationLabel": "सायख'नाय जायगा",
+    "selectEnterprise": "फालांगि रोखोम बासिय",
+    "allIndia": "गासै भारत (LGD बिजाब)",
+    "jwtSession": "फारि आनजाद",
+    "notifications": "फोसावनाय",
+    "myProfile": "फालांगिरिनि सिनायथि",
+    "logout": "ओंखारलां",
+    "dishaOsTitle": "दिशा AI OS हेफाजाबारि",
+    "searchPlaceholder": "गामि, फसल एबा आंसोल नागिर..."
+  },
+  "welcome": {
+    "heroHeadline": "भारतनि गामियारी फालांगिरिफोरनि थाखाय थार फोरमान गोनां लामा",
+    "heroSubtitle": "फालांगिनि जाथावनाय आनजाद खालाम, बेंक हाबथाव प्रजेक्ट रिपर्ट बानाय आरो सोरखारि हेफाजाब मोन।",
+    "badgeLabel": "भारत सोरखारनि LGD आरो MSME खान्थि बादियै",
+    "startPlanningBtn": "फालांगि बिथांखि जागाय",
+    "exploreMethodologyBtn": "मावखान्थि बुजि",
+    "statsEntrepreneursLabel": "लामा दिन्थिजानाय फालांगिरिफोर",
+    "statsDistrictsLabel": "खोलोबनाय जिलाफोर",
+    "statsSchemesLabel": "फोरमान गोनां सोरखारि आंसोल",
+    "statsSubsidiesLabel": "PMEGP रां हेफाजाब"
+  },
+  "dashboard": {
+    "overviewTitle": "फालांगि बिजिरनाय",
+    "overviewSubtitle": "जाथावनाय स्कोर, ओनसोलनि हाथाय आरो मुलि दाथाय",
+    "swotAnalysis": "HBFS जाथावनाय आरो SWOT बिजिरनाय",
+    "marketDemand": "हाथाय आरो बेसेननि खौरां",
+    "financialStructuring": "ऋण, गावनि मुलि आरो किस्ति फारिलाइ",
+    "governmentSchemes": "मोनथाव सोरखारि आंसोल",
+    "documentChecklist": "गोनांथि जानाय दाखिलाफोर",
+    "applicationsProgress": "DIC आरजि फारि",
+    "grievanceSupport": "अजाय सुस्रांनाय आरो हेफाजाब केंन्द्र",
+    "exportDprBtn": "प्रजेक्ट रिपर्ट डाउनलोड खालाम (PDF)"
+  },
+  "forms": {
+    "fullNameLabel": "गासै मुं (आधार / पेन मुसुखा बादियै)",
+    "emailLabel": "इमेल थं",
+    "mobileLabel": "१० अनजिमानि मबाइल नम्बर",
+    "stateLabel": "रायजो",
+    "districtLabel": "जिला",
+    "blockLabel": "मण्डल / खण्ड",
+    "panchayatLabel": "गामि पञ्चायत",
+    "villageLabel": "गामि / थाम",
+    "pincodeLabel": "पिन कड",
+    "activityTypeLabel": "फालांगिनि रोखोम",
+    "projectCostLabel": "गासै प्रजेक्ट बेसेन (₹)",
+    "ownContributionLabel": "गावनि मुलि खोलोब (%)",
+    "searchVillagePlaceholder": "गामि एबा पिन कड नागिर...",
+    "saveProfileBtn": "थाय आरो साखाफारा जा",
+    "cancelBtn": "नेवसि",
+    "submitBtn": "आरजि गथाय"
+  },
+  "badges": {
+    "lgdVerified": "LGD नायबिजिरखांबाय",
+    "specialCategoryRural": "गामियारी ओनसोल (३५% हेफाजाब)",
+    "pmegpEligible": "PMEGP हेफाजाब मोनथाव",
+    "odopNotified": "ODOP दिहुन्थाय",
+    "highFeasibility": "गोजौ फालांगि जाथावनाय",
+    "lowRisk": "खोम रीण खहा",
+    "unknownStateWarning": "रोखा नङि खौरां: UNKNOWN सिनायथि"
+  },
+  "footer": {
+    "copyrightText": "© २०२६ ग्राम-दिशा। स्मार्ट इन्डिया हेकाथननि थाखाय टिम एर्गोनजों दाजानाय।",
+    "madeInIndia": "भारतनि गामियारी मानसिफोरनि थाखाय।",
+    "teamErgon": "टिम एर्गोन",
+    "privacyPolicy": "गोपनीयता खान्थि",
+    "termsConditions": "नेम आरो रादायफोर",
+    "grievancePortal": "सोरखारि अजाय पोर्टल"
+  },
+  "accessibility": {
+    "selectLanguageAria": "राव बासिय",
+    "closeMenuAria": "मेनु बन्द खालाम",
+    "openMenuAria": "मेनु खेव",
+    "rtlNotice": "आगसिजों आगदा फारि",
+    "scriptName": "Devanagari (Bodo)"
+  }
+}
