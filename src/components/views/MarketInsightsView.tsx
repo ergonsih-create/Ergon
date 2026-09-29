@@ -28,11 +28,13 @@ import { UnknownState } from '../common/UnknownState';
 import { Button } from '../common/Button';
 import { MarketEngine, MandiCommodityRecord } from '../../services/deterministic/marketEngine';
 import { useAuth } from '../../context/AuthContext';
+import { useLanguage } from '../../context/LanguageContext';
 import { ProvenanceRecord } from '../../types';
 import { ApiClient } from '../../services/api/apiClient';
 
 export const MarketInsightsView: React.FC = () => {
   const { activeBusiness } = useAuth();
+  const { t } = useLanguage();
   const [selectedProvenance, setSelectedProvenance] = useState<ProvenanceRecord | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [liveData, setLiveData] = useState<any>(null);
@@ -80,7 +82,7 @@ export const MarketInsightsView: React.FC = () => {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-[#D9D3C7]/80">
         <div>
           <h1 className="text-xl sm:text-2xl font-display font-bold text-[#242522]">
-            Hyper-Local Market & Commodity Intelligence
+            {t('marketInsights')}
           </h1>
           <p className="text-xs text-[#68655D] mt-0.5">
             AGMARKNET daily mandi arrivals, modal price benchmarks, and competitor density for {currentDistrict}
@@ -112,7 +114,7 @@ export const MarketInsightsView: React.FC = () => {
 
       {/* Primary Mandi Commodity Pricing Grid */}
       <Card 
-        title={`APMC Mandi Commodity Arrival & Modal Rates (${currentDistrict} Cluster)`}
+        title={`${t('mandiPrices')} (${currentDistrict} Cluster)`}
         subtitle="Source: Directorate of Marketing & Inspection (DMI) / AGMARKNET National Portal"
       >
         <div className="overflow-x-auto">
@@ -194,7 +196,7 @@ export const MarketInsightsView: React.FC = () => {
       {/* Competitor Density & Demand Analysis */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         
-        <Card title="Registered Competitor Density" subtitle="Catchment Area (MSME Udyam Register)">
+        <Card title={t('competitorDensity')} subtitle="Catchment Area (MSME Udyam Register)">
           <div className="space-y-3 text-xs">
             <div className="p-3.5 rounded-2xl bg-[#F8F5EE] border border-[#D9D3C7]">
               <div className="flex justify-between items-center mb-1">

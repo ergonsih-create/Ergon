@@ -373,7 +373,7 @@ export const ParticleVoiceAiModal: React.FC<ParticleVoiceAiModalProps> = ({ isOp
         const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
         setMode('THINKING');
         try {
-          const res = await GeminiTranscribeService.transcribeAudio(audioBlob);
+          const res = await GeminiTranscribeService.transcribeAudioBlob(audioBlob);
           if (res.transcript) {
             setTranscript(res.transcript);
             handleSubmitQuery(res.transcript);

@@ -28,6 +28,7 @@ import { Badge } from '../common/Badge';
 import { UnknownState } from '../common/UnknownState';
 import { useAuth } from '../../context/AuthContext';
 import { useDisha } from '../../context/DishaContext';
+import { useLanguage } from '../../context/LanguageContext';
 import { 
   LGD_STATES, 
   calculatePMEGPSubsidyRate, 
@@ -39,6 +40,7 @@ import {
 export const LocationView: React.FC = () => {
   const { user, activeBusiness, updateActiveBusiness } = useAuth();
   const { openAdvisorWithInsight } = useDisha();
+  const { t } = useLanguage();
 
   const defaultLoc = activeBusiness?.proposedLocation || user?.location || {
     state: 'Maharashtra',
@@ -281,7 +283,7 @@ export const LocationView: React.FC = () => {
         <div>
           <div className="flex items-center gap-2">
             <h1 className="text-xl sm:text-2xl font-display font-bold text-[#242522]">
-              Hyper-Local Geographic Context (LGD)
+              {t('location')}
             </h1>
             <Badge variant="forest">LGD Code #{currentStateRecord.stateCode}-{currentDistrictRecord.districtCode}</Badge>
           </div>
@@ -293,7 +295,7 @@ export const LocationView: React.FC = () => {
           <Badge variant={isRural ? "forest" : "amber"} size="md">
             {isRural ? '🌾 Rural (Gram Panchayat)' : '🏢 Semi-Urban / Urban'}
           </Badge>
-          <Badge variant="sage" size="md">{radius} km Catchment Radius</Badge>
+          <Badge variant="sage" size="md">{radius} km {t('catchmentRadius')}</Badge>
         </div>
       </div>
 
@@ -547,7 +549,7 @@ export const LocationView: React.FC = () => {
             {/* Opportunity Radius Toggle & Save */}
             <div className="mt-6 pt-4 border-t border-[#D9D3C7]/60 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div className="flex items-center gap-3 text-xs">
-                <span className="font-semibold text-[#242522]">Opportunity Catchment Radius:</span>
+                <span className="font-semibold text-[#242522]">{t('catchmentRadius')}:</span>
                 <div className="flex rounded-xl bg-[#F8F5EE] p-1 border border-[#D9D3C7]">
                   <button
                     type="button"

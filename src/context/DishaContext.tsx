@@ -185,7 +185,7 @@ export const DishaProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         body: JSON.stringify({
           message: userText,
           businessId: businessId,
-          language: dishaState.voiceLanguage || 'en',
+          language: dishaState.voiceLanguage || localStorage.getItem('gram_disha_lang') || 'en',
         }),
       });
 

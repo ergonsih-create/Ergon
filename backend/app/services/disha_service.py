@@ -8,7 +8,13 @@ import json
 from datetime import datetime
 from typing import List, Optional, Dict, Any
 from sqlalchemy.orm import Session
-from app.db.models import DishaConversationModel, DishaMessageModel, BusinessModel, UserModel
+from app.db.models import (
+    DishaConversationModel,
+    DishaMessageModel,
+    BusinessModel,
+    UserModel,
+    DocumentItemModel
+)
 from app.engines.financial_engine import FinancialEngine
 from app.engines.scheme_engine import SchemeEngine
 from app.engines.feasibility_engine import FeasibilityEngine
@@ -90,6 +96,27 @@ class DishaService:
             scheme_suitability_index=0.88
         )
 
+        # Query verified and pending documents for this business
+        doc_models = []
+        if biz:
+            doc_models = db.query(DocumentItemModel).filter(DocumentItemModel.business_id == biz.id).all()
+        verified_docs = [d.name for d in doc_models if d.status in ("VERIFIED", "DIGILOCKER_SYNCED")]
+        pending_docs = [d.name for d in doc_models if d.status not in ("VERIFIED", "DIGILOCKER_SYNCED")]
+
+        # Query verified mandi commodities matching the district
+        from app.domains.market.router import VERIFIED_MANDI_RECORDS
+        biz_dist = (biz.district if biz else "Yavatmal").strip().lower()
+        matching_mandi = [
+            f"{m['commodity']} ({m['variety']}): Modal ₹{m['modal_price_per_quintal']}/Qtl at {m['market_mandi']}"
+            for m in VERIFIED_MANDI_RECORDS
+            if m["district"].lower() == biz_dist
+        ]
+        if not matching_mandi:
+            matching_mandi = [
+                f"{m['commodity']} ({m['variety']}): Modal ₹{m['modal_price_per_quintal']}/Qtl at {m['market_mandi']}"
+                for m in VERIFIED_MANDI_RECORDS[:2]
+            ]
+
         grounding_snapshot: Dict[str, Any] = {
             "business": {
                 "name": biz.name if biz else "Rural Agro Unit",
@@ -104,11 +131,21 @@ class DishaService:
             "financials": fin_data,
             "schemes": schemes_data,
             "feasibility": feas_data,
+            "documents": {
+                "verified": verified_docs if verified_docs else ["Aadhaar Card (UIDAI Verified)", "PAN Card (Income Tax Dept)"],
+                "pending": pending_docs if pending_docs else ["FSSAI Food Safety Registration", "Machinery Quotations", "Gram Panchayat NOC"],
+            },
+            "market_mandi": matching_mandi,
         }
 
-        # 4. Generate Grounded AI Response
+        # 4. Generate Grounded AI Response with Target Language
+        user_lang = req.language or conv.language or "en"
         ai_service = GeminiAIService()
-        reply_text = ai_service.generate_grounded_response(req.message, grounding_snapshot)
+        reply_text = ai_service.generate_grounded_response(
+            user_query=req.message,
+            grounding_data=grounding_snapshot,
+            language=user_lang
+        )
 
         # 5. Record Assistant Message
         assistant_msg = DishaMessageModel(

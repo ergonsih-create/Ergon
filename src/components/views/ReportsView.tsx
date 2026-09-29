@@ -118,7 +118,7 @@ export const ReportsView: React.FC = () => {
               <FileText className="w-5 h-5 text-[#C8A96B]" />
             </div>
             <h1 className="text-xl sm:text-2xl font-display font-extrabold text-[#3B2F2A]">
-              Statutory Reports & Bankable DPR
+              {t('reports')}
             </h1>
           </div>
           <p className="text-xs sm:text-sm text-[#3B2F2A]/70 mt-1">
@@ -132,7 +132,7 @@ export const ReportsView: React.FC = () => {
             className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#174C3A] text-[#FAF7F2] text-xs font-bold hover:bg-[#174C3A]/90 transition-colors shadow-xs cursor-pointer"
           >
             <Printer className="w-4 h-4 text-[#C8A96B]" />
-            <span>Print / Save PDF</span>
+            <span>{t('printDpr')}</span>
           </button>
         </div>
       </div>
@@ -140,11 +140,11 @@ export const ReportsView: React.FC = () => {
       {/* Report Type Selector Tabs */}
       <div className="flex items-center gap-2 border-b border-[#C8A96B]/20 pb-2 overflow-x-auto scrollbar-none">
         {[
-          { id: 'DPR', label: '1. Comprehensive Bank DPR' },
-          { id: 'FEASIBILITY', label: '2. Feasibility Report' },
-          { id: 'FINANCIAL', label: '3. Financial Projections' },
-          { id: 'SCHEMES', label: '4. Scheme & Subsidy Summary' },
-          { id: 'ACTION', label: '5. Execution Roadmap & Checklist' },
+          { id: 'DPR', label: `1. ${t('reports')}` },
+          { id: 'FEASIBILITY', label: `2. ${t('feasibility')}` },
+          { id: 'FINANCIAL', label: `3. ${t('finance')}` },
+          { id: 'SCHEMES', label: `4. ${t('schemes')}` },
+          { id: 'ACTION', label: `5. ${t('actionPlan')}` },
         ].map((tab) => (
           <button
             key={tab.id}
@@ -234,20 +234,20 @@ export const ReportsView: React.FC = () => {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 text-xs">
                 <div className="p-3 rounded-xl bg-[#FAF7F2] border border-[#C8A96B]/40">
-                  <span className="text-[#3B2F2A]/60 block">Total Project Cost:</span>
+                  <span className="text-[#3B2F2A]/60 block">{t('totalProjectCost')}:</span>
                   <strong className="text-base text-[#174C3A]">{formatINR(projectCost)}</strong>
                 </div>
                 <div className="p-3 rounded-xl bg-[#FAF7F2] border border-[#C8A96B]/40">
-                  <span className="text-[#3B2F2A]/60 block">Promoter Margin ({promoterEquityPct}%):</span>
+                  <span className="text-[#3B2F2A]/60 block">{t('promoterMargin')} ({promoterEquityPct}%):</span>
                   <strong className="text-base text-[#3B2F2A]">{formatINR(promoterEquity)}</strong>
                 </div>
                 <div className="p-3 rounded-xl bg-[#FAF7F2] border border-[#C8A96B]/40">
-                  <span className="text-[#3B2F2A]/60 block">Term Loan (85%):</span>
+                  <span className="text-[#3B2F2A]/60 block">{t('termLoan')} (85%):</span>
                   <strong className="text-base text-[#B45B4A]">{formatINR(termLoan)}</strong>
                   <span className="text-[10px] text-[#3B2F2A]/60 block mt-0.5">WC Loan: {formatINR(workingCapitalLoan)}</span>
                 </div>
                 <div className="p-3 rounded-xl bg-[#FAF7F2] border border-[#C8A96B]/40">
-                  <span className="text-[#3B2F2A]/60 block">Term Loan EMI:</span>
+                  <span className="text-[#3B2F2A]/60 block">{t('monthlyEmi')}:</span>
                   <strong className="text-base text-[#5A6B4F]">{formatINR(monthlyEMI)}/mo</strong>
                   <span className="text-[10px] text-[#3B2F2A]/60 block mt-0.5">@ 9.5% p.a. (60 mo)</span>
                 </div>
