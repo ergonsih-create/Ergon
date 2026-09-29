@@ -1,9 +1,9 @@
 import React from 'react';
-import { Sparkles, MessageSquare, Mic, Radio, FileText } from 'lucide-react';
+import { Sparkles, MessageSquare, Mic } from 'lucide-react';
 import { useDisha } from '../../context/DishaContext';
 
 export const DishaOrb: React.FC = () => {
-  const { toggleAdvisor, openVoiceModal, openGeminiLive, openTranscribe } = useDisha();
+  const { toggleAdvisor, openParticleAi } = useDisha();
 
   return (
     <div className="flex items-center gap-1.5">
@@ -30,24 +30,14 @@ export const DishaOrb: React.FC = () => {
         <MessageSquare className="w-3.5 h-3.5 text-[#174C3A] ml-0.5 opacity-80 group-hover:opacity-100" />
       </button>
 
-      {/* Gemini Live Voice Conversation Launcher (gemini-3.1-flash-live-preview) */}
+      {/* DISHA Voice AI Launcher (TTS + STT) */}
       <button
-        onClick={openGeminiLive}
-        aria-label="Gemini Live Voice Conversation"
-        title="Gemini 3.1 Live API Real-Time Voice Conversation"
-        className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#174C3A] text-white hover:bg-[#174C3A]/90 border border-[#C8A96B]/60 flex items-center justify-center shadow-xs transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer"
+        onClick={openParticleAi}
+        aria-label="DISHA Voice AI (TTS + STT)"
+        title="DISHA Voice AI Assistant (Speak in Indian Languages)"
+        className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#174C3A] hover:bg-[#113327] border border-[#C8A96B]/60 text-[#C69A45] flex items-center justify-center shadow-xs transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer"
       >
-        <Radio className="w-4 h-4 text-[#C69A45] animate-pulse" />
-      </button>
-
-      {/* Gemini Audio Transcribe Launcher (gemini-3.5-transcribe) */}
-      <button
-        onClick={openTranscribe}
-        aria-label="Gemini Audio Transcribe"
-        title="Gemini 3.5 Transcribe — Speech to Text"
-        className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#FAF7F2] hover:bg-[#F2E8D6] border border-[#C8A96B]/60 text-[#174C3A] flex items-center justify-center shadow-xs transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer"
-      >
-        <Mic className="w-4 h-4 text-[#174C3A]" />
+        <Mic className="w-4 h-4 text-[#C69A45]" />
       </button>
     </div>
   );

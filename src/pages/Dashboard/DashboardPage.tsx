@@ -11,8 +11,6 @@ import { AppNavigation } from '../../components/layout/AppNavigation';
 import { Breadcrumbs } from '../../components/common/Breadcrumbs';
 import { DishaAdvisorDrawer } from '../../components/disha/DishaAdvisorDrawer';
 import { DishaVoiceModal } from '../../components/disha/DishaVoiceModal';
-import { GeminiLiveVoiceModal } from '../../components/voice/GeminiLiveVoiceModal';
-import { GeminiTranscribeModal } from '../../components/voice/GeminiTranscribeModal';
 import { ParticleVoiceAiModal } from '../../components/voice/ParticleVoiceAiModal';
 import { JWTSessionModal } from '../../components/layout/JWTSessionModal';
 import { useDisha } from '../../context/DishaContext';
@@ -55,10 +53,6 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
     dishaState, 
     setModule, 
     closeVoiceModal,
-    isGeminiLiveOpen,
-    closeGeminiLive,
-    isTranscribeOpen,
-    closeTranscribe,
     isParticleAiOpen,
     openParticleAi,
     closeParticleAi,
@@ -183,26 +177,6 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
         isOpen={Boolean(dishaState.isVoiceModalOpen)}
         onClose={closeVoiceModal}
         onNavigate={(mod) => setModule(mod)}
-      />
-
-      {/* Gemini 3.1 Live API Voice Conversation Modal */}
-      <GeminiLiveVoiceModal
-        isOpen={isGeminiLiveOpen}
-        onClose={closeGeminiLive}
-        onSendToChat={(text) => {
-          sendChatMessage(text);
-          openAdvisor();
-        }}
-      />
-
-      {/* Gemini 3.5 Audio Transcribe Modal */}
-      <GeminiTranscribeModal
-        isOpen={isTranscribeOpen}
-        onClose={closeTranscribe}
-        onSendToChat={(text) => {
-          sendChatMessage(text);
-          openAdvisor();
-        }}
       />
 
       {/* Auto-Pop Particle AI Voice Assistant (TTS + STT) Modal */}

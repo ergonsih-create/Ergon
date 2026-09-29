@@ -37,8 +37,7 @@ export const DishaAdvisorDrawer: React.FC<{ onNavigate?: (mod: DishaContextState
     isSpeaking, 
     toggleSpeakCurrentInsight,
     openVoiceModal,
-    openGeminiLive,
-    openTranscribe
+    openParticleAi
   } = useDisha();
   const { availableLanguages, setLanguage, currentLanguage } = useLanguage();
 
@@ -91,18 +90,18 @@ export const DishaAdvisorDrawer: React.FC<{ onNavigate?: (mod: DishaContextState
           </div>
 
           <div className="flex items-center gap-1.5">
-            {/* Gemini Live API Voice Conversation Button */}
+            {/* DISHA Voice AI (TTS + STT) Button */}
             <button
               type="button"
               onClick={() => {
                 closeAdvisor();
-                openGeminiLive();
+                openParticleAi();
               }}
-              className="px-2 py-1.5 rounded-lg border text-xs font-semibold bg-[#174C3A] text-white border-[#C8A96B]/50 hover:bg-[#174C3A]/90 transition-colors flex items-center gap-1 cursor-pointer"
-              title="Real-time Gemini 3.1 Live API Voice Conversation"
+              className="px-2.5 py-1.5 rounded-lg border text-xs font-semibold bg-[#174C3A] text-white border-[#C8A96B]/50 hover:bg-[#113327] transition-colors flex items-center gap-1 cursor-pointer"
+              title="Open DISHA Voice AI Assistant"
             >
-              <Radio className="w-3.5 h-3.5 text-[#C69A45] animate-pulse" />
-              <span className="hidden sm:inline text-[10px]">Live API</span>
+              <Mic className="w-3.5 h-3.5 text-[#C69A45]" />
+              <span className="hidden sm:inline text-[10px]">Voice AI</span>
             </button>
 
             {/* Audio Speech Toggle */}
@@ -258,10 +257,13 @@ export const DishaAdvisorDrawer: React.FC<{ onNavigate?: (mod: DishaContextState
           />
           <button
             type="button"
-            onClick={openTranscribe}
+            onClick={() => {
+              closeAdvisor();
+              openParticleAi();
+            }}
             className="p-2.5 rounded-xl bg-[#C19A5B]/10 hover:bg-[#C19A5B] text-[#174C3A] hover:text-[#174C3A] border border-[#C19A5B]/30 transition-all duration-150 flex items-center justify-center cursor-pointer"
-            title="Gemini 3.5 Audio Transcribe — Speech to Text"
-            aria-label="Activate Gemini Transcribe"
+            title="DISHA Voice AI (TTS + STT)"
+            aria-label="Activate Voice AI"
           >
             <Mic className="w-4 h-4 text-[#C19A5B] group-hover:text-[#174C3A]" />
           </button>
