@@ -31,6 +31,7 @@ import { Button } from '../common/Button';
 import { Badge } from '../common/Badge';
 import { useDisha } from '../../context/DishaContext';
 import { useAuth } from '../../context/AuthContext';
+import { useLanguage } from '../../context/LanguageContext';
 import { ApiClient } from '../../services/api/apiClient';
 import { ref, uploadBytes, getDownloadURL, listAll, deleteObject } from 'firebase/storage';
 import { storage } from '../../services/firebase';
@@ -47,6 +48,7 @@ interface DocumentItem {
 export const DocumentsView: React.FC = () => {
   const { openAdvisorWithInsight } = useDisha();
   const { activeBusiness, user } = useAuth();
+  const { t } = useLanguage();
 
   const [documents, setDocuments] = useState<DocumentItem[]>([]);
   const [loadingDocs, setLoadingDocs] = useState(false);
@@ -462,7 +464,7 @@ Date Generated: \${dprResult.generation_date}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-[#D9D3C7]/80">
         <div>
           <h1 className="text-xl sm:text-2xl font-display font-bold text-[#242522]">
-            Statutory Document Readiness & Bankable DPR Generator
+            {t('statutoryDocumentation')} & {t('reports')}
           </h1>
           <p className="text-xs text-[#68655D] mt-0.5">
             Verified checklist of certificates, NOCs, and KVIC/SIDBI bankable Detailed Project Report generation.
@@ -480,7 +482,7 @@ Date Generated: \${dprResult.generation_date}
             className="text-xs shadow-md"
           >
             <Sparkles className={`w-3.5 h-3.5 mr-1 ${dprGenerating ? 'animate-spin' : ''}`} />
-            {dprGenerating ? 'Compiling Projections...' : 'Generate Bankable DPR'}
+            {dprGenerating ? 'Compiling Projections...' : t('generateBankableDpr')}
           </Button>
         </div>
       </div>

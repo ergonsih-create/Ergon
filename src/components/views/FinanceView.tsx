@@ -33,10 +33,12 @@ import { DeterministicFinancialEngine } from '../../services/deterministic/finan
 import { ApiClient } from '../../services/api/apiClient';
 import { useDisha } from '../../context/DishaContext';
 import { useAuth } from '../../context/AuthContext';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const FinanceView: React.FC<{ onNavigate?: (mod: any) => void }> = ({ onNavigate }) => {
   const { openAdvisorWithInsight } = useDisha();
   const { activeBusiness, updateActiveBusiness } = useAuth();
+  const { t } = useLanguage();
 
   const [activeTab, setActiveTab] = useState<'EMI' | 'PROJECT_COST' | 'STRUCTURE' | 'CASH_FLOW' | 'ROI_DSCR' | 'WORKING_CAPITAL'>('EMI');
 
@@ -147,7 +149,7 @@ export const FinanceView: React.FC<{ onNavigate?: (mod: any) => void }> = ({ onN
         <div>
           <div className="flex items-center gap-2">
             <h1 className="text-xl sm:text-2xl font-display font-extrabold text-[#3B2F2A]">
-              Financial Structuring & Debt Service
+              {t('finance')} & {t('loanAmortizerEmi')}
             </h1>
             <Badge variant="forest">Deterministic Formulas</Badge>
           </div>
@@ -166,12 +168,12 @@ export const FinanceView: React.FC<{ onNavigate?: (mod: any) => void }> = ({ onN
       {/* Navigation Sub-Tabs */}
       <div className="flex items-center gap-1.5 border-b border-[#C8A96B]/20 pb-2 overflow-x-auto scrollbar-none">
         {[
-          { id: 'EMI', label: 'Loan EMI Calculator (/finance/emi)' },
-          { id: 'PROJECT_COST', label: 'Project Cost (/finance/project-cost)' },
-          { id: 'STRUCTURE', label: 'Debt & Equity (/finance/structure)' },
-          { id: 'CASH_FLOW', label: 'Cash Flow (/finance/cash-flow)' },
-          { id: 'ROI_DSCR', label: 'ROI & DSCR (/finance/roi, /finance/dscr)' },
-          { id: 'WORKING_CAPITAL', label: 'Working Capital (/finance/working-capital)' },
+          { id: 'EMI', label: t('loanAmortizerEmi') },
+          { id: 'PROJECT_COST', label: t('totalProjectCost') },
+          { id: 'STRUCTURE', label: `${t('promoterMargin')} & Debt` },
+          { id: 'CASH_FLOW', label: 'Cash Flow' },
+          { id: 'ROI_DSCR', label: `${t('dscr')} & Break-Even` },
+          { id: 'WORKING_CAPITAL', label: 'Working Capital' },
         ].map(tab => (
           <button
             key={tab.id}

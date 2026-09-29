@@ -28,6 +28,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { useDisha } from '../../context/DishaContext';
+import { useLanguage } from '../../context/LanguageContext';
 import { BusinessContext, DishaContextState, LocationContext } from '../../types';
 import { CURATED_BUSINESS_TEMPLATES } from '../../data/sampleBusinesses';
 import { Badge } from '../common/Badge';
@@ -36,6 +37,7 @@ import { LGDLocationSelector } from '../common/LGDLocationSelector';
 export const BusinessIdeasView: React.FC<{ onNavigate?: (mod: DishaContextState['currentModule']) => void }> = ({ onNavigate }) => {
   const { activeBusiness, saveBusiness, updateActiveBusiness, user } = useAuth();
   const { openAdvisorWithInsight } = useDisha();
+  const { t } = useLanguage();
 
   const [activeTab, setActiveTab] = useState<'PROFILE' | 'REQUIREMENTS' | 'DOCUMENTS' | 'GROWTH' | 'TEMPLATES'>('PROFILE');
   const [saveMessage, setSaveMessage] = useState<string | null>(null);
@@ -144,7 +146,7 @@ export const BusinessIdeasView: React.FC<{ onNavigate?: (mod: DishaContextState[
               <Building className="w-4 h-4 text-[#C8A96B]" />
             </div>
             <h1 className="text-xl sm:text-2xl font-display font-extrabold text-[#3B2F2A]">
-              My Business Enterprise Profile
+              {t('myBusiness')}
             </h1>
           </div>
           <p className="text-xs text-[#3B2F2A]/70 mt-1">
@@ -163,11 +165,11 @@ export const BusinessIdeasView: React.FC<{ onNavigate?: (mod: DishaContextState[
       {/* Navigation Sub-Tabs */}
       <div className="flex items-center gap-1.5 border-b border-[#C8A96B]/20 pb-2 overflow-x-auto scrollbar-none">
         {[
-          { id: 'PROFILE', label: 'Business Profile (/business/profile)' },
-          { id: 'REQUIREMENTS', label: 'Infrastructure & Assets (/business/requirements)' },
-          { id: 'DOCUMENTS', label: 'Compliance & Registration (/business/documents)' },
-          { id: 'GROWTH', label: 'Growth Milestones (/business/growth)' },
-          { id: 'TEMPLATES', label: 'NABARD Reference Models (/business/idea)' },
+          { id: 'PROFILE', label: t('profile') },
+          { id: 'REQUIREMENTS', label: 'Infrastructure & Assets' },
+          { id: 'DOCUMENTS', label: t('documents') },
+          { id: 'GROWTH', label: t('progress') },
+          { id: 'TEMPLATES', label: 'Reference Models' },
         ].map(tab => (
           <button
             key={tab.id}

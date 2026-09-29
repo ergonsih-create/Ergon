@@ -50,9 +50,29 @@ export const Breadcrumbs: React.FC = () => {
   const { dishaState, setModule } = useDisha();
   const { activeBusiness, user } = useAuth();
   const { t } = useLanguage();
-
   const currentMod = dishaState.currentModule;
   const modInfo = MODULE_LABELS[currentMod] || { name: currentMod, pillar: 'Workspace' };
+
+  // Localized module title lookup
+  const localizedModuleMap: Record<string, string> = {
+    DASHBOARD: t('dashboard'),
+    BUSINESS_IDEAS: t('myBusiness'),
+    LOCATION: t('location'),
+    MARKET_INSIGHTS: t('marketInsights'),
+    FEASIBILITY: t('feasibility'),
+    FINANCE: t('finance'),
+    SCHEMES: t('schemes'),
+    DOCUMENTS: t('documents'),
+    APPLICATIONS: t('applications'),
+    REPORTS: t('reports'),
+    INVENTORY: t('operations'),
+    LEARNING: t('resources'),
+    SUPPORT: t('support'),
+    ADMIN: t('admin'),
+    NOTIFICATIONS: t('notifications'),
+    PROFILE: t('profile'),
+  };
+  const activeModuleName = localizedModuleMap[currentMod] || modInfo.name;
 
   return (
     <nav id="breadcrumbs_root" aria-label="Breadcrumb" className="w-full py-1.5 px-1 flex flex-wrap items-center gap-1.5 text-xs text-[#3B2F2A]/70 font-medium">
@@ -78,7 +98,7 @@ export const Breadcrumbs: React.FC = () => {
 
       {/* Active Module */}
       <span className="font-bold text-[#174C3A] bg-[#174C3A]/10 px-2 py-0.5 rounded-md border border-[#174C3A]/20">
-        {modInfo.name}
+        {activeModuleName}
       </span>
 
       {/* Active Business Context Badge if present */}

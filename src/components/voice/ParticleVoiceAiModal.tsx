@@ -25,8 +25,6 @@ import {
   Maximize2,
   Minimize2
 } from 'lucide-react';
-import { useDisha } from '../../context/DishaContext';
-import { GeminiTranscribeService } from '../../services/ai/geminiTranscribeService';
 
 interface ParticleVoiceAiModalProps {
   isOpen: boolean;
@@ -68,8 +66,39 @@ const PROMPT_SUGGESTIONS = [
   'What documents are needed for Udyam registration?'
 ];
 
+import { useDisha } from '../../context/DishaContext';
+import { useLanguage } from '../../context/LanguageContext';
+import { GeminiTranscribeService } from '../../services/ai/geminiTranscribeService';
+
+export const BCP47_LANG_MAP: Record<string, string> = {
+  en: 'en-IN',
+  hi: 'hi-IN',
+  mr: 'mr-IN',
+  ta: 'ta-IN',
+  te: 'te-IN',
+  bn: 'bn-IN',
+  gu: 'gu-IN',
+  kn: 'kn-IN',
+  pa: 'pa-IN',
+  ml: 'ml-IN',
+  od: 'or-IN',
+  as: 'as-IN',
+  ur: 'ur-IN',
+  ks: 'ks-IN',
+  mai: 'mai-IN',
+  sat: 'sat-IN',
+  ne: 'ne-NP',
+  kok: 'kok-IN',
+  sd: 'sd-IN',
+  doi: 'doi-IN',
+  mni: 'mni-IN',
+  brx: 'brx-IN',
+  sa: 'sa-IN',
+};
+
 export const ParticleVoiceAiModal: React.FC<ParticleVoiceAiModalProps> = ({ isOpen, onClose }) => {
   const { sendChatMessage, isProcessing: globalProcessing, dishaState, openAdvisor } = useDisha();
+  const { currentLanguage, setLanguage, availableLanguages } = useLanguage();
 
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const animFrameRef = useRef<number | null>(null);
@@ -86,9 +115,15 @@ export const ParticleVoiceAiModal: React.FC<ParticleVoiceAiModalProps> = ({ isOp
   const [isListening, setIsListening] = useState<boolean>(false);
   const [isMuted, setIsMuted] = useState<boolean>(false);
   const [speechRate, setSpeechRate] = useState<number>(1.0);
-  const [selectedLang, setSelectedLang] = useState<string>('en-IN');
+  const [selectedLang, setSelectedLang] = useState<string>(() => BCP47_LANG_MAP[currentLanguage] || 'en-IN');
   const [audioVolume, setAudioVolume] = useState<number>(0);
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
+
+  // Synchronize speech language whenever user changes language
+  useEffect(() => {
+    const targetBcp = BCP47_LANG_MAP[currentLanguage] || 'en-IN';
+    setSelectedLang(targetBcp);
+  }, [currentLanguage]);
 
   // Web Audio & Speech Recognition Refs
   const recognitionRef = useRef<any>(null);
@@ -244,25 +279,59 @@ export const ParticleVoiceAiModal: React.FC<ParticleVoiceAiModalProps> = ({ isOp
   // TTS Greeting on Open
   useEffect(() => {
     if (isOpen) {
-      speakText('Namaste! I am DISHA, your AI co-pilot. I am ready to guide your enterprise.');
+      const greetings: Record<string, string> = {
+        en: 'Namaste! I am DISHA, your AI co-pilot. I am ready to guide your enterprise.',
+        hi: 'नमस्ते! मैं दिशा AI हूँ, आपकी ग्रामीण उद्यम सलाहकार। अपना प्रश्न पूछें।',
+        mr: 'नमस्ते! मी दिशा AI आहे, आपली ग्रामीण उद्योग सल्लागार. आपला प्रश्न विचारा.',
+        ta: 'வணக்கம்! நான் திஷா AI. உங்கள் தொழில் வழிகாட்டி. கேளுங்கள்.',
+        te: 'నమస్కారం! నేను దిశ AI. మీ వ్యాపార సలహాదారుని. అడగండి.',
+        bn: 'নমস্কার! আমি দিশা এআই, আপনার গ্রামীণ ব্যবসা উপদেষ্টা। বলুন।',
+        gu: 'નમસ્તે! હું દિશા AI છું, આપની ગ્રામીણ ઉદ્યોગ સલાહકાર. પૂછો.',
+        kn: 'ನಮಸ್ಕಾರ! ನಾನು ದಿಶಾ AI, ನಿಮ್ಮ ಗ್ರಾಮೀಣ ಉದ್ಯಮ ಸಲಹೆಗಾರ್ತಿ. ಕೇಳಿ.',
+        pa: 'ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ! ਮੈਂ ਦਿਸ਼ਾ AI ਹਾਂ, ਤੁਹਾਡਾ ਪੇਂਡੂ ਕਾਰੋਬਾਰ ਸਲਾਹਕਾਰ। ਪੁੱਛੋ।',
+        ml: 'നമസ്കാരം! ഞാൻ ദിശ AI, നിങ്ങളുടെ സംരംഭക ഉപദേശക. ചോദിക്കൂ.',
+        od: 'ନମସ୍କାର! ମୁଁ ଦିଶା AI, ଆପଣଙ୍କ ଗ୍ରାମୀଣ ଉଦ୍ୟୋଗ ପରାମର୍ଶଦାତା। ପଚାରନ୍ତୁ।',
+        as: 'নমস্কাৰ! মই দিশা AI, আপোনাৰ ব্যৱসায়িক পৰামৰ্শদাতা। কওক।',
+        ur: 'نمستے! میں دشا اے آئی ہوں، آپ کی دیہی کاروباری مشیر۔ پوچھیے۔'
+      };
+      const greetText = greetings[currentLanguage] || greetings['hi'] || greetings['en'];
+      setAiResponse(greetText);
+      speakText(greetText, currentLanguage);
     } else {
       stopSpeech();
       stopListening();
     }
-  }, [isOpen]);
+  }, [isOpen, currentLanguage]);
 
-  // Text To Speech Handler
-  const speakText = (text: string) => {
+  // Text To Speech Handler with Indic voice selection
+  const speakText = (text: string, langCodeOverride?: string) => {
     if (isMuted || !('speechSynthesis' in window)) return;
     window.speechSynthesis.cancel();
 
-    const cleanText = text.replace(/[*#]/g, '').trim();
+    const cleanText = text.replace(/[*#_`]/g, '').trim();
     if (!cleanText) return;
 
     const utterance = new SpeechSynthesisUtterance(cleanText);
     utterance.rate = speechRate;
     utterance.pitch = 1.0;
-    utterance.lang = selectedLang;
+
+    const targetLangCode = langCodeOverride || currentLanguage;
+    const targetBcp = BCP47_LANG_MAP[targetLangCode] || selectedLang || 'en-IN';
+    utterance.lang = targetBcp;
+
+    // Pick best matching voice from available browser voices
+    if ('speechSynthesis' in window) {
+      const voices = window.speechSynthesis.getVoices();
+      const langPrefix = targetLangCode.toLowerCase();
+      const matchedVoice = voices.find(v => 
+        v.lang.toLowerCase().replace('_', '-').startsWith(targetBcp.toLowerCase()) ||
+        v.lang.toLowerCase().replace('_', '-').startsWith(langPrefix) ||
+        v.name.toLowerCase().includes(langPrefix)
+      );
+      if (matchedVoice) {
+        utterance.voice = matchedVoice;
+      }
+    }
 
     utterance.onstart = () => setMode('SPEAKING');
     utterance.onend = () => setMode('IDLE');
@@ -441,12 +510,19 @@ export const ParticleVoiceAiModal: React.FC<ParticleVoiceAiModalProps> = ({ isOp
     setMode('THINKING');
 
     try {
-      await sendChatMessage(textToSend);
-      // Retrieve AI reply from context history
-      const lastMsg = dishaState.chatHistory[dishaState.chatHistory.length - 1];
-      const reply = lastMsg?.sender === 'DISHA' ? lastMsg.text : 'I have analyzed your input and updated your workspace metrics.';
-      setAiResponse(reply);
-      speakText(reply);
+      const reply = await sendChatMessage(textToSend, currentLanguage);
+      const fallbackReply = currentLanguage === 'mr' 
+        ? 'मी आपल्या विनंतीचे विश्लेषण केले आहे.' 
+        : currentLanguage === 'hi' 
+        ? 'मैंने आपके प्रश्न का विश्लेषण किया है।' 
+        : currentLanguage === 'ta'
+        ? 'உங்கள் கேள்விக்கான பதில் தயார்.'
+        : currentLanguage === 'te'
+        ? 'మీ ప్రశ్నకు సమాధానం సిద్ధంగా ఉంది.'
+        : 'I have analyzed your input and updated your workspace metrics.';
+      const finalReply = reply || fallbackReply;
+      setAiResponse(finalReply);
+      speakText(finalReply, currentLanguage);
     } catch (err) {
       console.error('[Particle Voice AI] Error sending query:', err);
       setMode('IDLE');
@@ -558,17 +634,15 @@ export const ParticleVoiceAiModal: React.FC<ParticleVoiceAiModalProps> = ({ isOp
             {/* Language Selector Overlay */}
             <div className="absolute top-3 left-3 z-10">
               <select
-                value={selectedLang}
-                onChange={(e) => setSelectedLang(e.target.value)}
-                className="bg-[#0B2018]/90 text-xs text-[#E5C07B] border border-[#C19A5B]/40 rounded-xl px-2.5 py-1 focus:outline-none cursor-pointer"
+                value={currentLanguage}
+                onChange={(e) => setLanguage(e.target.value as any)}
+                className="bg-[#0B2018]/90 text-xs text-[#E5C07B] border border-[#C19A5B]/40 rounded-xl px-2.5 py-1 focus:outline-none cursor-pointer max-w-[170px]"
               >
-                <option value="en-IN">English (India)</option>
-                <option value="hi-IN">हिन्दी (Hindi)</option>
-                <option value="mr-IN">मराठी (Marathi)</option>
-                <option value="ta-IN">தமிழ் (Tamil)</option>
-                <option value="te-IN">తెలుగు (Telugu)</option>
-                <option value="bn-IN">বাংলা (Bengali)</option>
-                <option value="gu-IN">ગુજરાતી (Gujarati)</option>
+                {availableLanguages.map(l => (
+                  <option key={l.code} value={l.code} className="bg-[#0B2018] text-[#FAF7F2]">
+                    {l.nativeName} ({l.name})
+                  </option>
+                ))}
               </select>
             </div>
           </div>

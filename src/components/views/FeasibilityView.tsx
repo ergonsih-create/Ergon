@@ -25,10 +25,12 @@ import { UnknownState } from '../common/UnknownState';
 import { FeasibilityEngine } from '../../services/deterministic/feasibilityEngine';
 import { useDisha } from '../../context/DishaContext';
 import { useAuth } from '../../context/AuthContext';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const FeasibilityView: React.FC<{ onNavigate?: (mod: any) => void }> = ({ onNavigate }) => {
   const { openAdvisorWithInsight } = useDisha();
   const { activeBusiness } = useAuth();
+  const { t } = useLanguage();
 
   const [demandIndex, setDemandIndex] = useState(0.82);
   const [accessibilityIndex, setAccessibilityIndex] = useState(0.78);
@@ -95,7 +97,7 @@ export const FeasibilityView: React.FC<{ onNavigate?: (mod: any) => void }> = ({
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-[#D9D3C7]/80">
         <div>
           <h1 className="text-xl sm:text-2xl font-display font-bold text-[#242522]">
-            Feasibility Analysis & SWOT Matrix (HBFS Engine)
+            {t('feasibility')} (HBFS Engine)
           </h1>
           <p className="text-xs text-[#68655D] mt-0.5">
             Deterministic 8-Parameter Feasibility Scoring with explicit uncertainty deductions.

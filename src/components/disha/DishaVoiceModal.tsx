@@ -406,13 +406,15 @@ export const DishaVoiceModal: React.FC<DishaVoiceModalProps> = ({
     const utterance = new SpeechSynthesisUtterance(textToSpeak);
     utterance.rate = ttsSpeed;
     
-    // Choose voice matching detected language if available
+    // Choose voice matching detected language or active site language
     const voices = window.speechSynthesis.getVoices();
-    const langCode = transcriptionResult?.language || 'en';
-    const matchedVoice = voices.find(v => v.lang.startsWith(langCode));
+    const activeSiteLang = localStorage.getItem('gram_disha_lang') || 'en';
+    const langCode = transcriptionResult?.language || activeSiteLang;
+    const matchedVoice = voices.find(v => v.lang.toLowerCase().replace('_', '-').startsWith(langCode.toLowerCase()));
     if (matchedVoice) {
       utterance.voice = matchedVoice;
     }
+    utterance.lang = langCode;
 
     utterance.onend = () => setIsPlayingTTS(false);
     utterance.onerror = () => setIsPlayingTTS(false);

@@ -43,22 +43,22 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
   const [isMoreOpen, setIsMoreOpen] = useState(false);
 
   const mainTabs = [
-    { id: 'DASHBOARD' as const, label: 'Home', icon: LayoutDashboard },
-    { id: 'BUSINESS_IDEAS' as const, label: 'Business', icon: Lightbulb },
-    { id: 'FINANCE' as const, label: 'Finance', icon: Calculator },
-    { id: 'SCHEMES' as const, label: 'Schemes', icon: Landmark },
+    { id: 'DASHBOARD' as const, label: t('dashboard'), icon: LayoutDashboard },
+    { id: 'BUSINESS_IDEAS' as const, label: t('myBusiness'), icon: Lightbulb },
+    { id: 'FINANCE' as const, label: t('finance'), icon: Calculator },
+    { id: 'SCHEMES' as const, label: t('schemes'), icon: Landmark },
   ];
 
   const moreItems = [
-    { id: 'MARKET_INSIGHTS' as const, label: 'Market & Mandi', icon: TrendingUp },
-    { id: 'FEASIBILITY' as const, label: 'HBFS Feasibility', icon: Compass },
-    { id: 'APPLICATIONS' as const, label: 'Scheme Applications', icon: FileCheck2 },
-    { id: 'INVENTORY' as const, label: 'Inventory & Operations', icon: Boxes },
-    { id: 'REPORTS' as const, label: 'Reports & DPR', icon: FileText },
-    { id: 'LEARNING' as const, label: 'Training & Resources', icon: GraduationCap },
-    { id: 'SUPPORT' as const, label: 'Support & Grievance', icon: LifeBuoy },
-    { id: 'SETTINGS' as const, label: 'Settings & Profile', icon: Settings },
-    { id: 'ADMIN' as const, label: 'Government Datasets', icon: Database },
+    { id: 'MARKET_INSIGHTS' as const, label: t('marketInsights'), icon: TrendingUp },
+    { id: 'FEASIBILITY' as const, label: t('feasibility'), icon: Compass },
+    { id: 'APPLICATIONS' as const, label: t('applications'), icon: FileCheck2 },
+    { id: 'INVENTORY' as const, label: t('operations'), icon: Boxes },
+    { id: 'REPORTS' as const, label: t('reports'), icon: FileText },
+    { id: 'LEARNING' as const, label: t('resources'), icon: GraduationCap },
+    { id: 'SUPPORT' as const, label: t('support'), icon: LifeBuoy },
+    { id: 'SETTINGS' as const, label: t('profile'), icon: Settings },
+    { id: 'ADMIN' as const, label: t('admin'), icon: Database },
   ];
 
   const handleSelect = (m: DishaContextState['currentModule']) => {

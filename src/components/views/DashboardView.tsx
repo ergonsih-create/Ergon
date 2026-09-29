@@ -61,19 +61,19 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
           <div className="space-y-2 max-w-2xl">
             <div className="flex items-center gap-2">
               <span className="bg-[#174C3A]/10 text-[#174C3A] border border-[#174C3A]/20 text-[11px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
-                Gram-Disha Dashboard
+                {t('appName')} {t('dashboard')}
               </span>
               <span className="text-xs text-[#3B2F2A]/60">
-                LGD Verified • Census 2011 • MoRD Data Standard
+                {t('badges.lgdVerified')} • Census 2011 • MoRD Data Standard
               </span>
             </div>
             
             <h1 className="font-display text-2xl sm:text-3xl font-extrabold tracking-tight text-[#3B2F2A]">
-              Welcome, {user?.fullName || 'Entrepreneur Aspirant'}
+              {t('welcomeUser')}, {user?.fullName || 'Entrepreneur Aspirant'}
             </h1>
             
             <p className="text-sm text-[#3B2F2A]/80 leading-relaxed">
-              No enterprise profile has been created yet. Gram-Disha evaluates rural business feasibility, statutory bank DPRs, and government subsidies using your real enterprise parameters.
+              Gram-Disha evaluates rural business feasibility, statutory bank DPRs, and government subsidies using your real enterprise parameters.
             </p>
           </div>
 
@@ -83,7 +83,7 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
               className="flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-[#174C3A] text-[#FAF7F2] text-xs font-bold shadow-md hover:bg-[#174C3A]/90 transition-all cursor-pointer"
             >
               <PlusCircle className="w-4 h-4 text-[#C8A96B]" />
-              <span>Create Business Profile</span>
+              <span>{t('createBusinessProfile')}</span>
             </button>
           </div>
         </div>
@@ -93,31 +93,31 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
           {[
             {
               step: '01',
-              title: 'Business & Location',
+              title: t('myBusiness'),
               desc: 'Select your enterprise sector, proposed village/locality, and operational capacity.',
-              action: 'Configure Profile',
+              action: t('editEnterpriseDetails'),
               onClick: () => onNavigate('BUSINESS_IDEAS')
             },
             {
               step: '02',
-              title: 'Financial Structuring',
+              title: t('finance'),
               desc: 'Input machinery, shed, and working capital costs for deterministic EMI & DSCR calculation.',
-              action: 'Enter Capital',
+              action: t('totalProjectCost'),
               onClick: () => onNavigate('FINANCE')
             },
             {
               step: '03',
-              title: 'Schemes & Subsidies',
+              title: t('schemes'),
               desc: 'Evaluate eligibility for 25%-35% capital subsidy under PMEGP, PMFME, and Mudra.',
-              action: 'Check Schemes',
+              action: t('compareSchemes'),
               onClick: () => onNavigate('SCHEMES')
             },
             {
               step: '04',
-              title: 'DPR & Operations',
+              title: t('reports'),
               desc: 'Generate bankable project reports and track real daily inventory and sales.',
-              action: 'Explore Operations',
-              onClick: () => onNavigate('INVENTORY')
+              action: t('generateBankableDpr'),
+              onClick: () => onNavigate('REPORTS')
             }
           ].map((item, idx) => (
             <div 
@@ -145,7 +145,7 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
               <MapPin className="w-5 h-5 text-[#C8A96B]" />
             </div>
             <div>
-              <div className="text-xs font-bold text-[#3B2F2A]">Registered Location</div>
+              <div className="text-xs font-bold text-[#3B2F2A]">{t('registeredLocation')}</div>
               <div className="text-xs text-[#3B2F2A]/70">
                 {user?.location.district !== 'UNKNOWN' ? `${user?.location.villageOrLocality}, ${user?.location.district}, ${user?.location.state}` : 'Location unconfigured'}
               </div>
@@ -155,7 +155,7 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
             onClick={() => onNavigate('LOCATION')}
             className="px-3.5 py-1.5 rounded-xl border border-[#174C3A]/30 bg-[#FAF7F2] text-xs font-bold text-[#174C3A] hover:bg-[#174C3A] hover:text-[#FAF7F2] transition-colors cursor-pointer w-fit"
           >
-            Update Location
+            {t('updateLocation')}
           </button>
         </div>
       </div>
@@ -212,7 +212,7 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
           <div className="space-y-2 max-w-2xl">
             <div className="flex items-center gap-2">
               <span className="bg-[#C8A96B]/20 text-[#C8A96B] border border-[#C8A96B]/40 text-[11px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
-                Active Enterprise Profile
+                {t('activeEnterpriseProfile')}
               </span>
               <span className="text-xs text-[#FAF7F2]/70">
                 LGD: {gramPanchayat}, {district} ({isRural ? 'Rural Area' : 'Urban Area'})
@@ -234,7 +234,7 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                <span>Top Subsidy Scheme: <strong>{bestScheme?.schemeName || 'PMEGP'} ({bestScheme?.subsidyPercentage || 35}%)</strong></span>
+                <span>{t('schemes')}: <strong>{bestScheme?.schemeName || 'PMEGP'} ({bestScheme?.subsidyPercentage || 35}%)</strong></span>
               </div>
             </div>
           </div>
@@ -245,14 +245,14 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
               className="px-4 py-2.5 rounded-xl bg-[#FAF7F2] text-[#174C3A] text-xs font-bold hover:bg-[#F2E8D6] transition-colors shadow-xs cursor-pointer flex items-center justify-center gap-1.5"
             >
               <Building className="w-4 h-4 text-[#174C3A]" />
-              <span>Edit Enterprise Details</span>
+              <span>{t('editEnterpriseDetails')}</span>
             </button>
             <button
               onClick={() => onNavigate('APPLICATIONS')}
               className="px-4 py-2.5 rounded-xl bg-[#FAF7F2]/10 hover:bg-[#FAF7F2]/20 text-[#FAF7F2] border border-[#FAF7F2]/30 text-xs font-bold transition-colors cursor-pointer flex items-center justify-center gap-1.5"
             >
               <FileCheck className="w-4 h-4 text-[#C8A96B]" />
-              <span>Generate Bankable DPR</span>
+              <span>{t('generateBankableDpr')}</span>
             </button>
           </div>
         </div>
@@ -279,14 +279,14 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
               {(feasibilityScore.totalScore * 100).toFixed(1)}%
             </div>
             <div className="text-xs font-semibold text-[#3B2F2A]/70 mt-0.5">
-              HBFS Feasibility Score
+              {t('hbfsFeasibilityScore')}
             </div>
             <p className="text-[11px] text-[#3B2F2A]/60 mt-2 line-clamp-2">
               Demand index 0.78 with rural location viability and scheme suitability.
             </p>
           </div>
           <div className="mt-3 pt-3 border-t border-[#C8A96B]/20 flex items-center justify-between text-xs text-[#174C3A] font-bold group-hover:translate-x-0.5 transition-transform">
-            <span>View 8-Factor Matrix</span>
+            <span>{t('view8FactorMatrix')}</span>
             <ChevronRight className="w-3.5 h-3.5" />
           </div>
         </div>
@@ -309,14 +309,14 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
               {rawProjectCost > 0 ? `₹${(rawProjectCost / 100000).toFixed(2)}L` : 'Unconfigured'}
             </div>
             <div className="text-xs font-semibold text-[#3B2F2A]/70 mt-0.5">
-              Total Project Outlay
+              {t('totalProjectOutlay')}
             </div>
             <p className="text-[11px] text-[#3B2F2A]/60 mt-2 line-clamp-2">
               {rawProjectCost > 0 ? 'Cost itemized across machinery, civil works, and working capital.' : 'Configure capital inputs to compute loan amortizer and DSCR.'}
             </p>
           </div>
           <div className="mt-3 pt-3 border-t border-[#C8A96B]/20 flex items-center justify-between text-xs text-[#174C3A] font-bold group-hover:translate-x-0.5 transition-transform">
-            <span>Loan Amortizer & EMI</span>
+            <span>{t('loanAmortizerEmi')}</span>
             <ChevronRight className="w-3.5 h-3.5" />
           </div>
         </div>
@@ -339,14 +339,14 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
               {bestScheme?.schemeCode || 'PMEGP'}
             </div>
             <div className="text-xs font-semibold text-[#3B2F2A]/70 mt-0.5">
-              Capital Subsidy Assistance
+              {t('capitalSubsidyAssistance')}
             </div>
             <p className="text-[11px] text-[#3B2F2A]/60 mt-2 line-clamp-2">
               Matched for {user?.demographics.category || 'Special Category'} in {isRural ? 'Rural Area' : 'Urban Area'}.
             </p>
           </div>
           <div className="mt-3 pt-3 border-t border-[#C8A96B]/20 flex items-center justify-between text-xs text-[#174C3A] font-bold group-hover:translate-x-0.5 transition-transform">
-            <span>Compare 5 Schemes</span>
+            <span>{t('compareSchemes')}</span>
             <ChevronRight className="w-3.5 h-3.5" />
           </div>
         </div>
@@ -369,14 +369,14 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
               {marketData.odopCommodity || 'LGD Verified'}
             </div>
             <div className="text-xs font-semibold text-[#3B2F2A]/70 mt-0.5">
-              Notified District Commodity
+              {t('marketDemandMandi')}
             </div>
             <p className="text-[11px] text-[#3B2F2A]/60 mt-2 line-clamp-2">
               Official ODOP crop under Ministry of Food Processing (MoFPI).
             </p>
           </div>
           <div className="mt-3 pt-3 border-t border-[#C8A96B]/20 flex items-center justify-between text-xs text-[#174C3A] font-bold group-hover:translate-x-0.5 transition-transform">
-            <span>Market Intelligence</span>
+            <span>{t('exploreLocalMandis')}</span>
             <ChevronRight className="w-3.5 h-3.5" />
           </div>
         </div>
