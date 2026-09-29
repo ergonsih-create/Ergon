@@ -261,14 +261,14 @@ export const FinanceView: React.FC<{ onNavigate?: (mod: any) => void }> = ({ onN
           <div className="lg:col-span-6 bg-[#FAF7F2] border border-[#C8A96B]/30 rounded-2xl p-6 shadow-xs flex flex-col justify-between">
             <div>
               <h3 className="text-xs font-bold text-[#3B2F2A] uppercase tracking-wider mb-4">
-                Amortization Summary
+                {t('Amortization Summary')}
               </h3>
 
               {computedMonthlyEMI > 0 ? (
                 <div className="space-y-4">
                   <div className="p-5 rounded-2xl bg-[#174C3A] text-[#FAF7F2] text-center shadow-xs">
                     <span className="text-[11px] uppercase tracking-wider text-[#C8A96B] font-bold">
-                      Equated Monthly Installment (EMI)
+                      {t('Equated Monthly Installment (EMI)')}
                     </span>
                     <div className="text-3xl font-display font-extrabold text-[#FAF7F2] mt-1">
                       ₹{computedMonthlyEMI.toLocaleString('en-IN')}
@@ -280,21 +280,21 @@ export const FinanceView: React.FC<{ onNavigate?: (mod: any) => void }> = ({ onN
 
                   <div className="grid grid-cols-2 gap-3 text-xs">
                     <div className="p-3 rounded-xl border border-[#C8A96B]/30 bg-[#FAF7F2]">
-                      <span className="text-[#3B2F2A]/60 text-[11px]">Principal Amount</span>
+                      <span className="text-[#3B2F2A]/60 text-[11px]">{t('Principal Amount')}</span>
                       <div className="font-bold text-[#3B2F2A] text-sm mt-0.5">
                         ₹{numPrincipal.toLocaleString('en-IN')}
                       </div>
                     </div>
 
                     <div className="p-3 rounded-xl border border-[#C8A96B]/30 bg-[#FAF7F2]">
-                      <span className="text-[#3B2F2A]/60 text-[11px]">Total Interest Payable</span>
+                      <span className="text-[#3B2F2A]/60 text-[11px]">{t('Total Interest Payable')}</span>
                       <div className="font-bold text-[#B45B4A] text-sm mt-0.5">
                         ₹{totalInterestPayable.toLocaleString('en-IN')}
                       </div>
                     </div>
 
                     <div className="col-span-2 p-3 rounded-xl border border-[#C8A96B]/30 bg-[#F2E8D6]/30">
-                      <span className="text-[#3B2F2A]/60 text-[11px]">Total Outflow (Principal + Interest)</span>
+                      <span className="text-[#3B2F2A]/60 text-[11px]">{t('Total Outflow (Principal + Interest)')}</span>
                       <div className="font-bold text-[#174C3A] text-base mt-0.5">
                         ₹{totalRepayment.toLocaleString('en-IN')}
                       </div>
@@ -306,7 +306,7 @@ export const FinanceView: React.FC<{ onNavigate?: (mod: any) => void }> = ({ onN
                   <div className="w-10 h-10 mx-auto rounded-full bg-[#F2E8D6] flex items-center justify-center text-[#3B2F2A]/60">
                     <Calculator className="w-5 h-5 text-[#C8A96B]" />
                   </div>
-                  <h4 className="text-xs font-bold text-[#3B2F2A]">Awaiting Input Parameters</h4>
+                  <h4 className="text-xs font-bold text-[#3B2F2A]">{t('Awaiting Input Parameters')}</h4>
                   <p className="text-xs text-[#3B2F2A]/60">
                     Enter valid Principal, Interest Rate, and Tenure on the left to dynamically compute your exact monthly EMI and amortization schedule.
                   </p>

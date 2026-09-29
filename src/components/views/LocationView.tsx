@@ -325,8 +325,8 @@ export const LocationView: React.FC = () => {
 
         <div className="flex items-center gap-3 shrink-0 bg-[#FCFAF5] p-2.5 rounded-xl border border-[#D9D3C7]">
           <div className="text-right">
-            <div className="text-[10px] text-[#68655D] font-bold uppercase">Census Urbanity</div>
-            <div className="text-xs font-bold text-[#242522]">{currentDistrictRecord.censusRuralPercentage}% Rural Population</div>
+            <div className="text-[10px] text-[#68655D] font-bold uppercase">{t('Census Urbanity')}</div>
+            <div className="text-xs font-bold text-[#242522]">{currentDistrictRecord.censusRuralPercentage}% {t('Rural Population')}</div>
           </div>
         </div>
       </div>
@@ -335,7 +335,7 @@ export const LocationView: React.FC = () => {
         {/* Left: Administrative Hierarchy Form */}
         <div className="lg:col-span-2 space-y-6">
           <Card 
-            title="Administrative LGD Hierarchy" 
+            title={t('Administrative LGD Hierarchy')} 
             subtitle="Verified against Ministry of Panchayati Raj (MoPR) Local Government Directory"
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">

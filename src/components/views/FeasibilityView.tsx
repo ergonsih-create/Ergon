@@ -112,7 +112,7 @@ export const FeasibilityView: React.FC<{ onNavigate?: (mod: any) => void }> = ({
             className="text-xs"
           >
             <Sparkles className="w-3.5 h-3.5 mr-1.5 text-[#C69A45]" />
-            Explain Score
+            {t('Explain Score')}
           </Button>
         </div>
       </div>
@@ -121,17 +121,17 @@ export const FeasibilityView: React.FC<{ onNavigate?: (mod: any) => void }> = ({
       <div className="p-6 rounded-3xl bg-gradient-to-br from-[#174C3A] via-[#1E5744] to-[#12382B] text-[#FCFAF5] shadow-lg flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-6">
           <div className="w-24 h-24 rounded-2xl bg-[#FCFAF5] text-[#174C3A] flex flex-col items-center justify-center shadow-md shrink-0">
-            <span className="text-[10px] uppercase font-bold text-[#B95736]">HBFS Score</span>
+            <span className="text-[10px] uppercase font-bold text-[#B95736]">{t('hbfsFeasibilityScore')}</span>
             <span className="text-3xl font-extrabold font-display leading-tight">
               {(hbfsResult.totalScore * 100).toFixed(1)}%
             </span>
-            <span className="text-[9px] text-[#68655D] font-mono">Tier Score</span>
+            <span className="text-[9px] text-[#68655D] font-mono">{t('Tier Score')}</span>
           </div>
 
           <div className="space-y-1.5">
             <div className="flex items-center gap-2">
               <Badge variant="harvest" size="md">
-                {hbfsResult.rankingTier.replace('_', ' ')}
+                {t(hbfsResult.rankingTier.replace('_', ' '))}
               </Badge>
               <span className="text-xs text-[#FCFAF5]/80 font-medium">
                 Recommendation: Bankable & Credit-Ready
@@ -170,7 +170,7 @@ export const FeasibilityView: React.FC<{ onNavigate?: (mod: any) => void }> = ({
             {/* Positive Drivers Group */}
             <div className="space-y-3 pb-3 border-b border-[#D9D3C7]/60">
               <div className="font-bold text-[#174C3A] text-[11px] uppercase tracking-wider">
-                Positive Feasibility Drivers (+Weights)
+                {t('Positive Evaluation Indices (+Weights)')}
               </div>
 
               <div>
@@ -237,7 +237,7 @@ export const FeasibilityView: React.FC<{ onNavigate?: (mod: any) => void }> = ({
             {/* Negative Deductions Group */}
             <div className="space-y-3">
               <div className="font-bold text-[#9F452B] text-[11px] uppercase tracking-wider">
-                Negative Penalty Deductions (-Weights)
+                {t('Negative Penalty Deductions (-Weights)')}
               </div>
 
               <div>

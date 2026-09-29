@@ -26,11 +26,13 @@ import { SchemeEngine } from '../../services/deterministic/schemeEngine';
 import { SchemeMatch } from '../../types';
 import { useDisha } from '../../context/DishaContext';
 import { useAuth } from '../../context/AuthContext';
+import { useLanguage } from '../../context/LanguageContext';
 import { ApiClient } from '../../services/api/apiClient';
 
 export const SchemesView: React.FC<{ onNavigate?: (mod: any) => void }> = ({ onNavigate }) => {
   const { openAdvisorWithInsight } = useDisha();
   const { user, activeBusiness } = useAuth();
+  const { t } = useLanguage();
 
   const [filterState, setFilterState] = useState<'ALL' | 'POTENTIALLY_ELIGIBLE' | 'NOT_ELIGIBLE'>('ALL');
   const [selectedSchemeForDocs, setSelectedSchemeForDocs] = useState<SchemeMatch | null>(null);
@@ -146,31 +148,31 @@ export const SchemesView: React.FC<{ onNavigate?: (mod: any) => void }> = ({ onN
           onClick={() => setFilterState('ALL')}
           className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-colors ${
             filterState === 'ALL'
-              ? 'bg-[#174C3A] text-[#FCFAF5]'
-              : 'bg-[#FCFAF5] text-[#68655D] hover:bg-[#F8F5EE] border border-[#D9D3C7]'
+               ? 'bg-[#174C3A] text-[#FCFAF5]'
+               : 'bg-[#FCFAF5] text-[#68655D] hover:bg-[#F8F5EE] border border-[#D9D3C7]'
           }`}
         >
-          All Schemes ({evaluatedSchemes.length})
+          {t('All Schemes')} ({evaluatedSchemes.length})
         </button>
         <button
           onClick={() => setFilterState('POTENTIALLY_ELIGIBLE')}
           className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-colors ${
             filterState === 'POTENTIALLY_ELIGIBLE'
-              ? 'bg-[#174C3A] text-[#FCFAF5]'
-              : 'bg-[#FCFAF5] text-[#68655D] hover:bg-[#F8F5EE] border border-[#D9D3C7]'
+               ? 'bg-[#174C3A] text-[#FCFAF5]'
+               : 'bg-[#FCFAF5] text-[#68655D] hover:bg-[#F8F5EE] border border-[#D9D3C7]'
           }`}
         >
-          Potentially Eligible ({evaluatedSchemes.filter(s => s.eligibilityState === 'POTENTIALLY_ELIGIBLE').length})
+          {t('Potentially Eligible')} ({evaluatedSchemes.filter(s => s.eligibilityState === 'POTENTIALLY_ELIGIBLE').length})
         </button>
         <button
           onClick={() => setFilterState('NOT_ELIGIBLE')}
           className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-colors ${
             filterState === 'NOT_ELIGIBLE'
-              ? 'bg-[#174C3A] text-[#FCFAF5]'
-              : 'bg-[#FCFAF5] text-[#68655D] hover:bg-[#F8F5EE] border border-[#D9D3C7]'
+               ? 'bg-[#174C3A] text-[#FCFAF5]'
+               : 'bg-[#FCFAF5] text-[#68655D] hover:bg-[#F8F5EE] border border-[#D9D3C7]'
           }`}
         >
-          Not Eligible ({evaluatedSchemes.filter(s => s.eligibilityState === 'NOT_ELIGIBLE').length})
+          {t('Not Eligible')} ({evaluatedSchemes.filter(s => s.eligibilityState === 'NOT_ELIGIBLE').length})
         </button>
       </div>
 

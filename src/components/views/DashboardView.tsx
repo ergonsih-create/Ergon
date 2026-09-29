@@ -215,7 +215,7 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
                 {t('activeEnterpriseProfile')}
               </span>
               <span className="text-xs text-[#FAF7F2]/70">
-                LGD: {gramPanchayat}, {district} ({isRural ? 'Rural Area' : 'Urban Area'})
+                LGD: {gramPanchayat}, {district} ({isRural ? t('Rural Area') : t('Urban Area')})
               </span>
             </div>
             
@@ -230,7 +230,7 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
             <div className="flex flex-wrap items-center gap-4 pt-2 text-xs text-[#FAF7F2]/80">
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-[#C8A96B]" />
-                <span>Sector: <strong>{activeBusiness?.category || 'AGRO'}</strong></span>
+                <span>{t('Sector')}: <strong>{activeBusiness?.category || 'AGRO'}</strong></span>
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-400" />
@@ -301,7 +301,7 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
               <Calculator className="w-5 h-5" />
             </div>
             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#B45B4A]/15 text-[#B45B4A] uppercase">
-              Deterministic
+              {t('Deterministic')}
             </span>
           </div>
           <div className="mt-4">
@@ -342,7 +342,7 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
               {t('capitalSubsidyAssistance')}
             </div>
             <p className="text-[11px] text-[#3B2F2A]/60 mt-2 line-clamp-2">
-              Matched for {user?.demographics.category || 'Special Category'} in {isRural ? 'Rural Area' : 'Urban Area'}.
+              Matched for {user?.demographics.category || 'Special Category'} in {isRural ? t('Rural Area') : t('Urban Area')}.
             </p>
           </div>
           <div className="mt-3 pt-3 border-t border-[#C8A96B]/20 flex items-center justify-between text-xs text-[#174C3A] font-bold group-hover:translate-x-0.5 transition-transform">
@@ -361,7 +361,7 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
               <TrendingUp className="w-5 h-5" />
             </div>
             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#5A6B4F]/15 text-[#5A6B4F] uppercase">
-              ODOP Verified
+              {t('ODOP Verified')}
             </span>
           </div>
           <div className="mt-4">
@@ -391,29 +391,29 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Boxes className="w-4 h-4 text-[#174C3A]" />
-                <h3 className="text-xs font-bold text-[#3B2F2A] uppercase tracking-wider">Inventory & Operations</h3>
+                <h3 className="text-xs font-bold text-[#3B2F2A] uppercase tracking-wider">{t('Inventory & Operations')}</h3>
               </div>
               <button 
                 onClick={() => onNavigate('INVENTORY')}
                 className="text-xs font-bold text-[#174C3A] hover:underline cursor-pointer"
               >
-                Manage
+                {t('Manage')}
               </button>
             </div>
 
             <div className="mt-4 space-y-2">
               <div className="flex items-center justify-between text-xs">
-                <span className="text-[#3B2F2A]/70">Registered Stock Items:</span>
+                <span className="text-[#3B2F2A]/70">{t('Registered Stock Items:')}</span>
                 <span className="font-bold text-[#3B2F2A]">{inventory.length}</span>
               </div>
               <div className="flex items-center justify-between text-xs">
-                <span className="text-[#3B2F2A]/70">Low Stock Reorder Alerts:</span>
+                <span className="text-[#3B2F2A]/70">{t('Low Stock Reorder Alerts:')}</span>
                 <span className={`font-bold ${lowStockItems.length > 0 ? 'text-[#B45B4A]' : 'text-[#5A6B4F]'}`}>
                   {lowStockItems.length}
                 </span>
               </div>
               <div className="flex items-center justify-between text-xs">
-                <span className="text-[#3B2F2A]/70">Recorded Sales Revenue:</span>
+                <span className="text-[#3B2F2A]/70">{t('Recorded Sales Revenue:')}</span>
                 <span className="font-bold text-[#174C3A]">
                   ₹{totalSalesRevenue.toLocaleString('en-IN')}
                 </span>
@@ -426,7 +426,7 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
               onClick={() => onNavigate('INVENTORY')}
               className="w-full py-2 rounded-xl bg-[#F2E8D6]/60 hover:bg-[#F2E8D6] text-xs font-bold text-[#3B2F2A] transition-colors cursor-pointer text-center"
             >
-              + Record Stock or Sale
+              {t('+ Record Stock or Sale')}
             </button>
           </div>
         </div>
@@ -437,29 +437,29 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <FileText className="w-4 h-4 text-[#174C3A]" />
-                <h3 className="text-xs font-bold text-[#3B2F2A] uppercase tracking-wider">Scheme Applications</h3>
+                <h3 className="text-xs font-bold text-[#3B2F2A] uppercase tracking-wider">{t('Scheme Applications')}</h3>
               </div>
               <button 
                 onClick={() => onNavigate('APPLICATIONS')}
                 className="text-xs font-bold text-[#174C3A] hover:underline cursor-pointer"
               >
-                View All
+                {t('View All')}
               </button>
             </div>
 
             <div className="mt-4 space-y-2">
               <div className="flex items-center justify-between text-xs">
-                <span className="text-[#3B2F2A]/70">Active Application Dossiers:</span>
+                <span className="text-[#3B2F2A]/70">{t('Active Application Dossiers:')}</span>
                 <span className="font-bold text-[#3B2F2A]">{applications.length}</span>
               </div>
               <div className="flex items-center justify-between text-xs">
-                <span className="text-[#3B2F2A]/70">Bankable DPR Status:</span>
+                <span className="text-[#3B2F2A]/70">{t('Bankable DPR Status:')}</span>
                 <span className="font-bold text-[#5A6B4F]">
-                  {applications.length > 0 ? 'Draft Ready' : 'Not Started'}
+                  {applications.length > 0 ? t('Draft Ready') : t('Not Started')}
                 </span>
               </div>
               <div className="flex items-center justify-between text-xs">
-                <span className="text-[#3B2F2A]/70">Primary Agency:</span>
+                <span className="text-[#3B2F2A]/70">{t('Primary Agency:')}</span>
                 <span className="font-bold text-[#3B2F2A]">DIC / KVIC</span>
               </div>
             </div>
@@ -470,7 +470,7 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
               onClick={() => onNavigate('APPLICATIONS')}
               className="w-full py-2 rounded-xl bg-[#F2E8D6]/60 hover:bg-[#F2E8D6] text-xs font-bold text-[#3B2F2A] transition-colors cursor-pointer text-center"
             >
-              + Start Scheme Application
+              {t('+ Start Scheme Application')}
             </button>
           </div>
         </div>
@@ -481,27 +481,27 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <HelpCircle className="w-4 h-4 text-[#174C3A]" />
-                <h3 className="text-xs font-bold text-[#3B2F2A] uppercase tracking-wider">Help Desk & Grievance</h3>
+                <h3 className="text-xs font-bold text-[#3B2F2A] uppercase tracking-wider">{t('Help Desk & Grievance')}</h3>
               </div>
               <button 
                 onClick={() => onNavigate('SUPPORT')}
                 className="text-xs font-bold text-[#174C3A] hover:underline cursor-pointer"
               >
-                Track
+                {t('Track')}
               </button>
             </div>
 
             <div className="mt-4 space-y-2">
               <div className="flex items-center justify-between text-xs">
-                <span className="text-[#3B2F2A]/70">Submitted Inquiries / Tickets:</span>
+                <span className="text-[#3B2F2A]/70">{t('Submitted Inquiries / Tickets:')}</span>
                 <span className="font-bold text-[#3B2F2A]">{supportTickets.length}</span>
               </div>
               <div className="flex items-center justify-between text-xs">
-                <span className="text-[#3B2F2A]/70">Panchayat Facilitator:</span>
+                <span className="text-[#3B2F2A]/70">{t('Panchayat Facilitator:')}</span>
                 <span className="font-bold text-[#3B2F2A]">DIC District Desk</span>
               </div>
               <div className="flex items-center justify-between text-xs">
-                <span className="text-[#3B2F2A]/70">Toll-Free MSME Champions:</span>
+                <span className="text-[#3B2F2A]/70">{t('Toll-Free MSME Champions:')}</span>
                 <span className="font-bold text-[#174C3A]">1800-547-8800</span>
               </div>
             </div>
@@ -512,7 +512,7 @@ export const DashboardView: React.FC<{ onNavigate: (mod: DishaContextState['curr
               onClick={() => onNavigate('SUPPORT')}
               className="w-full py-2 rounded-xl bg-[#F2E8D6]/60 hover:bg-[#F2E8D6] text-xs font-bold text-[#3B2F2A] transition-colors cursor-pointer text-center"
             >
-              + File Support Inquiry
+              {t('+ File Support Inquiry')}
             </button>
           </div>
         </div>
