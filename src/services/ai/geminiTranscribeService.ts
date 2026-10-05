@@ -18,7 +18,11 @@ export class GeminiTranscribeService {
   /**
    * Transcribe a recorded Audio Blob using server-side gemini-3.5-transcribe
    */
-  static async transcribeAudioBlob(blob: Blob, customPrompt?: string): Promise<TranscribeResponse> {
+  static async transcribeAudioBlob(
+    blob: Blob,
+    customPrompt?: string,
+    languageCode?: string
+  ): Promise<TranscribeResponse> {
     try {
       const base64Audio = await this.blobToBase64(blob);
       const mimeType = blob.type || 'audio/webm';
@@ -32,6 +36,7 @@ export class GeminiTranscribeService {
           audio: base64Audio,
           mimeType,
           prompt: customPrompt,
+          language: languageCode,
         }),
       });
 

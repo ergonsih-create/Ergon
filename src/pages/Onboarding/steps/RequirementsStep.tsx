@@ -21,6 +21,7 @@ import {
   Clock
 } from 'lucide-react';
 import { UnknownBadge } from '../../../components/ui/UnknownBadge';
+import { useLanguage } from '../../../context/LanguageContext';
 
 interface RequirementsStepProps {
   initialRequirements?: string[];
@@ -42,6 +43,7 @@ export const RequirementsStep: React.FC<RequirementsStepProps> = ({
   onNext,
   onBack,
 }) => {
+  const { t } = useLanguage();
   const [landStatus, setLandStatus] = useState<'OWNED' | 'LEASED' | 'NEEDED'>('OWNED');
   const [powerStatus, setPowerStatus] = useState<'THREE_PHASE' | 'UPGRADE_NEEDED' | 'SOLAR_NEEDED'>('THREE_PHASE');
   const [waterStatus, setWaterStatus] = useState<'AVAILABLE' | 'NEEDED'>('AVAILABLE');
@@ -302,7 +304,7 @@ export const RequirementsStep: React.FC<RequirementsStepProps> = ({
           type="submit"
           className="px-6 py-3 rounded-2xl bg-[#3B2F2A] hover:bg-[#2D2420] text-sm font-bold text-[#FAF7F2] shadow-sm transition-all flex items-center gap-2 cursor-pointer"
         >
-          <span>Synthesize with DISHA AI Brief</span>
+          <span>{t('forms.saveProfileBtn')}</span>
           <span>→</span>
         </button>
       </div>

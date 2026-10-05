@@ -39,7 +39,7 @@ export const DishaAdvisorDrawer: React.FC<{ onNavigate?: (mod: DishaContextState
     openVoiceModal,
     openParticleAi
   } = useDisha();
-  const { availableLanguages, setLanguage, currentLanguage } = useLanguage();
+  const { availableLanguages, setLanguage, currentLanguage, t } = useLanguage();
 
   const [queryInput, setQueryInput] = useState('');
   const chatBottomRef = useRef<HTMLDivElement>(null);
@@ -138,11 +138,11 @@ export const DishaAdvisorDrawer: React.FC<{ onNavigate?: (mod: DishaContextState
         {/* Quick Reasoning & Explanatory Action Hub */}
         <div className="px-3 py-2 bg-[#FAF7F2] border-b border-[#D9D3C7]/60 flex items-center gap-1.5 overflow-x-auto scrollbar-none">
           {[
-            { label: '💡 Explain Results', prompt: 'Please explain the current evaluation results and indicators for this module.' },
-            { label: '🧮 Explain Calculations', prompt: 'Break down the mathematical formulas and calculations for EMI, DSCR, and margin money.' },
-            { label: '🏛️ Explain Schemes', prompt: 'Which central/state schemes am I eligible for and how is the subsidy calculated?' },
-            { label: '🔍 Missing Information', prompt: 'Audit my enterprise profile: what critical data or documents are missing?' },
-            { label: '⚡ Next Action Guidance', prompt: 'What are the recommended statutory next steps I should execute right now?' },
+            { label: `💡 ${t('explainScore')}`, prompt: `Please explain the evaluation results and indicators for ${dishaState.currentModule} in ${currentLanguage}.` },
+            { label: `🧮 ${t('monthlyEmi')}`, prompt: `Break down the calculations for EMI, DSCR, and margin money in ${currentLanguage}.` },
+            { label: `🏛️ ${t('schemes')}`, prompt: `Which central/state schemes am I eligible for and how is the subsidy calculated in ${currentLanguage}?` },
+            { label: `🔍 ${t('statutoryChecklist')}`, prompt: `Audit my enterprise profile: what critical data or documents are missing in ${currentLanguage}?` },
+            { label: `⚡ ${t('actionPlanRoadmap')}`, prompt: `What are the recommended statutory next steps I should execute right now in ${currentLanguage}?` },
           ].map((action, i) => (
             <button
               key={i}
@@ -231,17 +231,17 @@ export const DishaAdvisorDrawer: React.FC<{ onNavigate?: (mod: DishaContextState
         {/* Suggested Quick Prompt Chips */}
         <div className="p-2.5 bg-[#FCFAF5] border-t border-[#D9D3C7]/60 flex items-center gap-1.5 overflow-x-auto scrollbar-none">
           {[
-            'What is my PMEGP subsidy?',
-            'What is my monthly loan EMI?',
-            'Check mandi pulse prices',
-            'Explain HBFS feasibility'
+            { label: t('schemes'), prompt: `What is my PMEGP subsidy in ${currentLanguage}?` },
+            { label: t('monthlyEmi'), prompt: `What is my monthly loan EMI in ${currentLanguage}?` },
+            { label: t('marketInsights'), prompt: `Check mandi pulse prices in ${currentLanguage}.` },
+            { label: t('feasibility'), prompt: `Explain HBFS feasibility in ${currentLanguage}.` }
           ].map((chip, idx) => (
             <button
               key={idx}
-              onClick={() => sendChatMessage(chip)}
-              className="text-[11px] font-medium bg-[#F8F5EE] hover:bg-[#EFEAE1] text-[#242522] border border-[#D9D3C7] px-2.5 py-1 rounded-full whitespace-nowrap transition-colors"
+              onClick={() => sendChatMessage(chip.prompt)}
+              className="text-[11px] font-medium bg-[#F8F5EE] hover:bg-[#EFEAE1] text-[#242522] border border-[#D9D3C7] px-2.5 py-1 rounded-full whitespace-nowrap transition-colors cursor-pointer"
             >
-              {chip}
+              {chip.label}
             </button>
           ))}
         </div>

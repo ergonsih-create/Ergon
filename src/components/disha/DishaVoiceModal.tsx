@@ -50,6 +50,7 @@ import { useLanguage } from '../../context/LanguageContext';
 import { useDisha } from '../../context/DishaContext';
 import { useAuth } from '../../context/AuthContext';
 import { DishaContextState } from '../../types';
+import { getBcp47Language, cleanTextForTTS, findMatchingVoice } from '../../utils/voiceUtils';
 
 interface DishaVoiceModalProps {
   isOpen: boolean;
@@ -64,7 +65,7 @@ export const DishaVoiceModal: React.FC<DishaVoiceModalProps> = ({
   onNavigate,
   onApplyFieldValue
 }) => {
-  const { currentLanguage, availableLanguages } = useLanguage();
+  const { currentLanguage, availableLanguages, t } = useLanguage();
   const { dishaState, sendChatMessage } = useDisha();
   const { user } = useAuth();
 
@@ -83,8 +84,8 @@ export const DishaVoiceModal: React.FC<DishaVoiceModalProps> = ({
   const [recordedBlob, setRecordedBlob] = useState<Blob | null>(null);
   const timerRef = useRef<any>(null);
 
-  // Preferred Language Setting (Default is auto-detect or current UI language)
-  const [selectedLanguage, setSelectedLanguage] = useState<string>('auto');
+  // Preferred Language Setting (Default is current UI language)
+  const [selectedLanguage, setSelectedLanguage] = useState<string>(currentLanguage || 'en');
 
   // Transcription & Intent Output
   const [transcriptionResult, setTranscriptionResult] = useState<WhisperTranscriptionResult | null>(null);
@@ -121,11 +122,11 @@ export const DishaVoiceModal: React.FC<DishaVoiceModalProps> = ({
       setIsShowingTranslation(false);
       setSelectedWordTimestamp(null);
       setConfirmedAction(false);
-      setSelectedLanguage('auto');
+      setSelectedLanguage(currentLanguage || 'en');
     } else {
       handleCancel();
     }
-  }, [isOpen]);
+  }, [isOpen, currentLanguage]);
 
   // Clean up on unmount
   useEffect(() => {
@@ -403,18 +404,20 @@ export const DishaVoiceModal: React.FC<DishaVoiceModalProps> = ({
     if (!textToSpeak) return;
 
     window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(textToSpeak);
+    const cleanText = cleanTextForTTS(textToSpeak);
+    if (!cleanText) return;
+
+    const utterance = new SpeechSynthesisUtterance(cleanText);
     utterance.rate = ttsSpeed;
     
     // Choose voice matching detected language or active site language
-    const voices = window.speechSynthesis.getVoices();
-    const activeSiteLang = localStorage.getItem('gram_disha_lang') || 'en';
-    const langCode = transcriptionResult?.language || activeSiteLang;
-    const matchedVoice = voices.find(v => v.lang.toLowerCase().replace('_', '-').startsWith(langCode.toLowerCase()));
+    const langCode = transcriptionResult?.language || (selectedLanguage !== 'auto' ? selectedLanguage : currentLanguage);
+    const bcp47 = getBcp47Language(langCode);
+    const matchedVoice = findMatchingVoice(bcp47);
     if (matchedVoice) {
       utterance.voice = matchedVoice;
     }
-    utterance.lang = langCode;
+    utterance.lang = bcp47;
 
     utterance.onend = () => setIsPlayingTTS(false);
     utterance.onerror = () => setIsPlayingTTS(false);
@@ -529,7 +532,7 @@ export const DishaVoiceModal: React.FC<DishaVoiceModalProps> = ({
                   className="px-5 py-2.5 rounded-2xl bg-[#174C3A] hover:bg-[#123d2e] text-[#FAF7F2] font-semibold text-xs flex items-center gap-2 shadow-md transition-all duration-150 hover:scale-102 active:scale-98 cursor-pointer"
                 >
                   <Mic className="w-4 h-4 text-[#C8A96B]" />
-                  <span>{transcriptionResult ? 'Record Again' : 'Start Speaking'}</span>
+                  <span>{transcriptionResult ? (t('retry') || 'Record Again') : 'Start Speaking'}</span>
                 </button>
               )}
 
@@ -548,7 +551,7 @@ export const DishaVoiceModal: React.FC<DishaVoiceModalProps> = ({
                   onClick={handleCancel}
                   className="px-3 py-2 rounded-xl text-xs font-medium text-[#3B2F2A]/70 hover:bg-[#C8A96B]/20 transition-colors"
                 >
-                  Cancel
+                  {t('forms.cancelBtn') || 'Cancel'}
                 </button>
               )}
             </div>

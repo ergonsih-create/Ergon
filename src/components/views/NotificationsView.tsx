@@ -20,11 +20,13 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { useDisha } from '../../context/DishaContext';
+import { useLanguage } from '../../context/LanguageContext';
 import { AppNotification } from '../../types';
 
 export const NotificationsView: React.FC = () => {
   const { notifications, markNotificationRead, clearAllNotifications } = useAuth();
   const { setModule } = useDisha();
+  const { t } = useLanguage();
   const [filter, setFilter] = useState<'ALL' | 'SCHEMES' | 'OPERATIONS' | 'DISHA'>('ALL');
 
   const filteredNotifications = notifications.filter(n => {
@@ -70,7 +72,7 @@ export const NotificationsView: React.FC = () => {
               <Bell className="w-5 h-5 text-[#C8A96B]" />
             </div>
             <h1 className="text-xl sm:text-2xl font-display font-extrabold text-[#3B2F2A]">
-              Notifications & Activity Stream
+              {t('notifications')}
             </h1>
           </div>
           <p className="text-xs sm:text-sm text-[#3B2F2A]/70 mt-1">
@@ -84,7 +86,7 @@ export const NotificationsView: React.FC = () => {
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-[#B45B4A]/30 text-xs font-semibold text-[#B45B4A] hover:bg-[#B45B4A]/10 transition-colors cursor-pointer w-fit"
           >
             <Trash2 className="w-3.5 h-3.5" />
-            <span>Clear All</span>
+            <span>{t('clearAll')}</span>
           </button>
         )}
       </div>
@@ -101,10 +103,10 @@ export const NotificationsView: React.FC = () => {
                 : 'text-[#3B2F2A]/70 hover:bg-[#F2E8D6]/50'
             }`}
           >
-            {tab === 'ALL' && `All Alerts (${notifications.length})`}
-            {tab === 'SCHEMES' && 'Schemes & Applications'}
-            {tab === 'OPERATIONS' && 'Operations & Stock'}
-            {tab === 'DISHA' && 'Disha Insights'}
+            {tab === 'ALL' && `${t('allResources')} (${notifications.length})`}
+            {tab === 'SCHEMES' && `${t('schemes')} & ${t('applications')}`}
+            {tab === 'OPERATIONS' && t('operations')}
+            {tab === 'DISHA' && 'DISHA'}
           </button>
         ))}
       </div>

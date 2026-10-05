@@ -3,8 +3,10 @@
  * GRAM-DISHA — DISHA AI OS Copilot Context
  */
 
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import { DishaContextState, SupportedLanguageCode } from '../types';
+import { useLanguage } from './LanguageContext';
+import { getBcp47Language, getBrowserVoice, cleanTextForTTS } from '../utils/voiceUtils';
 
 interface DishaContextType {
   dishaState: DishaContextState;
@@ -63,12 +65,29 @@ const defaultState: DishaContextState = {
 const DishaContext = createContext<DishaContextType | undefined>(undefined);
 
 export const DishaProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [dishaState, setDishaState] = useState<DishaContextState>(defaultState);
+  const { currentLanguage } = useLanguage();
+  const [dishaState, setDishaState] = useState<DishaContextState>(() => ({
+    ...defaultState,
+    voiceLanguage: currentLanguage || (localStorage.getItem('gram_disha_lang') as SupportedLanguageCode) || 'en',
+  }));
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
   const [isSpeaking, setIsSpeaking] = useState<boolean>(false);
   const [isGeminiLiveOpen, setIsGeminiLiveOpen] = useState<boolean>(false);
   const [isTranscribeOpen, setIsTranscribeOpen] = useState<boolean>(false);
   const [isParticleAiOpen, setIsParticleAiOpen] = useState<boolean>(false);
+
+  // Synchronize voiceLanguage whenever application language changes
+  useEffect(() => {
+    if (currentLanguage) {
+      setDishaState(prev => {
+        if (prev.voiceLanguage === currentLanguage) return prev;
+        return {
+          ...prev,
+          voiceLanguage: currentLanguage,
+        };
+      });
+    }
+  }, [currentLanguage]);
 
   const openGeminiLive = () => setIsGeminiLiveOpen(true);
   const closeGeminiLive = () => setIsGeminiLiveOpen(false);
@@ -135,8 +154,21 @@ export const DishaProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         window.speechSynthesis.cancel();
         setIsSpeaking(false);
       } else {
-        const textToSpeak = `${dishaState.activeInsightSummary || ''}. ${dishaState.recommendedAction || ''}`;
+        const rawText = `${dishaState.activeInsightSummary || ''}. ${dishaState.recommendedAction || ''}`;
+        const textToSpeak = cleanTextForTTS(rawText);
+        if (!textToSpeak) return;
+
+        window.speechSynthesis.cancel();
         const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        const activeLang = dishaState.voiceLanguage || currentLanguage || 'en';
+        const targetBcp = getBcp47Language(activeLang);
+        utterance.lang = targetBcp;
+
+        const matchedVoice = getBrowserVoice(activeLang);
+        if (matchedVoice) {
+          utterance.voice = matchedVoice;
+        }
+
         utterance.onend = () => setIsSpeaking(false);
         utterance.onerror = () => setIsSpeaking(false);
         setIsSpeaking(true);

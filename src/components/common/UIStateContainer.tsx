@@ -26,6 +26,7 @@ import {
 } from 'lucide-react';
 import { LoadingSkeleton } from './LoadingSkeleton';
 import { Button } from './Button';
+import { useLanguage } from '../../context/LanguageContext';
 
 export interface UIStateContainerProps {
   state: 'NORMAL' | 'LOADING' | 'EMPTY' | 'ERROR' | 'OFFLINE' | 'UNKNOWN' | 'SUCCESS' | 'VALIDATION';
@@ -50,6 +51,8 @@ export const UIStateContainer: React.FC<UIStateContainerProps> = ({
   unknownEntity = 'Parameter Data',
   validationItems = [],
 }) => {
+  const { t } = useLanguage();
+
   if (state === 'NORMAL') {
     return <>{children}</>;
   }
@@ -79,7 +82,7 @@ export const UIStateContainer: React.FC<UIStateContainerProps> = ({
         </div>
         <div className="space-y-1">
           <h3 className="text-base sm:text-lg font-bold text-[#3B2F2A]">
-            {title || 'No Records Found'}
+            {title || t('noRecordsFound')}
           </h3>
           <p className="text-xs sm:text-sm text-[#3B2F2A]/70 leading-relaxed">
             {description || 'There is no data available for this section yet. Configure your enterprise inputs or start a new assessment.'}
@@ -117,7 +120,7 @@ export const UIStateContainer: React.FC<UIStateContainerProps> = ({
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#B45B4A] text-[#FAF7F2] text-xs font-bold hover:bg-[#B45B4A]/90 transition-colors cursor-pointer"
             >
               <RefreshCw className="w-3.5 h-3.5" />
-              <span>Retry Calculation</span>
+              <span>{t('retry')}</span>
             </button>
           </div>
         )}

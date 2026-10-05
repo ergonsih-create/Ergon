@@ -22,8 +22,10 @@ import { Card } from '../common/Card';
 import { Button } from '../common/Button';
 import { Badge } from '../common/Badge';
 import { ApiClient } from '../../services/api/apiClient';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const LearningResourcesView: React.FC = () => {
+  const { t } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState<'ALL' | 'SCHEMES' | 'COMPLIANCE' | 'BANKING' | 'TRAINING'>('ALL');
   const [resources, setResources] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
@@ -54,7 +56,7 @@ export const LearningResourcesView: React.FC = () => {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-[#D9D3C7]/80">
         <div>
           <h1 className="text-xl sm:text-2xl font-display font-bold text-[#242522]">
-            Entrepreneur Learning & Statutory Resource Vault
+            {t('resources')} & Statutory Vault
           </h1>
           <p className="text-xs text-[#68655D] mt-0.5">
             Official government gazette circulars, compliance walkthroughs, and credit appraisal handbooks.
@@ -73,7 +75,7 @@ export const LearningResourcesView: React.FC = () => {
                   : 'bg-[#FCFAF5] text-[#68655D] border border-[#D9D3C7] hover:bg-[#F8F5EE]'
               }`}
             >
-              {cat === 'ALL' ? 'All Resources' : cat}
+              {cat === 'ALL' ? t('allResources') : cat}
             </button>
           ))}
         </div>

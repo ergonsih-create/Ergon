@@ -1,6 +1,7 @@
 import React from 'react';
 import { AlertCircle, RefreshCw, XCircle } from 'lucide-react';
 import { Button } from './Button';
+import { useLanguage } from '../../context/LanguageContext';
 
 export interface ErrorBannerProps {
   title?: string;
@@ -11,12 +12,14 @@ export interface ErrorBannerProps {
 }
 
 export const ErrorBanner: React.FC<ErrorBannerProps> = ({
-  title = 'System Notice',
+  title,
   message,
   onRetry,
   onDismiss,
   variant = 'error',
 }) => {
+  const { t } = useLanguage();
+  const displayTitle = title || t('systemNotice') || 'System Notice';
   const isError = variant === 'error';
   return (
     <div
@@ -29,14 +32,14 @@ export const ErrorBanner: React.FC<ErrorBannerProps> = ({
       <div className="flex items-start gap-3">
         <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
         <div>
-          <h4 className="font-semibold text-sm text-[#242522]">{title}</h4>
+          <h4 className="font-semibold text-sm text-[#242522]">{displayTitle}</h4>
           <p className="text-xs text-[#68655D] mt-0.5 leading-relaxed">{message}</p>
         </div>
       </div>
       <div className="flex items-center gap-2 shrink-0">
         {onRetry && (
           <Button variant="outline" size="sm" onClick={onRetry} leftIcon={<RefreshCw className="w-3 h-3" />}>
-            Retry
+            {t('retry')}
           </Button>
         )}
         {onDismiss && (

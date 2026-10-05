@@ -33,26 +33,28 @@ import { GramDishaLogoBox } from '../../components/common/GramDishaLogo';
 import { LocationContext, BusinessContext, UserProfile } from '../../types';
 import { JWTAuthService } from '../../services/auth/jwtAuthService';
 import { NetworkStatus } from '../../components/common/NetworkStatus';
+import { useLanguage } from '../../context/LanguageContext';
 
 interface OnboardingFlowProps {
   onComplete: () => void;
   onExitToLanding: () => void;
 }
 
-const STEPS = [
-  { id: 1, label: 'Location', short: 'LGD Context', icon: MapPin },
-  { id: 2, label: 'Business', short: 'Sector & Plan', icon: Building2 },
-  { id: 3, label: 'Finance', short: 'Capital & Subsidy', icon: Calculator },
-  { id: 4, label: 'Requirements', short: 'Infra & Assets', icon: Wrench },
-  { id: 5, label: 'Disha Brief', short: 'Synthesis & Launch', icon: Sparkles },
-];
-
 export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({
   onComplete,
   onExitToLanding,
 }) => {
   const { user, updateUserProfile, updateActiveBusiness } = useAuth();
+  const { t } = useLanguage();
   const [currentStep, setCurrentStep] = useState<number>(1);
+
+  const STEPS = [
+    { id: 1, label: t('activeLocationLabel') !== 'activeLocationLabel' ? t('activeLocationLabel') : 'Location', short: 'LGD Context', icon: MapPin },
+    { id: 2, label: t('myBusiness'), short: 'Sector & Plan', icon: Building2 },
+    { id: 3, label: t('finance'), short: 'Capital & Subsidy', icon: Calculator },
+    { id: 4, label: t('operations'), short: 'Infra & Assets', icon: Wrench },
+    { id: 5, label: 'DISHA Brief', short: 'Synthesis & Launch', icon: Sparkles },
+  ];
 
   // Form State
   const [locationData, setLocationData] = useState<LocationContext>({

@@ -26,6 +26,7 @@ import {
   HelpCircle
 } from 'lucide-react';
 import { GeminiLiveService, LiveTranscriptTurn } from '../../services/ai/geminiLiveService';
+import { useLanguage } from '../../context/LanguageContext';
 
 interface GeminiLiveVoiceModalProps {
   isOpen: boolean;
@@ -38,6 +39,7 @@ export const GeminiLiveVoiceModal: React.FC<GeminiLiveVoiceModalProps> = ({
   onClose,
   onSendToChat,
 }) => {
+  const { t } = useLanguage();
   const [status, setStatus] = useState<'disconnected' | 'connecting' | 'connected' | 'listening' | 'speaking' | 'error'>('disconnected');
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [isMuted, setIsMuted] = useState<boolean>(false);

@@ -15,11 +15,13 @@ import { Button } from '../common/Button';
 import { Badge } from '../common/Badge';
 import { useDisha } from '../../context/DishaContext';
 import { useAuth } from '../../context/AuthContext';
+import { useLanguage } from '../../context/LanguageContext';
 import { ApiClient } from '../../services/api/apiClient';
 
 export const ActionPlanView: React.FC = () => {
   const { openAdvisorWithInsight } = useDisha();
   const { activeBusiness } = useAuth();
+  const { t } = useLanguage();
 
   const [milestones, setMilestones] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
@@ -109,7 +111,7 @@ export const ActionPlanView: React.FC = () => {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-[#D9D3C7]/80">
         <div>
           <h1 className="text-xl sm:text-2xl font-display font-bold text-[#242522]">
-            Action Plan & Execution Roadmap
+            {t('actionPlanRoadmap')}
           </h1>
           <p className="text-xs text-[#68655D] mt-0.5">
             Step 6 of Decision Pipeline: Structured operational milestones and institutional escalation guidance.
@@ -117,7 +119,7 @@ export const ActionPlanView: React.FC = () => {
         </div>
         <div className="flex items-center gap-2">
           <Badge variant={completionPct >= 60 ? 'forest' : 'harvest'} size="md">
-            {completedCount} / {totalCount} Completed ({completionPct}%)
+            {completedCount} / {totalCount} {t('completed')} ({completionPct}%)
           </Badge>
           <Button 
             variant="outline" 
@@ -125,15 +127,15 @@ export const ActionPlanView: React.FC = () => {
             onClick={() => setShowAddModal(true)}
             className="text-xs"
           >
-            <Plus className="w-3.5 h-3.5 mr-1" /> Add Milestone
+            <Plus className="w-3.5 h-3.5 mr-1" /> {t('addMilestone')}
           </Button>
           <Button variant="secondary" size="sm" onClick={handleExplainAction} leftIcon={<Sparkles className="w-3.5 h-3.5 text-[#C69A45]" />}>
-            Explain with DISHA
+            {t('explainWithDisha')}
           </Button>
         </div>
       </div>
 
-      <Card title="Execution Milestones" subtitle="Track regulatory, banking, and physical setup progress stored in MySQL schema">
+      <Card title={t('executionMilestones')} subtitle="Track regulatory, banking, and physical setup progress stored in MySQL schema">
         <div className="space-y-3">
           {milestones.map((m, idx) => {
             const isDone = m.status === 'COMPLETED';
@@ -182,7 +184,7 @@ export const ActionPlanView: React.FC = () => {
       {showAddModal && (
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
           <form onSubmit={handleAddMilestone} className="bg-[#FCFAF5] rounded-3xl max-w-md w-full p-6 shadow-2xl border border-[#D9D3C7] space-y-4">
-            <h3 className="font-display font-bold text-lg text-[#242522]">Add New Milestone</h3>
+            <h3 className="font-display font-bold text-lg text-[#242522]">{t('addMilestone')}</h3>
             
             <div className="space-y-3 text-xs">
               <div>
@@ -222,10 +224,10 @@ export const ActionPlanView: React.FC = () => {
 
             <div className="flex justify-end gap-2 pt-2">
               <Button type="button" variant="outline" size="sm" onClick={() => setShowAddModal(false)}>
-                Cancel
+                {t('forms.cancelBtn')}
               </Button>
               <Button type="submit" variant="forest" size="sm">
-                Save to Roadmap
+                {t('forms.saveProfileBtn') || 'Save'}
               </Button>
             </div>
           </form>

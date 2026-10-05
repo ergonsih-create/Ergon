@@ -21,8 +21,10 @@ import { Badge } from '../common/Badge';
 import { Button } from '../common/Button';
 import { MASTER_GOVERNMENT_DATASETS, MasterDatasetMetadata } from '../../data/masterDatasets';
 import { ApiClient } from '../../services/api/apiClient';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const AdminDatasetsView: React.FC = () => {
+  const { t } = useLanguage();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
   const [selectedDataset, setSelectedDataset] = useState<MasterDatasetMetadata | null>(null);
@@ -134,7 +136,7 @@ export const AdminDatasetsView: React.FC = () => {
                 : 'bg-[#FCFAF5] text-[#68655D] border border-[#D9D3C7] hover:bg-[#F8F5EE]'
             }`}
           >
-            {cat.replace('_', ' ')}
+            {cat === 'ALL' ? t('allResources') : cat.replace('_', ' ')}
           </button>
         ))}
       </div>

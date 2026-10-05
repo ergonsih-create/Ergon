@@ -32,9 +32,11 @@ import { useAuth } from '../../context/AuthContext';
 import { SchemeApplication } from '../../types';
 import { DeterministicFinancialEngine } from '../../services/deterministic/financialEngine';
 import { ApiClient } from '../../services/api/apiClient';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const ApplicationsView: React.FC = () => {
   const { activeBusiness, user, applications: localApps, submitApplication } = useAuth();
+  const { t } = useLanguage();
 
   const [activeTab, setActiveTab] = useState<'DPR' | 'STATUS' | 'DOCUMENTS'>('DPR');
   const [isApplying, setIsApplying] = useState(false);
@@ -145,7 +147,7 @@ export const ApplicationsView: React.FC = () => {
               <FileText className="w-4 h-4 text-[#C8A96B]" />
             </div>
             <h1 className="text-xl sm:text-2xl font-display font-extrabold text-[#3B2F2A]">
-              Detailed Project Report (DPR) & Applications
+              {t('bankableDprDoc')} & {t('schemeApplications')}
             </h1>
           </div>
           <p className="text-xs text-[#3B2F2A]/70 mt-1">
@@ -160,7 +162,7 @@ export const ApplicationsView: React.FC = () => {
               className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#FAF7F2] border border-[#C8A96B]/40 text-[#3B2F2A] hover:bg-[#F2E8D6]/60 text-xs font-bold transition-colors cursor-pointer"
             >
               <Printer className="w-3.5 h-3.5 text-[#174C3A]" />
-              <span>Print / Export DPR</span>
+              <span>{t('printExportDpr')}</span>
             </button>
           )}
           <button
@@ -169,7 +171,7 @@ export const ApplicationsView: React.FC = () => {
             className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#174C3A] text-[#FAF7F2] text-xs font-bold hover:bg-[#174C3A]/90 disabled:opacity-50 transition-colors shadow-xs cursor-pointer"
           >
             <Plus className="w-3.5 h-3.5 text-[#C8A96B]" />
-            <span>Submit Scheme Application</span>
+            <span>{t('submitSchemeApp')}</span>
           </button>
         </div>
       </div>
@@ -177,9 +179,9 @@ export const ApplicationsView: React.FC = () => {
       {/* Navigation Sub-Tabs */}
       <div className="flex items-center gap-1.5 border-b border-[#C8A96B]/20 pb-2 overflow-x-auto scrollbar-none print:hidden">
         {[
-          { id: 'DPR', label: 'Bankable DPR Document' },
-          { id: 'STATUS', label: `Application Status (${displayedApplications.length})` },
-          { id: 'DOCUMENTS', label: 'Statutory Document Checklist' },
+          { id: 'DPR', label: t('bankableDprDoc') },
+          { id: 'STATUS', label: `${t('appStatus')} (${displayedApplications.length})` },
+          { id: 'DOCUMENTS', label: t('statutoryChecklist') },
         ].map(tab => (
           <button
             key={tab.id}

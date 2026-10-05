@@ -116,7 +116,7 @@ export const SchemesView: React.FC<{ onNavigate?: (mod: any) => void }> = ({ onN
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-[#D9D3C7]/80">
         <div>
           <h1 className="text-xl sm:text-2xl font-display font-bold text-[#242522]">
-            Versioned Government Scheme Matcher
+            {t('schemes')}
           </h1>
           <p className="text-xs text-[#68655D] mt-0.5">
             Deterministic eligibility matching against official KVIC, MoFPI, SIDBI, and NABARD rulesets.
@@ -137,7 +137,7 @@ export const SchemesView: React.FC<{ onNavigate?: (mod: any) => void }> = ({ onN
             className="text-xs"
           >
             <Sparkles className="w-3.5 h-3.5 mr-1.5 text-[#C69A45]" />
-            DISHA Scheme Guidance
+            {t('explainWithDisha')}
           </Button>
         </div>
       </div>

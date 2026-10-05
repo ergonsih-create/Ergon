@@ -18,6 +18,7 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import { BusinessContext } from '../../../types';
+import { useLanguage } from '../../../context/LanguageContext';
 
 interface FinanceStepProps {
   business: Partial<BusinessContext>;
@@ -49,6 +50,7 @@ export const FinanceStep: React.FC<FinanceStepProps> = ({
   onNext,
   onBack,
 }) => {
+  const { t } = useLanguage();
   const [totalCost, setTotalCost] = useState<number>(1000000);
   const [marginPercent, setMarginPercent] = useState<number>(10);
   const [existingAssets, setExistingAssets] = useState<number>(150000);
@@ -252,7 +254,7 @@ export const FinanceStep: React.FC<FinanceStepProps> = ({
 
         <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs text-[#FAF7F2]/80 pt-1 gap-2">
           <span>
-            Estimated Monthly Debt Service (EMI): <strong className="text-[#FAF7F2]">₹{estimatedMonthlyEMI.toLocaleString('en-IN')}/mo</strong> (5 yr tenure @ 9.5% p.a.)
+            {t('monthlyEmi')}: <strong className="text-[#FAF7F2]">₹{estimatedMonthlyEMI.toLocaleString('en-IN')}/mo</strong> (5 yr tenure @ 9.5% p.a.)
           </span>
           <span className="text-[11px] text-[#C8A96B]">
             *Subsidy is back-ended & held in TDR for 3 years
@@ -273,7 +275,7 @@ export const FinanceStep: React.FC<FinanceStepProps> = ({
           type="submit"
           className="px-6 py-3 rounded-2xl bg-[#3B2F2A] hover:bg-[#2D2420] text-sm font-bold text-[#FAF7F2] shadow-sm transition-all flex items-center gap-2 cursor-pointer"
         >
-          <span>Continue to Operational Requirements</span>
+          <span>{t('forms.saveProfileBtn')}</span>
           <span>→</span>
         </button>
       </div>

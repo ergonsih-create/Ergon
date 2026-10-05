@@ -69,36 +69,28 @@ const PROMPT_SUGGESTIONS = [
 import { useDisha } from '../../context/DishaContext';
 import { useLanguage } from '../../context/LanguageContext';
 import { GeminiTranscribeService } from '../../services/ai/geminiTranscribeService';
+import {
+  BCP47_LANG_MAP,
+  getBcp47Language,
+  getLanguageName,
+  cleanTextForTTS,
+  splitTextIntoSentenceChunks,
+  findMatchingVoice,
+} from '../../utils/voiceUtils';
 
-export const BCP47_LANG_MAP: Record<string, string> = {
-  en: 'en-IN',
-  hi: 'hi-IN',
-  mr: 'mr-IN',
-  ta: 'ta-IN',
-  te: 'te-IN',
-  bn: 'bn-IN',
-  gu: 'gu-IN',
-  kn: 'kn-IN',
-  pa: 'pa-IN',
-  ml: 'ml-IN',
-  od: 'or-IN',
-  as: 'as-IN',
-  ur: 'ur-IN',
-  ks: 'ks-IN',
-  mai: 'mai-IN',
-  sat: 'sat-IN',
-  ne: 'ne-NP',
-  kok: 'kok-IN',
-  sd: 'sd-IN',
-  doi: 'doi-IN',
-  mni: 'mni-IN',
-  brx: 'brx-IN',
-  sa: 'sa-IN',
-};
+export { BCP47_LANG_MAP };
 
 export const ParticleVoiceAiModal: React.FC<ParticleVoiceAiModalProps> = ({ isOpen, onClose }) => {
   const { sendChatMessage, isProcessing: globalProcessing, dishaState, openAdvisor } = useDisha();
-  const { currentLanguage, setLanguage, availableLanguages } = useLanguage();
+  const { currentLanguage, setLanguage, availableLanguages, t } = useLanguage();
+
+  const promptSuggestions = [
+    { label: t('schemes'), query: `Show PMEGP subsidy details in ${currentLanguage}` },
+    { label: t('monthlyEmi'), query: `Calculate monthly loan EMI in ${currentLanguage}` },
+    { label: t('marketInsights'), query: `Check APMC Mandi prices in ${currentLanguage}` },
+    { label: t('bankableDprDoc'), query: `Generate bankable DPR details in ${currentLanguage}` },
+    { label: t('statutoryChecklist'), query: `What documents are needed in ${currentLanguage}?` }
+  ];
 
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const animFrameRef = useRef<number | null>(null);
@@ -115,13 +107,13 @@ export const ParticleVoiceAiModal: React.FC<ParticleVoiceAiModalProps> = ({ isOp
   const [isListening, setIsListening] = useState<boolean>(false);
   const [isMuted, setIsMuted] = useState<boolean>(false);
   const [speechRate, setSpeechRate] = useState<number>(1.0);
-  const [selectedLang, setSelectedLang] = useState<string>(() => BCP47_LANG_MAP[currentLanguage] || 'en-IN');
+  const [selectedLang, setSelectedLang] = useState<string>(() => getBcp47Language(currentLanguage));
   const [audioVolume, setAudioVolume] = useState<number>(0);
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   // Synchronize speech language whenever user changes language
   useEffect(() => {
-    const targetBcp = BCP47_LANG_MAP[currentLanguage] || 'en-IN';
+    const targetBcp = getBcp47Language(currentLanguage);
     setSelectedLang(targetBcp);
   }, [currentLanguage]);
 
@@ -132,6 +124,8 @@ export const ParticleVoiceAiModal: React.FC<ParticleVoiceAiModalProps> = ({ isOp
   const micStreamRef = useRef<MediaStream | null>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const audioChunksRef = useRef<Blob[]>([]);
+  const speechQueueRef = useRef<string[]>([]);
+  const isSpeakingCancelledRef = useRef<boolean>(false);
 
   // Particle System Canvas Initialization
   useEffect(() => {
@@ -303,47 +297,83 @@ export const ParticleVoiceAiModal: React.FC<ParticleVoiceAiModalProps> = ({ isOp
     }
   }, [isOpen, currentLanguage]);
 
-  // Text To Speech Handler with Indic voice selection
-  const speakText = (text: string, langCodeOverride?: string) => {
-    if (isMuted || !('speechSynthesis' in window)) return;
-    window.speechSynthesis.cancel();
-
-    const cleanText = text.replace(/[*#_`]/g, '').trim();
-    if (!cleanText) return;
-
-    const utterance = new SpeechSynthesisUtterance(cleanText);
-    utterance.rate = speechRate;
-    utterance.pitch = 1.0;
-
-    const targetLangCode = langCodeOverride || currentLanguage;
-    const targetBcp = BCP47_LANG_MAP[targetLangCode] || selectedLang || 'en-IN';
-    utterance.lang = targetBcp;
-
-    // Pick best matching voice from available browser voices
-    if ('speechSynthesis' in window) {
-      const voices = window.speechSynthesis.getVoices();
-      const langPrefix = targetLangCode.toLowerCase();
-      const matchedVoice = voices.find(v => 
-        v.lang.toLowerCase().replace('_', '-').startsWith(targetBcp.toLowerCase()) ||
-        v.lang.toLowerCase().replace('_', '-').startsWith(langPrefix) ||
-        v.name.toLowerCase().includes(langPrefix)
-      );
-      if (matchedVoice) {
-        utterance.voice = matchedVoice;
-      }
-    }
-
-    utterance.onstart = () => setMode('SPEAKING');
-    utterance.onend = () => setMode('IDLE');
-    utterance.onerror = () => setMode('IDLE');
-
-    window.speechSynthesis.speak(utterance);
-  };
-
   const stopSpeech = () => {
+    speechQueueRef.current = [];
+    isSpeakingCancelledRef.current = true;
     if ('speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
+    setMode('IDLE');
+  };
+
+  // Text To Speech Handler with Indic voice selection and sequential sentence chunking
+  const speakText = (text: string, langCodeOverride?: string) => {
+    if (isMuted || !('speechSynthesis' in window)) return;
+
+    // Reset previous speech and cancellation flag
+    speechQueueRef.current = [];
+    isSpeakingCancelledRef.current = true;
+    window.speechSynthesis.cancel();
+
+    const cleanText = cleanTextForTTS(text);
+    if (!cleanText) {
+      setMode('IDLE');
+      return;
+    }
+
+    const chunks = splitTextIntoSentenceChunks(cleanText, 180);
+    if (chunks.length === 0) {
+      setMode('IDLE');
+      return;
+    }
+
+    speechQueueRef.current = [...chunks];
+    isSpeakingCancelledRef.current = false;
+
+    const targetLangCode = langCodeOverride || currentLanguage;
+    const targetBcp = getBcp47Language(targetLangCode);
+    const matchedVoice = findMatchingVoice(targetBcp);
+
+    setMode('SPEAKING');
+
+    const playNext = () => {
+      if (isSpeakingCancelledRef.current || speechQueueRef.current.length === 0) {
+        setMode('IDLE');
+        return;
+      }
+
+      const nextChunk = speechQueueRef.current.shift();
+      if (!nextChunk) {
+        setMode('IDLE');
+        return;
+      }
+
+      const utterance = new SpeechSynthesisUtterance(nextChunk);
+      utterance.rate = speechRate;
+      utterance.pitch = 1.0;
+      utterance.lang = targetBcp;
+      if (matchedVoice) {
+        utterance.voice = matchedVoice;
+      }
+
+      utterance.onend = () => {
+        if (!isSpeakingCancelledRef.current) {
+          playNext();
+        }
+      };
+
+      utterance.onerror = () => {
+        if (isSpeakingCancelledRef.current) {
+          setMode('IDLE');
+          return;
+        }
+        playNext();
+      };
+
+      window.speechSynthesis.speak(utterance);
+    };
+
+    playNext();
   };
 
   // Speech Recognition (STT) Start
@@ -387,7 +417,7 @@ export const ParticleVoiceAiModal: React.FC<ParticleVoiceAiModalProps> = ({ isOp
       const rec = new SpeechRecognition();
       rec.continuous = false;
       rec.interimResults = true;
-      rec.lang = selectedLang;
+      rec.lang = selectedLang || getBcp47Language(currentLanguage);
 
       rec.onstart = () => setIsListening(true);
 
@@ -442,10 +472,14 @@ export const ParticleVoiceAiModal: React.FC<ParticleVoiceAiModalProps> = ({ isOp
         const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
         setMode('THINKING');
         try {
-          const res = await GeminiTranscribeService.transcribeAudioBlob(audioBlob);
+          const langName = getLanguageName(currentLanguage);
+          const dynamicPrompt = `Transcribe this audio verbatim in ${langName} (${currentLanguage}). Do not translate to English. Preserve original speech and native script accurately. Output only the transcribed text.`;
+          const res = await GeminiTranscribeService.transcribeAudioBlob(audioBlob, dynamicPrompt, currentLanguage);
           if (res.transcript) {
             setTranscript(res.transcript);
             handleSubmitQuery(res.transcript);
+          } else {
+            setMode('IDLE');
           }
         } catch {
           setMode('IDLE');
@@ -692,16 +726,16 @@ export const ParticleVoiceAiModal: React.FC<ParticleVoiceAiModalProps> = ({ isOp
                 Suggested Prompts
               </p>
               <div className="flex flex-wrap gap-1.5">
-                {PROMPT_SUGGESTIONS.map((prompt, idx) => (
+                {promptSuggestions.map((item, idx) => (
                   <button
                     key={idx}
                     onClick={() => {
-                      setTranscript(prompt);
-                      handleSubmitQuery(prompt);
+                      setTranscript(item.query);
+                      handleSubmitQuery(item.query);
                     }}
                     className="text-[11px] px-2.5 py-1 rounded-full bg-[#174C3A]/40 border border-[#C19A5B]/30 text-[#FAF7F2]/90 hover:bg-[#C19A5B]/20 hover:border-[#C19A5B] hover:text-[#E5C07B] transition-colors flex items-center gap-1 cursor-pointer"
                   >
-                    <span>{prompt}</span>
+                    <span>{item.label}</span>
                     <ArrowRight className="w-3 h-3 opacity-60" />
                   </button>
                 ))}

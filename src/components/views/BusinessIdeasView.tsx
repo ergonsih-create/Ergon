@@ -343,7 +343,7 @@ export const BusinessIdeasView: React.FC<{ onNavigate?: (mod: DishaContextState[
               className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#174C3A] text-[#FAF7F2] text-xs font-bold hover:bg-[#174C3A]/90 transition-colors shadow-xs cursor-pointer"
             >
               <Save className="w-4 h-4 text-[#C8A96B]" />
-              <span>{activeBusiness ? 'Update Enterprise Profile' : 'Save & Register Enterprise'}</span>
+              <span>{t('forms.saveProfileBtn') || (activeBusiness ? 'Update Enterprise Profile' : 'Save & Register Enterprise')}</span>
             </button>
           </div>
         </form>

@@ -259,7 +259,7 @@ export const GlobalSearchModal: React.FC<{
             type="text"
             value={query}
             onChange={e => { setQuery(e.target.value); setSelectedIndex(0); }}
-            placeholder="Search screens, schemes, business ideas, DSCR, FSSAI..."
+            placeholder={t('header.searchPlaceholder') || "Search screens, schemes, business ideas, DSCR, FSSAI..."}
             className="w-full bg-transparent text-sm sm:text-base font-medium text-[#3B2F2A] focus:outline-none placeholder:text-[#3B2F2A]/50"
           />
           {query && (
@@ -283,7 +283,7 @@ export const GlobalSearchModal: React.FC<{
           {filteredResults.length === 0 ? (
             <div className="p-8 text-center text-[#3B2F2A]/60">
               <Sparkles className="w-8 h-8 mx-auto text-[#C8A96B] mb-2" />
-              <p className="text-sm font-bold">No results found for "{query}"</p>
+              <p className="text-sm font-bold">{t('noRecordsFound') || `No results found for "${query}"`}</p>
               <p className="text-xs text-[#3B2F2A]/60 mt-1">Try searching for "PMEGP", "Feasibility", "Finance", or "Inventory".</p>
             </div>
           ) : (

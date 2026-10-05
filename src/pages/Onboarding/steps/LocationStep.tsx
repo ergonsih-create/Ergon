@@ -27,6 +27,7 @@ import {
   getStateByName,
   VillageHabitationRecord
 } from '../../../data/lgdLocations';
+import { useLanguage } from '../../../context/LanguageContext';
 
 interface LocationStepProps {
   location: LocationContext;
@@ -39,6 +40,7 @@ export const LocationStep: React.FC<LocationStepProps> = ({
   onChange,
   onNext,
 }) => {
+  const { t } = useLanguage();
   const [selectedState, setSelectedState] = useState(location.state || 'Maharashtra');
   const [selectedDistrict, setSelectedDistrict] = useState(location.district || 'Yavatmal');
   const [selectedBlock, setSelectedBlock] = useState(location.block || 'ALL_BLOCKS');
@@ -255,7 +257,7 @@ export const LocationStep: React.FC<LocationStepProps> = ({
           </span>
         </div>
         <h2 className="text-2xl font-display font-bold text-[#3B2F2A]">
-          Where is your enterprise located?
+          {t('activeLocationLabel')}
         </h2>
         <p className="text-xs sm:text-sm text-[#3B2F2A]/75 leading-relaxed">
           Select your administrative hierarchy from the official Local Government Directory (LGD). Gram-Disha uses this data to map APMC Mandis, Notified ODOP products, and rural capital subsidies (up to 35%).
@@ -285,7 +287,7 @@ export const LocationStep: React.FC<LocationStepProps> = ({
 
         <div className="flex items-center gap-2 shrink-0">
           <span className="text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg bg-[#FAF7F2] text-[#3B2F2A] border border-[#C8A96B]/30">
-            {currentDistrictRecord.urbanityClassification} ({currentDistrictRecord.censusRuralPercentage}% Rural)
+            {currentDistrictRecord.urbanityClassification} ({currentDistrictRecord.censusRuralPercentage}% {t('ruralPopulation')})
           </span>
         </div>
       </div>
@@ -295,7 +297,7 @@ export const LocationStep: React.FC<LocationStepProps> = ({
         {/* State */}
         <div>
           <label className="block text-xs font-bold text-[#3B2F2A] mb-1.5">
-            State / UT <span className="text-[#B45B4A]">*</span>
+            {t('forms.stateLabel')} <span className="text-[#B45B4A]">*</span>
           </label>
           <select
             value={selectedState}
@@ -313,7 +315,7 @@ export const LocationStep: React.FC<LocationStepProps> = ({
         {/* District */}
         <div>
           <label className="block text-xs font-bold text-[#3B2F2A] mb-1.5">
-            District <span className="text-[#B45B4A]">*</span>
+            {t('forms.districtLabel')} <span className="text-[#B45B4A]">*</span>
           </label>
           <select
             value={selectedDistrict}
@@ -331,7 +333,7 @@ export const LocationStep: React.FC<LocationStepProps> = ({
         {/* Block / Taluka */}
         <div>
           <label className="block text-xs font-bold text-[#3B2F2A] mb-1.5 flex items-center justify-between">
-            <span>Sub-District / Block / Taluka <span className="text-[#B45B4A]">*</span></span>
+            <span>{t('forms.blockLabel')} <span className="text-[#B45B4A]">*</span></span>
             <span className="text-[10px] font-semibold text-[#174C3A] bg-[#174C3A]/10 px-2 py-0.5 rounded-full">
               {currentDistrictRecord.blocks.length} Blocks
             </span>
@@ -357,7 +359,7 @@ export const LocationStep: React.FC<LocationStepProps> = ({
         {/* Gram Panchayat */}
         <div>
           <label className="block text-xs font-bold text-[#3B2F2A] mb-1.5 flex items-center justify-between">
-            <span>Gram Panchayat / Local Body <span className="text-[#B45B4A]">*</span></span>
+            <span>{t('forms.panchayatLabel')} <span className="text-[#B45B4A]">*</span></span>
             <span className="text-[10px] font-semibold text-[#174C3A] bg-[#174C3A]/10 px-2 py-0.5 rounded-full">
               {availableGPs.length} Local Bodies
             </span>
@@ -385,7 +387,7 @@ export const LocationStep: React.FC<LocationStepProps> = ({
           <div className="flex flex-wrap items-center justify-between gap-2">
             <div className="flex items-center gap-2">
               <label className="block text-xs font-bold text-[#3B2F2A]">
-                Village / Revenue Gaon Body <span className="text-[#B45B4A]">*</span>
+                {t('forms.villageLabel')} <span className="text-[#B45B4A]">*</span>
               </label>
               {!isCustomVillage && (
                 <span className="text-[10px] font-bold text-[#174C3A] bg-[#174C3A]/10 px-2 py-0.5 rounded-full">
@@ -465,7 +467,7 @@ export const LocationStep: React.FC<LocationStepProps> = ({
         {/* Pincode */}
         <div>
           <label className="block text-xs font-bold text-[#3B2F2A] mb-1.5">
-            Postal PIN Code
+            {t('forms.pincodeLabel')}
           </label>
           <input
             type="text"
@@ -600,7 +602,7 @@ export const LocationStep: React.FC<LocationStepProps> = ({
           type="submit"
           className="px-6 py-3 rounded-2xl bg-[#3B2F2A] hover:bg-[#2D2420] text-sm font-bold text-[#FAF7F2] shadow-sm transition-all flex items-center gap-2 cursor-pointer"
         >
-          <span>Continue to Business Details</span>
+          <span>{t('forms.saveProfileBtn')}</span>
           <span>→</span>
         </button>
       </div>

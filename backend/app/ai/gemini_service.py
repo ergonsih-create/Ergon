@@ -85,8 +85,17 @@ class GeminiAIService(BaseAIProvider):
         mandi_text = "\n".join([f"- {m}" for m in mandi_list[:3]]) if mandi_list else "Mandi benchmarks active at district yard."
 
         from app.ai.prompts import LANGUAGE_PROMPTS
-        target_lang = language or "en"
-        lang_instruction = LANGUAGE_PROMPTS.get(target_lang, f"Respond in language code '{target_lang}' clearly while preserving exact numbers (₹, %, and ratios).")
+        target_lang = (language or "en").lower().strip()
+        lang_key = target_lang.split("-")[0] if "-" in target_lang else target_lang
+        lang_instruction = LANGUAGE_PROMPTS.get(
+            lang_key,
+            LANGUAGE_PROMPTS.get(
+                target_lang,
+                f"MANDATORY LANGUAGE: Respond entirely in language code '{target_lang}' using its native script. "
+                f"Do not mix English into normal explanatory sentences. Translate all headings, bullets, and labels. "
+                f"Keep numbers (₹, %, ratios) and official scheme acronyms (PMEGP, MUDRA, etc.) unchanged."
+            )
+        )
 
         full_prompt = DISHA_GROUNDING_TEMPLATE.format(
             business_name=biz.get("name", "Rural Enterprise"),
@@ -125,7 +134,8 @@ class GeminiAIService(BaseAIProvider):
         dscr = fin.get("projectedDSCR", 1.85)
 
         def get_fallback_text(lang_code: str) -> str:
-            if lang_code == "hi":
+            code = lang_code.split("-")[0].lower() if "-" in lang_code else lang_code.lower()
+            if code == "hi":
                 return (
                     f"नमस्ते! आपके **{biz.get('name', 'व्यवसाय')}** के लिए कुल परियोजना लागत **₹{cost:,.2f}** है, "
                     f"जिसमें आपकी खुद की मार्जिन राशि **₹{fin.get('promoterContribution', 150000.0):,.2f}** ({fin.get('promoterContributionPercentage', 17.6):.1f}%) है।\n\n"
@@ -133,7 +143,7 @@ class GeminiAIService(BaseAIProvider):
                     f"इसके बाद शेष बैंक मियादी ऋण **₹{term_loan:,.2f}** होगा, जिसकी मासिक किस्त (EMI) लगभग **₹{emi:,.2f}** होगी।\n\n"
                     f"आपका ऋण सेवा व्याप्ति अनुपात (DSCR) **{dscr:.2f}** है, जो बैंक के नियमों (न्यूनतम 1.50) के अनुसार पूर्णतः सुरक्षित है।"
                 )
-            elif lang_code == "mr":
+            elif code == "mr":
                 return (
                     f"नमस्कार! तुमच्या **{biz.get('name', 'उद्योगासाठी')}** एकूण प्रकल्प खर्च **₹{cost:,.2f}** असून, "
                     f"तुमचे स्वतःचे भांडवल (मार्जिन) **₹{fin.get('promoterContribution', 150000.0):,.2f}** ({fin.get('promoterContributionPercentage', 17.6):.1f}%) आवश्यक आहे.\n\n"
@@ -141,7 +151,7 @@ class GeminiAIService(BaseAIProvider):
                     f"उर्वरित बँक मुदत कर्ज **₹{term_loan:,.2f}** असेल आणि मासिक हप्ता (EMI) **₹{emi:,.2f}** असेल.\n\n"
                     f"तुमचे DSCR प्रमाण **{dscr:.2f}** असून ते बँकेच्या निकषांनुसार सुरक्षित आहे."
                 )
-            elif lang_code == "te":
+            elif code == "te":
                 return (
                     f"నమస్కారం! మీ **{biz.get('name', 'వ్యాపారానికి')}** మొత్తం ప్రాజెక్ట్ ఖర్చు **₹{cost:,.2f}**, "
                     f"ఇందులో ప్రమోటర్ వాటా **₹{fin.get('promoterContribution', 150000.0):,.2f}** ({fin.get('promoterContributionPercentage', 17.6):.1f}%).\n\n"
@@ -149,7 +159,7 @@ class GeminiAIService(BaseAIProvider):
                     f"బ్యాంక్ టర్మ్ లోన్ **₹{term_loan:,.2f}** మరియు నెలవారీ ఈఎంఐ (EMI) **₹{emi:,.2f}**.\n\n"
                     f"మీ DSCR నిష్పత్తి **{dscr:.2f}**, ఇది బ్యాంక్ నిబంధనల ప్రకారం సురక్షితమైనది."
                 )
-            elif lang_code == "ta":
+            elif code == "ta":
                 return (
                     f"வணக்கம்! உங்கள் **{biz.get('name', 'தொழிலுக்கான')}** மொத்த திட்ட மதிப்பீடு **₹{cost:,.2f}**. "
                     f"உங்கள் சொந்த மூலதனப் பங்கு **₹{fin.get('promoterContribution', 150000.0):,.2f}** ({fin.get('promoterContributionPercentage', 17.6):.1f}%).\n\n"
@@ -157,7 +167,7 @@ class GeminiAIService(BaseAIProvider):
                     f"வங்கி காலக்கடன் தேவை **₹{term_loan:,.2f}** மற்றும் மாதத் தவணை (EMI) **₹{emi:,.2f}**.\n\n"
                     f"உங்கள் கடன் சேவை பாதுகாப்பு விகிதம் (DSCR) **{dscr:.2f}** ஆக உள்ளது, இது வங்கி விதிமுறைகளுக்கு உகந்தது."
                 )
-            elif lang_code == "bn":
+            elif code == "bn":
                 return (
                     f"নমস্কার! আপনার **{biz.get('name', 'উদ্যোগের')}** জন্য মোট প্রকল্প ব্যয় **₹{cost:,.2f}**, "
                     f"যার মধ্যে আপনার নিজস্ব মূলধন **₹{fin.get('promoterContribution', 150000.0):,.2f}** ({fin.get('promoterContributionPercentage', 17.6):.1f}%)।\n\n"
@@ -165,7 +175,7 @@ class GeminiAIService(BaseAIProvider):
                     f"অবশিষ্ট ব্যাংক মেয়াদী ঋণ **₹{term_loan:,.2f}** এবং মাসিক কিস্তি (EMI) **₹{emi:,.2f}**।\n\n"
                     f"আপনার DSCR অনুপাত **{dscr:.2f}**, যা ব্যাংক নির্দেশিকা অনুযায়ী অত্যন্ত শক্তিশালী।"
                 )
-            elif lang_code == "gu":
+            elif code == "gu":
                 return (
                     f"નમસ્તે! તમારા **{biz.get('name', 'ઉદ્યોગ')}** માટે કુલ પ્રોજેક્ટ ખર્ચ **₹{cost:,.2f}** છે, "
                     f"જેમાં તમારો પોતાનો હિસ્સો **₹{fin.get('promoterContribution', 150000.0):,.2f}** ({fin.get('promoterContributionPercentage', 17.6):.1f}%) છે.\n\n"
@@ -173,7 +183,7 @@ class GeminiAIService(BaseAIProvider):
                     f"બાકી બેંક મુદતી લોન **₹{term_loan:,.2f}** રહેશે અને માસિક હપ્તો (EMI) **₹{emi:,.2f}** થશે.\n\n"
                     f"તમારો DSCR ગુણોત્તર **{dscr:.2f}** છે, જે બેંક ધારાધોરણો મુજબ સંપૂર્ણ સુરક્ષિત છે."
                 )
-            elif lang_code == "kn":
+            elif code == "kn":
                 return (
                     f"ನಮಸ್ಕಾರ! ನಿಮ್ಮ **{biz.get('name', 'ಉದ್ಯಮಕ್ಕಾಗಿ')}** ಒಟ್ಟು ಯೋಜನಾ ವೆಚ್ಚ **₹{cost:,.2f}**, "
                     f"ಇದರಲ್ಲಿ ನಿಮ್ಮ ಸ್ವಂತ ಬಂಡವಾಳ ಪಾಲು **₹{fin.get('promoterContribution', 150000.0):,.2f}** ({fin.get('promoterContributionPercentage', 17.6):.1f}%).\n\n"
@@ -181,19 +191,47 @@ class GeminiAIService(BaseAIProvider):
                     f"ಬ್ಯಾಂಕ್ ಅವಧಿ ಸಾಲ **₹{term_loan:,.2f}** ಮತ್ತು ಮಾಸಿಕ ಕಂತು (EMI) **₹{emi:,.2f}** ಆಗಿರುತ್ತದೆ.\n\n"
                     f"ನಿಮ್ಮ DSCR ಅನುಪಾತ **{dscr:.2f}** ಆಗಿದ್ದು, ಬ್ಯಾಂಕ್ ಮಾನದಂಡಗಳಿಗೆ ಅನುಗುಣವಾಗಿದೆ."
                 )
-            elif lang_code == "pa":
+            elif code == "pa":
                 return (
                     f"ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ! ਤੁਹਾਡੇ **{biz.get('name', 'ਕਾਰੋਬਾਰ')}** ਲਈ ਕੁੱਲ ਪ੍ਰੋਜੈਕਟ ਲਾਗਤ **₹{cost:,.2f}** ਹੈ, "
                     f"ਜਿਸ ਵਿੱਚ ਤੁਹਾਡਾ ਆਪਣਾ ਹਿੱਸਾ **₹{fin.get('promoterContribution', 150000.0):,.2f}** ({fin.get('promoterContributionPercentage', 17.6):.1f}%) ਹੈ।\n\n"
                     f"**PMEGP ਸਕੀਮ** ਦੇ ਤਹਿਤ ਤੁਹਾਡੀ ਪੇਂਡੂ ਇਕਾਈ **35% ਸਬਸਿਡੀ** (ਲਗਭਗ **₹{subsidy:,.2f}**) ਦੀ ਹੱਕਦਾਰ ਹੈ। "
                     f"ਬੈਂਕ ਮਿਆਦੀ ਕਰਜ਼ਾ **₹{term_loan:,.2f}** ਅਤੇ ਮਾਸਿਕ ਕਿਸ਼ਤ (EMI) ਲਗਭਗ **₹{emi:,.2f}** ਹੋਵੇਗੀ।"
                 )
-            elif lang_code == "ur":
+            elif code == "ur":
                 return (
                     f"آداب! آپ کے **{biz.get('name', 'کاروبار')}** کے لیے کل پروجیکٹ لاگت **₹{cost:,.2f}** ہے، "
                     f"جس میں آپ کی اپنی رقم **₹{fin.get('promoterContribution', 150000.0):,.2f}** ({fin.get('promoterContributionPercentage', 17.6):.1f}%) ہے۔\n\n"
                     f"**PMEGP اسکیم** کے تحت آپ کے دیہی یونٹ کو **35% سبسڈی** (تقریباً **₹{subsidy:,.2f}**) حاصل ہو سکتی ہے۔ "
                     f"بینک میعادی قرض **₹{term_loan:,.2f}** اور ماہانہ قسط (EMI) تقریباً **₹{emi:,.2f}** ہوگی۔"
+                )
+            elif code == "ml":
+                return (
+                    f"നമസ്കാരം! നിങ്ങളുടെ **{biz.get('name', 'സംരംഭത്തിന്')}** ആകെ പ്രോജക്റ്റ് ചെലവ് **₹{cost:,.2f}** ആണ്. "
+                    f"നിങ്ങളുടെ സ്വന്തം വിഹിതം **₹{fin.get('promoterContribution', 150000.0):,.2f}** ({fin.get('promoterContributionPercentage', 17.6):.1f}%).\n\n"
+                    f"**PMEGP പദ്ധതിക്ക്** കീഴിൽ നിങ്ങളുടെ ഗ്രാമീണ യൂണിറ്റിന് **35% മൂലധന സബ്‌സിഡി** (ഏകദേശം **₹{subsidy:,.2f}**) ലഭിക്കാൻ അർഹതയുണ്ട്. "
+                    f"ബാങ്ക് ടേം ലോൺ **₹{term_loan:,.2f}** ഉം പ്രതിമാസ തിരിച്ചടവ് (EMI) **₹{emi:,.2f}** ഉം ആണ്."
+                )
+            elif code in ("od", "or"):
+                return (
+                    f"ନମସ୍କାର! ଆପଣଙ୍କ **{biz.get('name', 'ଉଦ୍ୟୋଗ')}** ପାଇଁ ମୋଟ ପ୍ରକଳ୍ପ ମୂଲ୍ୟ **₹{cost:,.2f}**, "
+                    f"ଯେଉଁଥିରେ ଆପଣଙ୍କ ନିଜସ୍ୱ ଅଂଶ **₹{fin.get('promoterContribution', 150000.0):,.2f}** ({fin.get('promoterContributionPercentage', 17.6):.1f}%)।\n\n"
+                    f"**PMEGP ଯୋଜନା** ଅଧୀନରେ ଆପଣଙ୍କ ଗ୍ରାମୀଣ ୟୁନିଟ୍ **35% ସବସିଡି** (ପ୍ରାୟ **₹{subsidy:,.2f}**) ପାଇଁ ଯୋଗ୍ୟ। "
+                    f"ବ୍ୟାଙ୍କ ଋଣ **₹{term_loan:,.2f}** ଏବଂ ମାସିକ କିସ୍ତି (EMI) **₹{emi:,.2f}** ହେବ।"
+                )
+            elif code == "as":
+                return (
+                    f"নমস্কাৰ! আপোনাৰ **{biz.get('name', 'উদ্যোগৰ')}** বাবে মুঠ প্ৰকল্প ব্যয় **₹{cost:,.2f}**, "
+                    f"য'ত আপোনাৰ নিজা অংশীদাৰিত্ব **₹{fin.get('promoterContribution', 150000.0):,.2f}** ({fin.get('promoterContributionPercentage', 17.6):.1f}%)।\n\n"
+                    f"**PMEGP আঁচনিৰ** অধীনত আপোনাৰ গ্ৰাম্য গোটে **35% মূলধন ৰাজসাহায্য** (প্ৰায় **₹{subsidy:,.2f}**) লাভ কৰাৰ যোগ্য। "
+                    f"বেংক ম্যাদী ঋণ **₹{term_loan:,.2f}** আৰু মাহেকীয়া কিস্তি (EMI) **₹{emi:,.2f}** হ'ব।"
+                )
+            elif code == "ne":
+                return (
+                    f"नमस्ते! तपाईंको **{biz.get('name', 'उद्यम')}** को लागि कुल परियोजना लागत **₹{cost:,.2f}** छ, "
+                    f"जसमा तपाईंको आफ्नै मार्जिन रकम **₹{fin.get('promoterContribution', 150000.0):,.2f}** ({fin.get('promoterContributionPercentage', 17.6):.1f}%) छ।\n\n"
+                    f"**PMEGP योजना** अन्तर्गत तपाईंको ग्रामीण एकाइले **35% पुँजीगत अनुदान (सब्सिडी)** (लगभग **₹{subsidy:,.2f}**) प्राप्त गर्न सक्छ। "
+                    f"बाँकी बैंक आवधिक ऋण **₹{term_loan:,.2f}** र मासिक किस्ता (EMI) **₹{emi:,.2f}** हुनेछ।"
                 )
             else:
                 return (

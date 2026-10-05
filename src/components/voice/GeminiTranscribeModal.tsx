@@ -23,6 +23,7 @@ import {
   Volume2
 } from 'lucide-react';
 import { GeminiTranscribeService } from '../../services/ai/geminiTranscribeService';
+import { useLanguage } from '../../context/LanguageContext';
 
 interface GeminiTranscribeModalProps {
   isOpen: boolean;
@@ -37,6 +38,7 @@ export const GeminiTranscribeModal: React.FC<GeminiTranscribeModalProps> = ({
   onApplyTranscript,
   onSendToChat,
 }) => {
+  const { currentLanguage, t } = useLanguage();
   const [isRecording, setIsRecording] = useState<boolean>(false);
   const [recordingSeconds, setRecordingSeconds] = useState<number>(0);
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
@@ -115,7 +117,7 @@ export const GeminiTranscribeModal: React.FC<GeminiTranscribeModalProps> = ({
     setIsProcessing(true);
     setError('');
 
-    const res = await GeminiTranscribeService.transcribeAudioBlob(blob);
+    const res = await GeminiTranscribeService.transcribeAudioBlob(blob, undefined, currentLanguage);
     setIsProcessing(false);
 
     if (res.success) {
@@ -281,7 +283,7 @@ export const GeminiTranscribeModal: React.FC<GeminiTranscribeModalProps> = ({
                     className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#174C3A] text-white text-xs font-medium hover:bg-[#174C3A]/90 transition-all"
                   >
                     <Send className="w-3.5 h-3.5" />
-                    Send to DISHA Assistant
+                    <span>{t('explainWithDisha') || 'Send to DISHA Assistant'}</span>
                   </button>
                 )}
 

@@ -1,12 +1,14 @@
 import React from 'react';
 import { ShieldCheck, ExternalLink, HelpCircle } from 'lucide-react';
 import { Badge } from '../common/Badge';
+import { useLanguage } from '../../context/LanguageContext';
 
 interface FooterProps {
   onNavigateLegal?: (page: 'PRIVACY' | 'TERMS' | 'COOKIES' | 'REFUND') => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({ onNavigateLegal }) => {
+  const { t } = useLanguage();
   return (
     <footer className="w-full border-t border-[#D9D3C7] bg-[#FCFAF5] py-8 text-xs text-[#68655D] mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
@@ -47,19 +49,19 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateLegal }) => {
         </div>
 
         <div className="pt-4 border-t border-[#D9D3C7]/60 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px]">
-          <div>© 2026 GRAM-DISHA • Enterprise Intelligence Platform</div>
+          <div>{t('footer.copyrightText') || '© 2026 GRAM-DISHA • Enterprise Intelligence Platform'}</div>
           <div className="flex flex-wrap items-center gap-4">
             <button 
               onClick={() => onNavigateLegal?.('PRIVACY')} 
               className="hover:text-[#174C3A] hover:underline cursor-pointer font-medium"
             >
-              Privacy Policy
+              {t('footer.privacyPolicy') || 'Privacy Policy'}
             </button>
             <button 
               onClick={() => onNavigateLegal?.('TERMS')} 
               className="hover:text-[#174C3A] hover:underline cursor-pointer font-medium"
             >
-              Terms of Advisory
+              {t('footer.termsConditions') || 'Terms of Advisory'}
             </button>
             <button 
               onClick={() => onNavigateLegal?.('COOKIES')} 

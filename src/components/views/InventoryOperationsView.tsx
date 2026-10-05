@@ -25,10 +25,12 @@ import {
   ShoppingCart
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
+import { useLanguage } from '../../context/LanguageContext';
 import { InventoryItem, SalesRecord } from '../../types';
 
 export const InventoryOperationsView: React.FC = () => {
   const { inventory, sales, addInventoryItem, deleteInventoryItem, recordSale } = useAuth();
+  const { t } = useLanguage();
 
   const [activeTab, setActiveTab] = useState<'INVENTORY' | 'SALES' | 'PLANNING'>('INVENTORY');
 
@@ -113,7 +115,7 @@ export const InventoryOperationsView: React.FC = () => {
               <Boxes className="w-4 h-4 text-[#C8A96B]" />
             </div>
             <h1 className="text-xl sm:text-2xl font-display font-extrabold text-[#3B2F2A]">
-              Micro-Enterprise Operations & ERP Hub
+              {t('inventoryOperations')}
             </h1>
           </div>
           <p className="text-xs text-[#3B2F2A]/70 mt-1">
@@ -127,14 +129,14 @@ export const InventoryOperationsView: React.FC = () => {
             className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#174C3A] text-[#FAF7F2] text-xs font-bold hover:bg-[#174C3A]/90 transition-colors shadow-xs cursor-pointer"
           >
             <Plus className="w-3.5 h-3.5 text-[#C8A96B]" />
-            <span>Add Stock Item</span>
+            <span>+ {t('registeredStockItems')}</span>
           </button>
           <button
             onClick={() => setIsRecordSaleOpen(true)}
             className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#FAF7F2] border border-[#C8A96B]/40 text-[#3B2F2A] hover:bg-[#F2E8D6]/60 text-xs font-bold transition-colors cursor-pointer"
           >
             <ShoppingCart className="w-3.5 h-3.5 text-[#174C3A]" />
-            <span>Record Sale</span>
+            <span>{t('recordStockOrSale')}</span>
           </button>
         </div>
       </div>
@@ -142,9 +144,9 @@ export const InventoryOperationsView: React.FC = () => {
       {/* Navigation Sub-Tabs */}
       <div className="flex items-center gap-1.5 border-b border-[#C8A96B]/20 pb-2 overflow-x-auto scrollbar-none">
         {[
-          { id: 'INVENTORY', label: `Inventory Stock (${inventory.length})` },
-          { id: 'SALES', label: `Sales Journal (${sales.length})` },
-          { id: 'PLANNING', label: 'Production & Reorder Planning' },
+          { id: 'INVENTORY', label: `${t('registeredStockItems')} (${inventory.length})` },
+          { id: 'SALES', label: `${t('recordedSalesRevenue')} (${sales.length})` },
+          { id: 'PLANNING', label: t('lowStockReorderAlerts') },
         ].map(tab => (
           <button
             key={tab.id}
@@ -163,21 +165,21 @@ export const InventoryOperationsView: React.FC = () => {
       {/* Summary KPI Strip */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="p-4 rounded-2xl bg-[#FAF7F2] border border-[#C8A96B]/30 shadow-xs">
-          <span className="text-[11px] text-[#3B2F2A]/60 font-semibold uppercase">Total Stock Items</span>
+          <span className="text-[11px] text-[#3B2F2A]/60 font-semibold uppercase">{t('registeredStockItems')}</span>
           <div className="text-xl font-display font-extrabold text-[#3B2F2A] mt-0.5">
-            {inventory.length} Items Registered
+            {inventory.length}
           </div>
         </div>
 
         <div className="p-4 rounded-2xl bg-[#FAF7F2] border border-[#C8A96B]/30 shadow-xs">
-          <span className="text-[11px] text-[#3B2F2A]/60 font-semibold uppercase">Reorder Alerts</span>
+          <span className="text-[11px] text-[#3B2F2A]/60 font-semibold uppercase">{t('lowStockReorderAlerts')}</span>
           <div className={`text-xl font-display font-extrabold mt-0.5 ${lowStockItems.length > 0 ? 'text-[#B45B4A]' : 'text-[#5A6B4F]'}`}>
-            {lowStockItems.length} Low Stock Alert{lowStockItems.length === 1 ? '' : 's'}
+            {lowStockItems.length}
           </div>
         </div>
 
         <div className="p-4 rounded-2xl bg-[#FAF7F2] border border-[#C8A96B]/30 shadow-xs">
-          <span className="text-[11px] text-[#3B2F2A]/60 font-semibold uppercase">Total Recorded Revenue</span>
+          <span className="text-[11px] text-[#3B2F2A]/60 font-semibold uppercase">{t('recordedSalesRevenue')}</span>
           <div className="text-xl font-display font-extrabold text-[#174C3A] mt-0.5">
             ₹{totalSalesRevenue.toLocaleString('en-IN')}
           </div>
@@ -488,13 +490,13 @@ export const InventoryOperationsView: React.FC = () => {
                 onClick={() => setIsAddStockOpen(false)}
                 className="px-3.5 py-2 rounded-xl border border-[#C8A96B]/30 text-xs font-semibold text-[#3B2F2A] hover:bg-[#F2E8D6]/50 transition-colors cursor-pointer"
               >
-                Cancel
+                {t('forms.cancelBtn') || 'Cancel'}
               </button>
               <button
                 type="submit"
                 className="px-5 py-2 rounded-xl bg-[#174C3A] text-[#FAF7F2] text-xs font-bold hover:bg-[#174C3A]/90 transition-colors shadow-xs cursor-pointer"
               >
-                Save Stock Item
+                {t('forms.saveProfileBtn') || 'Save Stock Item'}
               </button>
             </div>
           </form>
@@ -611,13 +613,13 @@ export const InventoryOperationsView: React.FC = () => {
                 onClick={() => setIsRecordSaleOpen(false)}
                 className="px-3.5 py-2 rounded-xl border border-[#C8A96B]/30 text-xs font-semibold text-[#3B2F2A] hover:bg-[#F2E8D6]/50 transition-colors cursor-pointer"
               >
-                Cancel
+                {t('forms.cancelBtn') || 'Cancel'}
               </button>
               <button
                 type="submit"
                 className="px-5 py-2 rounded-xl bg-[#174C3A] text-[#FAF7F2] text-xs font-bold hover:bg-[#174C3A]/90 transition-colors shadow-xs cursor-pointer"
               >
-                Log Sale Record
+                {t('forms.saveProfileBtn') || 'Log Sale Record'}
               </button>
             </div>
           </form>

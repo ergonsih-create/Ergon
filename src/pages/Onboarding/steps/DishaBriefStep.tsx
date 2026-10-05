@@ -24,6 +24,7 @@ import {
 } from 'lucide-react';
 import { LocationContext, BusinessContext } from '../../../types';
 import { UnknownBadge } from '../../../components/ui/UnknownBadge';
+import { useLanguage } from '../../../context/LanguageContext';
 
 interface DishaBriefStepProps {
   location: LocationContext;
@@ -55,6 +56,7 @@ export const DishaBriefStep: React.FC<DishaBriefStepProps> = ({
   onLaunchDashboard,
   onBack,
 }) => {
+  const { t } = useLanguage();
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
   const [activeTab, setActiveTab] = useState<'SUMMARY' | 'FEASIBILITY' | 'SCHEMES' | 'AUDIT'>('SUMMARY');
 
@@ -392,7 +394,7 @@ export const DishaBriefStep: React.FC<DishaBriefStepProps> = ({
           onClick={onLaunchDashboard}
           className="px-7 py-3.5 rounded-2xl bg-[#3B2F2A] hover:bg-[#2D2420] text-sm font-bold text-[#FAF7F2] shadow-lg transition-all flex items-center gap-2 cursor-pointer active:scale-[0.98]"
         >
-          <span>Confirm & Launch Enterprise Dashboard</span>
+          <span>{t('nav.dashboardLink')}</span>
           <ArrowRight className="w-4 h-4 text-[#C8A96B]" />
         </button>
       </div>

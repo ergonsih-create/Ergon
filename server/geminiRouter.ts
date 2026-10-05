@@ -36,7 +36,7 @@ function getGenAIClient(): GoogleGenAI {
  */
 geminiRouter.post('/transcribe', async (req: Request, res: Response) => {
   try {
-    const { audio, mimeType, prompt } = req.body || {};
+    const { audio, mimeType, prompt, language } = req.body || {};
 
     if (!audio) {
       return res.status(400).json({ error: 'Missing required field: audio (base64 string)' });
@@ -57,7 +57,14 @@ geminiRouter.post('/transcribe', async (req: Request, res: Response) => {
       },
     };
 
-    const instruction = prompt || 'Transcribe this spoken audio verbatim and accurately. Preserve speech nuances. Output only the transcribed text without conversational filler or extra commentary.';
+    let instruction = prompt;
+    if (!instruction) {
+      if (language && language !== 'auto') {
+        instruction = `Transcribe this audio verbatim in the original language (${language}). Do not translate it to English. Preserve the spoken language and native script. Output only the transcription.`;
+      } else {
+        instruction = 'Transcribe this spoken audio verbatim and accurately. Preserve speech nuances. Output only the transcribed text without conversational filler or extra commentary.';
+      }
+    }
 
     const response = await ai.models.generateContent({
       model: 'gemini-2.5-flash',

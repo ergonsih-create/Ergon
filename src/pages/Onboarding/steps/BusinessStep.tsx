@@ -19,6 +19,7 @@ import {
   HelpCircle
 } from 'lucide-react';
 import { BusinessContext, BusinessStage, BusinessScale } from '../../../types';
+import { useLanguage } from '../../../context/LanguageContext';
 
 interface BusinessStepProps {
   business: Partial<BusinessContext>;
@@ -84,6 +85,7 @@ export const BusinessStep: React.FC<BusinessStepProps> = ({
   onNext,
   onBack,
 }) => {
+  const { t } = useLanguage();
   const [category, setCategory] = useState(business.category || 'AGRO_PROCESSING');
   const [title, setTitle] = useState(
     business.title || 'Maa Annapurna Agro & Pulse Processing Unit'
@@ -135,7 +137,7 @@ export const BusinessStep: React.FC<BusinessStepProps> = ({
           </span>
         </div>
         <h2 className="text-2xl font-display font-bold text-[#3B2F2A]">
-          What enterprise are you planning?
+          {t('myBusiness')}
         </h2>
         <p className="text-xs sm:text-sm text-[#3B2F2A]/75 leading-relaxed">
           Choose a sector archetype or enter your custom venture. Gram-Disha applies sector-specific technical benchmarks and raw material ratios.
@@ -296,7 +298,7 @@ export const BusinessStep: React.FC<BusinessStepProps> = ({
           type="submit"
           className="px-6 py-3 rounded-2xl bg-[#3B2F2A] hover:bg-[#2D2420] text-sm font-bold text-[#FAF7F2] shadow-sm transition-all flex items-center gap-2 cursor-pointer"
         >
-          <span>Continue to Financial Structuring</span>
+          <span>{t('forms.saveProfileBtn')}</span>
           <span>→</span>
         </button>
       </div>

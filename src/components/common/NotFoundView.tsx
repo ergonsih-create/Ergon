@@ -8,12 +8,14 @@ import React from 'react';
 import { Home, ArrowLeft, Search, HelpCircle } from 'lucide-react';
 import { GramDishaIcon } from './GramDishaLogo';
 import { Button } from './Button';
+import { useLanguage } from '../../context/LanguageContext';
 
 interface NotFoundViewProps {
   onGoHome?: () => void;
 }
 
 export const NotFoundView: React.FC<NotFoundViewProps> = ({ onGoHome }) => {
+  const { t } = useLanguage();
   return (
     <div className="min-h-[70vh] flex items-center justify-center p-4">
       <div className="max-w-md w-full text-center space-y-6 bg-[#FAF7F2] p-8 rounded-3xl border border-[#C8A96B]/30 shadow-sm">
@@ -44,7 +46,7 @@ export const NotFoundView: React.FC<NotFoundViewProps> = ({ onGoHome }) => {
             onClick={onGoHome}
             className="w-full sm:w-auto flex items-center justify-center gap-2 text-xs font-bold"
           >
-            <Home className="w-4 h-4" /> Return to Gram-Disha Home
+            <Home className="w-4 h-4" /> {t('nav.home')}
           </Button>
         </div>
 

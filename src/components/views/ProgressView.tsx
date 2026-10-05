@@ -17,10 +17,12 @@ import { Badge } from '../common/Badge';
 import { Button } from '../common/Button';
 import { UnknownState } from '../common/UnknownState';
 import { useAuth } from '../../context/AuthContext';
+import { useLanguage } from '../../context/LanguageContext';
 import { ApiClient } from '../../services/api/apiClient';
 
 export const ProgressView: React.FC = () => {
   const { activeBusiness } = useAuth();
+  const { t } = useLanguage();
   const [kpis, setKpis] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [isBackendConnected, setIsBackendConnected] = useState(false);
@@ -84,7 +86,7 @@ export const ProgressView: React.FC = () => {
             className="text-xs"
           >
             <RefreshCw className={`w-3.5 h-3.5 mr-1 ${loading ? 'animate-spin' : ''}`} />
-            Refresh
+            {t('refresh')}
           </Button>
         </div>
       </div>

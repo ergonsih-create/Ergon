@@ -26,10 +26,12 @@ import {
   ChevronDown
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
+import { useLanguage } from '../../context/LanguageContext';
 import { SupportTicket } from '../../types';
 
 export const SupportGrievanceView: React.FC = () => {
   const { supportTickets, submitSupportTicket, user, activeBusiness } = useAuth();
+  const { t } = useLanguage();
 
   const [activeTab, setActiveTab] = useState<'TICKETS' | 'NEW_TICKET' | 'FAQ' | 'CONTACT'>('TICKETS');
   const [expandedFaq, setExpandedFaq] = useState<number | null>(0);
@@ -128,7 +130,7 @@ export const SupportGrievanceView: React.FC = () => {
               <LifeBuoy className="w-4 h-4 text-[#C8A96B]" />
             </div>
             <h1 className="text-xl sm:text-2xl font-display font-extrabold text-[#3B2F2A]">
-              Support Desk & Institutional Facilitation
+              {t('helpDeskGrievance')}
             </h1>
           </div>
           <p className="text-xs text-[#3B2F2A]/70 mt-1">
@@ -141,17 +143,17 @@ export const SupportGrievanceView: React.FC = () => {
           className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#174C3A] text-[#FAF7F2] text-xs font-bold hover:bg-[#174C3A]/90 transition-colors shadow-xs cursor-pointer"
         >
           <Plus className="w-3.5 h-3.5 text-[#C8A96B]" />
-          <span>Raise Support Ticket</span>
+          <span>{t('fileSupportInquiry')}</span>
         </button>
       </div>
 
       {/* Navigation Sub-Tabs */}
       <div className="flex items-center gap-1.5 border-b border-[#C8A96B]/20 pb-2 overflow-x-auto scrollbar-none">
         {[
-          { id: 'TICKETS', label: `My Tickets (${supportTickets.length})` },
-          { id: 'NEW_TICKET', label: '+ Submit Inquiry' },
-          { id: 'FAQ', label: 'Statutory Scheme FAQ' },
-          { id: 'CONTACT', label: 'Official Department Helplines' },
+          { id: 'TICKETS', label: `${t('submittedInquiries')} (${supportTickets.length})` },
+          { id: 'NEW_TICKET', label: `+ ${t('fileSupportInquiry')}` },
+          { id: 'FAQ', label: 'FAQ' },
+          { id: 'CONTACT', label: t('panchayatFacilitator') },
         ].map(tab => (
           <button
             key={tab.id}
@@ -301,14 +303,14 @@ export const SupportGrievanceView: React.FC = () => {
               onClick={() => setActiveTab('TICKETS')}
               className="px-4 py-2 rounded-xl border border-[#C8A96B]/30 text-xs font-semibold text-[#3B2F2A] hover:bg-[#F2E8D6]/50 cursor-pointer"
             >
-              Cancel
+              {t('forms.cancelBtn') || 'Cancel'}
             </button>
             <button
               type="submit"
               className="flex items-center gap-1.5 px-5 py-2 rounded-xl bg-[#174C3A] text-[#FAF7F2] text-xs font-bold hover:bg-[#174C3A]/90 transition-colors shadow-xs cursor-pointer"
             >
               <Send className="w-3.5 h-3.5 text-[#C8A96B]" />
-              <span>Submit Request</span>
+              <span>{t('forms.submitBtn') || 'Submit Request'}</span>
             </button>
           </div>
         </form>

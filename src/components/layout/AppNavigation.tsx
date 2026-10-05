@@ -153,10 +153,11 @@ export const AppNavigation: React.FC<{
   const handleTabClick = (item: NavTabItem) => {
     onSelectModule(item.id);
     setIsMobileMenuOpen(false);
+    const label = t(item.labelKey) !== item.labelKey ? t(item.labelKey) : item.defaultLabel;
     openAdvisorWithInsight(
-      `Switched to ${item.defaultLabel}. All data is bound to verified government registers and deterministic formulas.`,
+      label,
       [],
-      `Explore detailed parameters or adjust assumptions for ${item.defaultLabel}.`
+      label
     );
   };
 
@@ -212,7 +213,7 @@ export const AppNavigation: React.FC<{
           }`}
         >
           <LayoutDashboard className="w-5 h-5" />
-          <span className="text-[10px] tracking-tight">Home</span>
+          <span className="text-[10px] tracking-tight">{t('dashboard')}</span>
         </button>
 
         <button
@@ -222,7 +223,7 @@ export const AppNavigation: React.FC<{
           }`}
         >
           <Lightbulb className="w-5 h-5" />
-          <span className="text-[10px] tracking-tight">Business</span>
+          <span className="text-[10px] tracking-tight">{t('myBusiness')}</span>
         </button>
 
         {/* Center Prominent Voice AI Orb Launcher */}
@@ -241,7 +242,7 @@ export const AppNavigation: React.FC<{
           }`}
         >
           <Landmark className="w-5 h-5" />
-          <span className="text-[10px] tracking-tight">Schemes</span>
+          <span className="text-[10px] tracking-tight">{t('schemes')}</span>
         </button>
 
         <button
@@ -251,7 +252,7 @@ export const AppNavigation: React.FC<{
           }`}
         >
           <Grid className="w-5 h-5" />
-          <span className="text-[10px] tracking-tight">All Modules</span>
+          <span className="text-[10px] tracking-tight">{t('allSchemes') || 'Modules'}</span>
         </button>
       </div>
 

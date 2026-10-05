@@ -29,3 +29,5 @@ export const SUPPORTED_LANGUAGES: LanguageOption[] = [
   { code: 'brx', name: 'Bodo', nativeName: 'बड़ो', script: 'Devanagari', direction: 'ltr' },
   { code: 'sa', name: 'Sanskrit', nativeName: 'संस्कृतम्', script: 'Devanagari', direction: 'ltr' }
 ];
+
+export { BCP47_LANG_MAP, getBcp47Language, getLanguageName } from '../utils/voiceUtils';

@@ -31,7 +31,7 @@ import { LGDLocationSelector } from '../common/LGDLocationSelector';
 
 export const ProfileSettingsView: React.FC = () => {
   const { user, updateUserProfile, logout, activeBusiness } = useAuth();
-  const { currentLanguage, setLanguage, availableLanguages } = useLanguage();
+  const { currentLanguage, setLanguage, availableLanguages, t } = useLanguage();
 
   const [activeTab, setActiveTab] = useState<'PROFILE' | 'LOCATION' | 'DEMOGRAPHICS' | 'LANGUAGE' | 'NOTIFICATIONS' | 'SECURITY'>('PROFILE');
   const [saveSuccess, setSaveSuccess] = useState(false);
@@ -100,7 +100,7 @@ export const ProfileSettingsView: React.FC = () => {
               <User className="w-5 h-5 text-[#C8A96B]" />
             </div>
             <h1 className="text-xl sm:text-2xl font-display font-extrabold text-[#3B2F2A]">
-              Profile & Enterprise Settings
+              {t('header.myProfile')}
             </h1>
           </div>
           <p className="text-xs sm:text-sm text-[#3B2F2A]/70 mt-1">
@@ -119,12 +119,12 @@ export const ProfileSettingsView: React.FC = () => {
       {/* Tabs */}
       <div className="flex items-center gap-2 border-b border-[#C8A96B]/20 pb-2 overflow-x-auto scrollbar-none">
         {[
-          { id: 'PROFILE', label: 'Basic Profile', icon: User },
-          { id: 'LOCATION', label: 'LGD Location & Gaon', icon: MapPin },
-          { id: 'DEMOGRAPHICS', label: 'Demographics & Schemes Criteria', icon: Users },
-          { id: 'LANGUAGE', label: 'Language (23 Languages)', icon: Globe },
-          { id: 'NOTIFICATIONS', label: 'Notification Preferences', icon: Bell },
-          { id: 'SECURITY', label: 'JWT Session & Security', icon: ShieldCheck }
+          { id: 'PROFILE', label: t('profile'), icon: User },
+          { id: 'LOCATION', label: t('activeLocationLabel'), icon: MapPin },
+          { id: 'DEMOGRAPHICS', label: 'Demographics & Schemes', icon: Users },
+          { id: 'LANGUAGE', label: t('nav.switchLanguage'), icon: Globe },
+          { id: 'NOTIFICATIONS', label: t('notifications'), icon: Bell },
+          { id: 'SECURITY', label: t('header.jwtSession'), icon: ShieldCheck }
         ].map(tab => {
           const Icon = tab.icon;
           const isActive = activeTab === tab.id;
